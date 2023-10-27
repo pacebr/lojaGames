@@ -68,5 +68,28 @@ namespace LojaGames
 
 
         }
+        public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
+        {
+
+            string sql = "SELECT COUNT(*) FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
+
+            using (SqlConnection conn = conexaoBanco())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                cmd.Parameters.AddWithValue("@senha", senha);
+
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
+            }
+        }
+        public static void FecharConexao()
+        {
+            if (conexao != null && conexao.State == ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
     }
 }

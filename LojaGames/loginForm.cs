@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LojaGames.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,5 +40,27 @@ namespace LojaGames
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string usuario = txtBoxUsuario.Text;
+            string senha = txtBoxSenha.Text;
+
+            bool loginSucesso = dataAcess.VerificarCredenciais(usuario, senha);
+
+            if (loginSucesso)
+            {
+                menuForm formmenu = new menuForm();
+                formmenu.ShowDialog();
+                dataAcess.FecharConexao();
+            }
+            else
+            {
+                dataAcess.FecharConexao();
+                MessageBox.Show("Falha no login. Usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+
+
     }
 }
