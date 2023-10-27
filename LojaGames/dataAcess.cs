@@ -14,7 +14,7 @@ namespace LojaGames
         private static SqlConnection conexao;
         private static SqlConnection conexaoBanco()
         {
-            conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=lojaGames_db");
+            conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb");
             conexao.Open();
             return conexao;
         }

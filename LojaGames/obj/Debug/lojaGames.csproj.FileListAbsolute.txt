@@ -1,0 +1,11 @@
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\bin\Debug\LojaGames.exe.config
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\bin\Debug\LojaGames.exe
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\bin\Debug\LojaGames.pdb
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.AssemblyReference.cache
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.Properties.Resources.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.GenerateResource.cache
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.CoreCompileInputs.cache
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.exe
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.pdb
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.loginForm.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.registerForm.resources
