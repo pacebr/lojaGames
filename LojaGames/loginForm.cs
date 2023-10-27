@@ -17,16 +17,12 @@ namespace LojaGames
         public loginForm()
         {
             InitializeComponent();
+
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void lblRegistrar_DoubleClick(object sender, EventArgs e)
-        {
-
         }
 
         private void lblRegistrar_Click(object sender, EventArgs e)
@@ -56,11 +52,33 @@ namespace LojaGames
             }
             else
             {
-                dataAcess.FecharConexao();
                 MessageBox.Show("Falha no login. Usuário ou senha incorretos. Tente novamente.");
+                dataAcess.FecharConexao();
             }
         }
 
+        private void lblRegistrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblRegistrar.ForeColor = Color.Purple;
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+        }
 
+        private void lblRegistrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblRegistrar.ForeColor = Color.PaleTurquoise;
+            this.Cursor = Cursors.Default;
+        }
+
+        private void txtBoxSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnLogin_Click(sender, e);
+        }
+
+        private void txtBoxUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnLogin_Click(sender, e);
+        }
     }
 }

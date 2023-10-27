@@ -34,12 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtBoxSenha = new System.Windows.Forms.TextBox();
-            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblRegistrar = new System.Windows.Forms.Label();
+            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
+            this.txtBoxSenha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // imageList1
@@ -55,9 +55,9 @@
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 21);
+            this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Email";
+            this.label1.Text = "Usuario";
             // 
             // label2
             // 
@@ -81,30 +81,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtBoxSenha
-            // 
-            this.txtBoxSenha.BackColor = System.Drawing.Color.White;
-            this.txtBoxSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoxSenha.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxSenha.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxSenha.Location = new System.Drawing.Point(36, 243);
-            this.txtBoxSenha.Multiline = true;
-            this.txtBoxSenha.Name = "txtBoxSenha";
-            this.txtBoxSenha.Size = new System.Drawing.Size(202, 24);
-            this.txtBoxSenha.TabIndex = 1;
-            // 
-            // txtBoxUsuario
-            // 
-            this.txtBoxUsuario.BackColor = System.Drawing.Color.White;
-            this.txtBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxUsuario.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxUsuario.Location = new System.Drawing.Point(36, 168);
-            this.txtBoxUsuario.Multiline = true;
-            this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(202, 24);
-            this.txtBoxUsuario.TabIndex = 0;
             // 
             // btnSair
             // 
@@ -143,13 +119,34 @@
             // 
             this.lblRegistrar.AutoSize = true;
             this.lblRegistrar.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegistrar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblRegistrar.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.lblRegistrar.Location = new System.Drawing.Point(36, 348);
             this.lblRegistrar.Name = "lblRegistrar";
             this.lblRegistrar.Size = new System.Drawing.Size(60, 13);
             this.lblRegistrar.TabIndex = 3;
             this.lblRegistrar.Text = "Registre-se";
             this.lblRegistrar.Click += new System.EventHandler(this.lblRegistrar_Click);
+            this.lblRegistrar.MouseEnter += new System.EventHandler(this.lblRegistrar_MouseEnter);
+            this.lblRegistrar.MouseLeave += new System.EventHandler(this.lblRegistrar_MouseLeave);
+            // 
+            // txtBoxUsuario
+            // 
+            this.txtBoxUsuario.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUsuario.Location = new System.Drawing.Point(34, 168);
+            this.txtBoxUsuario.Name = "txtBoxUsuario";
+            this.txtBoxUsuario.Size = new System.Drawing.Size(204, 22);
+            this.txtBoxUsuario.TabIndex = 8;
+            this.txtBoxUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxUsuario_KeyPress);
+            // 
+            // txtBoxSenha
+            // 
+            this.txtBoxSenha.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSenha.Location = new System.Drawing.Point(34, 243);
+            this.txtBoxSenha.Name = "txtBoxSenha";
+            this.txtBoxSenha.PasswordChar = '*';
+            this.txtBoxSenha.Size = new System.Drawing.Size(204, 22);
+            this.txtBoxSenha.TabIndex = 9;
+            this.txtBoxSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxSenha_KeyPress);
             // 
             // loginForm
             // 
@@ -158,6 +155,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::LojaGames.Properties.Resources.Minimalistic_Mountain_Sunset_562023__1_;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.txtBoxSenha);
+            this.Controls.Add(this.txtBoxUsuario);
             this.Controls.Add(this.lblRegistrar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,12 +164,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBoxSenha);
-            this.Controls.Add(this.txtBoxUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NOW GAMES | LOGIN";
+            this.Text = "EXODUS";
             this.Load += new System.EventHandler(this.loginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,12 +179,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtBoxSenha;
-        private System.Windows.Forms.TextBox txtBoxUsuario;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblRegistrar;
+        private System.Windows.Forms.TextBox txtBoxUsuario;
+        private System.Windows.Forms.TextBox txtBoxSenha;
     }
 }
 
