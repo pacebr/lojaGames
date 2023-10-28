@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LojaGames
+namespace LojaGames.Resources
 {
-    public partial class registerForm : Form
+    public partial class menu : Form
     {
-        public registerForm()
+        public menu()
         {
             InitializeComponent();
         }

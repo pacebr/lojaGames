@@ -1,6 +1,6 @@
 ﻿namespace LojaGames
 {
-    partial class registerForm
+    partial class registro
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // registerForm
+            // registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "registerForm";
+            this.Name = "registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "registerForm";
+            this.Text = "registro";
             this.ResumeLayout(false);
 
         }

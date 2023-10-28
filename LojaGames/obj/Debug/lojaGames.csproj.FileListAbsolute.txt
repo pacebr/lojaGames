@@ -7,5 +7,5 @@ C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.Gener
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.CoreCompileInputs.cache
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.exe
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.pdb
-C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.loginForm.resources
-C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.registerForm.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.registro.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.login.resources

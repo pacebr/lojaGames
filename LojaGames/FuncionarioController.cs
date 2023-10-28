@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    internal class dataAcess
+    internal class FuncionarioController
     {
         private static SqlConnection conexao;
         private static SqlConnection conexaoBanco()
@@ -19,39 +19,37 @@ namespace LojaGames
             return conexao;
         }
         //Funções Gerais
-        public static DataTable dql(string sql)// Select
+        public static DataTable dql(string sql) // Select
         {
             SqlDataAdapter da = null;
             DataTable dt = new DataTable();
             try
             {
-                var vcon = conexaoBanco();
-                var cmd = vcon.CreateCommand();
+                var conn = conexaoBanco();
+                var cmd = conn.CreateCommand();
                 cmd.CommandText = sql;
-                da = new SqlDataAdapter(cmd.CommandText, vcon);
+                da = new SqlDataAdapter(cmd.CommandText, conn);
                 da.Fill(dt);
-                vcon.Close();
+                conn.Close();
                 return dt;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-
         }
-        public static void dml(string q, string msgOK = null, string msgERRO = null)// Insert, Delete e Update
+        public static void dml(string q, string msgOK = null, string msgERRO = null) // Insert, Delete e Update
         {
             SqlDataAdapter da = null;
             DataTable dt = new DataTable();
             try
             {
-                var vcon = conexaoBanco();
-                var cmd = vcon.CreateCommand();
+                var conn = conexaoBanco();
+                var cmd = conn.CreateCommand();
                 cmd.CommandText = q;
-                da = new SqlDataAdapter(cmd.CommandText, vcon);
+                da = new SqlDataAdapter(cmd.CommandText, conn);
                 cmd.ExecuteNonQuery();
-                vcon.Close();
+                conn.Close();
                 if (msgOK != null)
                 {
                     MessageBox.Show(msgOK);
@@ -66,23 +64,44 @@ namespace LojaGames
                 throw ex;
             }
 
-
         }
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
-
+            int count;
             string sql = "SELECT COUNT(*) FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
-
             using (SqlConnection conn = conexaoBanco())
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
 
-                int count = (int)cmd.ExecuteScalar();
-
+                count = (int)cmd.ExecuteScalar();
+                FecharConexao();
                 return count > 0;
             }
+        }
+        public static bool VerificarGerencia(string usuario) // verificar cargo
+        {
+            string cargo = "";
+            bool isGerente = false;
+
+            string sql = "SELECT cargo FROM funcionarios.dados WHERE usuario = @usuario";
+            using (SqlConnection conn = conexaoBanco())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cargo = reader["cargo"] as string;
+                    }
+                }
+            }
+            if (cargo == "Gerente")
+                isGerente = true;
+
+            return isGerente;
         }
         public static void FecharConexao()
         {

@@ -1,6 +1,6 @@
 ﻿namespace LojaGames.Resources
 {
-    partial class menuForm
+    partial class menu
     {
         /// <summary>
         /// Required designer variable.

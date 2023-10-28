@@ -46,29 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dataAcess.cs" />
-    <Compile Include="loginForm.cs">
+    <Compile Include="ClienteController.cs" />
+    <Compile Include="FuncionarioController.cs" />
+    <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginForm.Designer.cs">
-      <DependentUpon>loginForm.cs</DependentUpon>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registerForm.cs">
+    <Compile Include="registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registerForm.Designer.cs">
-      <DependentUpon>registerForm.cs</DependentUpon>
+    <Compile Include="registro.Designer.cs">
+      <DependentUpon>registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\menuForm.cs">
+    <Compile Include="Resources\menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\menuForm.Designer.cs">
-      <DependentUpon>menuForm.cs</DependentUpon>
+    <Compile Include="Resources\menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="loginForm.resx">
-      <DependentUpon>loginForm.cs</DependentUpon>
+    <Compile Include="toggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,8 +84,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="registerForm.resx">
-      <DependentUpon>registerForm.cs</DependentUpon>
+    <EmbeddedResource Include="registro.resx">
+      <DependentUpon>registro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
