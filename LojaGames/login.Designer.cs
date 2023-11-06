@@ -200,13 +200,13 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Borned", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(150, 39);
+            this.label6.Location = new System.Drawing.Point(150, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(254, 40);
             this.label6.TabIndex = 12;
             this.label6.Text = "FUNCIONARIO";
             // 
-            // loginForm
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSair);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "loginForm";
+            this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXODUS";
             this.Load += new System.EventHandler(this.loginForm_Load);
