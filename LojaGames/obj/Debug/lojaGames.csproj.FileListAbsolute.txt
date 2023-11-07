@@ -9,3 +9,4 @@ C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.exe
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.pdb
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.registro.resources
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.login.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.Resources.menu.resources

@@ -16,5 +16,50 @@ namespace LojaGames.Resources
         {
             InitializeComponent();
         }
+
+        private void panelBtn_Games_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Games.BackColor = Color.Green;
+        }
+
+        private void panelBtn_Games_MouseLeave(object sender, EventArgs e)
+        {
+            panelBtn_Games.BackColor = Color.DarkSlateBlue;
+        }
+
+        private void panelBtn_Users_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Users.BackColor = Color.Green;
+        }
+
+        private void panelBtn_Users_MouseLeave(object sender, EventArgs e)
+        {
+            panelBtn_Users.BackColor = Color.DarkSlateBlue;
+        }
+
+        private void panelBtn_Dashboard_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Dashboard.BackColor = Color.Green;
+        }
+
+        private void panelBtn_Dashboard_MouseLeave(object sender, EventArgs e)
+        {
+            panelBtn_Dashboard.BackColor = Color.DarkSlateBlue;
+        }
+
+        private void lblGames_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Games.BackColor = Color.Green;
+        }
+
+        private void lblUsers_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Users.BackColor = Color.Green;
+        }
+
+        private void lblDashboard_MouseEnter(object sender, EventArgs e)
+        {
+            panelBtn_Dashboard.BackColor = Color.Green;
+        }
     }
 }
