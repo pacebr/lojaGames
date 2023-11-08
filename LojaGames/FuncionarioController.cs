@@ -23,7 +23,7 @@ namespace LojaGames
 
                 conexao.Open();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 conexao = conexaoCurso;
                 conexao.Open();

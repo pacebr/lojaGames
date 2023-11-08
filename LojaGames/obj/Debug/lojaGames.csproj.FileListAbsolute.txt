@@ -24,3 +24,6 @@ C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\lojaGames.
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.exe
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.pdb
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.games.resources
+C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.games.resources
+C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.Users.resources
+C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.dashboard.resources

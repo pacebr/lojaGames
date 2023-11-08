@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteController.cs" />
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FuncionarioController.cs" />
     <Compile Include="games.cs">
       <SubType>Form</SubType>
@@ -77,6 +83,15 @@
     <Compile Include="toggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users.Designer.cs">
+      <DependentUpon>users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="games.resx">
       <DependentUpon>games.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="registro.resx">
       <DependentUpon>registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users.resx">
+      <DependentUpon>users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

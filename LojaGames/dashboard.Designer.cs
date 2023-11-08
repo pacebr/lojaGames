@@ -1,6 +1,6 @@
 ﻿namespace LojaGames
 {
-    partial class games
+    partial class dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelBtn_Desconectar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBtn_Dashboard = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
@@ -35,12 +36,20 @@
             this.lblUsers = new System.Windows.Forms.Label();
             this.panelBtn_Games = new System.Windows.Forms.Panel();
             this.lblGames = new System.Windows.Forms.Label();
-            this.panelBtn_Desconectar = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelBtn_Dashboard.SuspendLayout();
             this.panelBtn_Users.SuspendLayout();
             this.panelBtn_Games.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelBtn_Desconectar
+            // 
+            this.panelBtn_Desconectar.BackgroundImage = global::LojaGames.Properties.Resources.icons8_desligar_25;
+            this.panelBtn_Desconectar.Location = new System.Drawing.Point(775, 426);
+            this.panelBtn_Desconectar.Name = "panelBtn_Desconectar";
+            this.panelBtn_Desconectar.Size = new System.Drawing.Size(25, 25);
+            this.panelBtn_Desconectar.TabIndex = 7;
+            this.panelBtn_Desconectar.Click += new System.EventHandler(this.panelBtn_Desconectar_Click);
             // 
             // panel1
             // 
@@ -51,19 +60,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 451);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 6;
             // 
             // panelBtn_Dashboard
             // 
-            this.panelBtn_Dashboard.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelBtn_Dashboard.BackColor = System.Drawing.Color.DarkGreen;
             this.panelBtn_Dashboard.Controls.Add(this.lblDashboard);
             this.panelBtn_Dashboard.Location = new System.Drawing.Point(39, 253);
             this.panelBtn_Dashboard.Name = "panelBtn_Dashboard";
             this.panelBtn_Dashboard.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Dashboard.TabIndex = 2;
-            this.panelBtn_Dashboard.Click += new System.EventHandler(this.panelBtn_Dashboard_Click);
-            this.panelBtn_Dashboard.MouseEnter += new System.EventHandler(this.panelBtn_Dashboard_MouseEnter);
-            this.panelBtn_Dashboard.MouseLeave += new System.EventHandler(this.panelBtn_Dashboard_MouseLeave);
             // 
             // lblDashboard
             // 
@@ -74,9 +80,6 @@
             this.lblDashboard.Size = new System.Drawing.Size(59, 13);
             this.lblDashboard.TabIndex = 0;
             this.lblDashboard.Text = "Dashboard";
-            this.lblDashboard.Click += new System.EventHandler(this.panelBtn_Dashboard_Click);
-            this.lblDashboard.MouseEnter += new System.EventHandler(this.panelBtn_Dashboard_MouseEnter);
-            this.lblDashboard.MouseLeave += new System.EventHandler(this.panelBtn_Dashboard_MouseLeave);
             // 
             // panelBtn_Users
             // 
@@ -105,13 +108,15 @@
             // 
             // panelBtn_Games
             // 
-            this.panelBtn_Games.BackColor = System.Drawing.Color.DarkGreen;
+            this.panelBtn_Games.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panelBtn_Games.Controls.Add(this.lblGames);
             this.panelBtn_Games.Location = new System.Drawing.Point(39, 129);
             this.panelBtn_Games.Name = "panelBtn_Games";
             this.panelBtn_Games.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Games.TabIndex = 2;
             this.panelBtn_Games.Click += new System.EventHandler(this.panelBtn_Games_Click);
+            this.panelBtn_Games.MouseEnter += new System.EventHandler(this.panelBtn_Games_MouseEnter);
+            this.panelBtn_Games.MouseLeave += new System.EventHandler(this.panelBtn_Games_MouseLeave);
             // 
             // lblGames
             // 
@@ -123,17 +128,11 @@
             this.lblGames.Size = new System.Drawing.Size(40, 13);
             this.lblGames.TabIndex = 0;
             this.lblGames.Text = "Games";
+            this.lblGames.Click += new System.EventHandler(this.panelBtn_Games_Click);
+            this.lblGames.MouseEnter += new System.EventHandler(this.panelBtn_Games_MouseEnter);
+            this.lblGames.MouseLeave += new System.EventHandler(this.panelBtn_Games_MouseLeave);
             // 
-            // panelBtn_Desconectar
-            // 
-            this.panelBtn_Desconectar.BackgroundImage = global::LojaGames.Properties.Resources.icons8_desligar_25;
-            this.panelBtn_Desconectar.Location = new System.Drawing.Point(775, 426);
-            this.panelBtn_Desconectar.Name = "panelBtn_Desconectar";
-            this.panelBtn_Desconectar.Size = new System.Drawing.Size(25, 25);
-            this.panelBtn_Desconectar.TabIndex = 5;
-            this.panelBtn_Desconectar.Click += new System.EventHandler(this.panelBtn_Desconectar_Click);
-            // 
-            // games
+            // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,9 +140,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.panelBtn_Desconectar);
             this.Controls.Add(this.panel1);
-            this.Name = "games";
+            this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Games";
+            this.Text = "dashboard";
             this.panel1.ResumeLayout(false);
             this.panelBtn_Dashboard.ResumeLayout(false);
             this.panelBtn_Dashboard.PerformLayout();

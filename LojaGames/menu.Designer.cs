@@ -61,6 +61,7 @@
             this.panelBtn_Dashboard.Name = "panelBtn_Dashboard";
             this.panelBtn_Dashboard.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Dashboard.TabIndex = 2;
+            this.panelBtn_Dashboard.Click += new System.EventHandler(this.panelBtn_Dashboard_Click);
             this.panelBtn_Dashboard.MouseEnter += new System.EventHandler(this.panelBtn_Dashboard_MouseEnter);
             this.panelBtn_Dashboard.MouseLeave += new System.EventHandler(this.panelBtn_Dashboard_MouseLeave);
             // 
@@ -73,6 +74,7 @@
             this.lblDashboard.Size = new System.Drawing.Size(59, 13);
             this.lblDashboard.TabIndex = 0;
             this.lblDashboard.Text = "Dashboard";
+            this.lblDashboard.Click += new System.EventHandler(this.panelBtn_Dashboard_Click);
             this.lblDashboard.MouseEnter += new System.EventHandler(this.lblDashboard_MouseEnter);
             // 
             // panelBtn_Users
@@ -83,6 +85,7 @@
             this.panelBtn_Users.Name = "panelBtn_Users";
             this.panelBtn_Users.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Users.TabIndex = 3;
+            this.panelBtn_Users.Click += new System.EventHandler(this.panelBtn_Users_Click);
             this.panelBtn_Users.MouseEnter += new System.EventHandler(this.panelBtn_Users_MouseEnter);
             this.panelBtn_Users.MouseLeave += new System.EventHandler(this.panelBtn_Users_MouseLeave);
             // 
@@ -95,6 +98,7 @@
             this.lblUsers.Size = new System.Drawing.Size(34, 13);
             this.lblUsers.TabIndex = 2;
             this.lblUsers.Text = "Users";
+            this.lblUsers.Click += new System.EventHandler(this.panelBtn_Users_Click);
             this.lblUsers.MouseEnter += new System.EventHandler(this.lblUsers_MouseEnter);
             // 
             // panelBtn_Games

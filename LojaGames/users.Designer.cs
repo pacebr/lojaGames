@@ -1,6 +1,6 @@
 ﻿namespace LojaGames
 {
-    partial class games
+    partial class users
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 451);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 6;
             // 
             // panelBtn_Dashboard
             // 
@@ -80,15 +80,12 @@
             // 
             // panelBtn_Users
             // 
-            this.panelBtn_Users.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelBtn_Users.BackColor = System.Drawing.Color.DarkGreen;
             this.panelBtn_Users.Controls.Add(this.lblUsers);
             this.panelBtn_Users.Location = new System.Drawing.Point(39, 191);
             this.panelBtn_Users.Name = "panelBtn_Users";
             this.panelBtn_Users.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Users.TabIndex = 3;
-            this.panelBtn_Users.Click += new System.EventHandler(this.panelBtn_Users_Click);
-            this.panelBtn_Users.MouseEnter += new System.EventHandler(this.panelBtn_Users_MouseEnter);
-            this.panelBtn_Users.MouseLeave += new System.EventHandler(this.panelBtn_Users_MouseLeave);
             // 
             // lblUsers
             // 
@@ -99,19 +96,18 @@
             this.lblUsers.Size = new System.Drawing.Size(34, 13);
             this.lblUsers.TabIndex = 2;
             this.lblUsers.Text = "Users";
-            this.lblUsers.Click += new System.EventHandler(this.panelBtn_Users_Click);
-            this.lblUsers.MouseEnter += new System.EventHandler(this.panelBtn_Users_MouseEnter);
-            this.lblUsers.MouseLeave += new System.EventHandler(this.panelBtn_Users_MouseLeave);
             // 
             // panelBtn_Games
             // 
-            this.panelBtn_Games.BackColor = System.Drawing.Color.DarkGreen;
+            this.panelBtn_Games.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panelBtn_Games.Controls.Add(this.lblGames);
             this.panelBtn_Games.Location = new System.Drawing.Point(39, 129);
             this.panelBtn_Games.Name = "panelBtn_Games";
             this.panelBtn_Games.Size = new System.Drawing.Size(110, 40);
             this.panelBtn_Games.TabIndex = 2;
             this.panelBtn_Games.Click += new System.EventHandler(this.panelBtn_Games_Click);
+            this.panelBtn_Games.MouseEnter += new System.EventHandler(this.panelBtn_Games_MouseEnter);
+            this.panelBtn_Games.MouseLeave += new System.EventHandler(this.panelBtn_Games_MouseLeave);
             // 
             // lblGames
             // 
@@ -123,6 +119,9 @@
             this.lblGames.Size = new System.Drawing.Size(40, 13);
             this.lblGames.TabIndex = 0;
             this.lblGames.Text = "Games";
+            this.lblGames.Click += new System.EventHandler(this.panelBtn_Games_Click);
+            this.lblGames.MouseEnter += new System.EventHandler(this.panelBtn_Games_MouseEnter);
+            this.lblGames.MouseLeave += new System.EventHandler(this.panelBtn_Games_MouseLeave);
             // 
             // panelBtn_Desconectar
             // 
@@ -130,10 +129,10 @@
             this.panelBtn_Desconectar.Location = new System.Drawing.Point(775, 426);
             this.panelBtn_Desconectar.Name = "panelBtn_Desconectar";
             this.panelBtn_Desconectar.Size = new System.Drawing.Size(25, 25);
-            this.panelBtn_Desconectar.TabIndex = 5;
+            this.panelBtn_Desconectar.TabIndex = 7;
             this.panelBtn_Desconectar.Click += new System.EventHandler(this.panelBtn_Desconectar_Click);
             // 
-            // games
+            // users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,9 +140,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.panelBtn_Desconectar);
             this.Controls.Add(this.panel1);
-            this.Name = "games";
+            this.Name = "users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Games";
+            this.Text = "Users";
             this.panel1.ResumeLayout(false);
             this.panelBtn_Dashboard.ResumeLayout(false);
             this.panelBtn_Dashboard.PerformLayout();
