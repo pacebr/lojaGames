@@ -59,7 +59,7 @@
             this.btnSair.Location = new System.Drawing.Point(697, 419);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 30);
-            this.btnSair.TabIndex = 4;
+            this.btnSair.TabIndex = 0;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -68,10 +68,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Borned", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(296, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(351, 88);
+            this.label3.Size = new System.Drawing.Size(303, 73);
             this.label3.TabIndex = 6;
             this.label3.Text = "EXODUS";
             // 
@@ -79,10 +79,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Borned", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(444, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(260, 40);
+            this.label4.Size = new System.Drawing.Size(187, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Games Store";
             // 
@@ -104,7 +104,7 @@
             this.btnLogin.Location = new System.Drawing.Point(5, 202);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(204, 31);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -140,7 +140,7 @@
             this.txtBoxUsuario.Location = new System.Drawing.Point(5, 49);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
             this.txtBoxUsuario.Size = new System.Drawing.Size(204, 22);
-            this.txtBoxUsuario.TabIndex = 8;
+            this.txtBoxUsuario.TabIndex = 0;
             this.txtBoxUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxUsuario_KeyPress);
             // 
             // txtBoxSenha
@@ -150,7 +150,7 @@
             this.txtBoxSenha.Name = "txtBoxSenha";
             this.txtBoxSenha.PasswordChar = '*';
             this.txtBoxSenha.Size = new System.Drawing.Size(204, 22);
-            this.txtBoxSenha.TabIndex = 9;
+            this.txtBoxSenha.TabIndex = 1;
             this.txtBoxSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxSenha_KeyPress);
             // 
             // toggleButton1
@@ -164,7 +164,7 @@
             this.toggleButton1.OnBackColor = System.Drawing.Color.MediumSlateBlue;
             this.toggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
             this.toggleButton1.Size = new System.Drawing.Size(45, 22);
-            this.toggleButton1.TabIndex = 10;
+            this.toggleButton1.TabIndex = 2;
             this.toggleButton1.UseVisualStyleBackColor = true;
             this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
             // 
@@ -199,10 +199,10 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Borned", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(150, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(254, 40);
+            this.label6.Size = new System.Drawing.Size(219, 33);
             this.label6.TabIndex = 12;
             this.label6.Text = "FUNCIONARIO";
             // 
