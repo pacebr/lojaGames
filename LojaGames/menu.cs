@@ -66,5 +66,12 @@ namespace LojaGames.Resources
         {
             Close();
         }
+
+        private void panelBtn_Games_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            games formgames = new games();
+            formgames.ShowDialog();
+        }
     }
 }

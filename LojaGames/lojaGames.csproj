@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="ClienteController.cs" />
     <Compile Include="FuncionarioController.cs" />
+    <Compile Include="games.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="games.Designer.cs">
+      <DependentUpon>games.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="toggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="games.resx">
+      <DependentUpon>games.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
