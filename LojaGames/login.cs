@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace LojaGames
 {
     public partial class login : Form
@@ -22,6 +23,7 @@ namespace LojaGames
             InitializeComponent();
             txtBoxUsuario.Select();
             label6.Text = "";
+            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -37,7 +39,9 @@ namespace LojaGames
 
         private void loginForm_Load(object sender, EventArgs e)
         {
-
+            label6.Parent = pictureBox1;
+            label3.Parent = pictureBox1;
+            label4.Parent = pictureBox1;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -96,18 +100,25 @@ namespace LojaGames
             {
                 if (FuncionarioController.VerificarGerencia(usuario))
                 {
+                    Refresh();
+                    Visible = false;
                     menu formmenu = new menu();
                     formmenu.ShowDialog();
+                    Visible = true;
                 }
                 if (!FuncionarioController.VerificarGerencia(usuario))
                 {
                     MessageBox.Show("funcionario buxa");
                 }
+                txtBoxUsuario.Clear();
+                txtBoxSenha.Clear();
+                
             }
             if (!isFuncionario)
             {
                 MessageBox.Show("É CLIENTE");
             }
+            toggleButton1.Checked = false;
         }
         private void IsFuncionario()
         {

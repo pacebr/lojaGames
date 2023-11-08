@@ -40,11 +40,14 @@
             this.lblRegistrar = new System.Windows.Forms.Label();
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.txtBoxSenha = new System.Windows.Forms.TextBox();
-            this.toggleButton1 = new LojaGames.toggleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toggleButton1 = new LojaGames.toggleButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -153,21 +156,6 @@
             this.txtBoxSenha.TabIndex = 1;
             this.txtBoxSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxSenha_KeyPress);
             // 
-            // toggleButton1
-            // 
-            this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(164, 170);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleButton1.OnBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.toggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleButton1.Size = new System.Drawing.Size(45, 22);
-            this.toggleButton1.TabIndex = 2;
-            this.toggleButton1.UseVisualStyleBackColor = true;
-            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
@@ -200,24 +188,48 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(150, 37);
+            this.label6.Location = new System.Drawing.Point(164, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(219, 33);
             this.label6.TabIndex = 12;
             this.label6.Text = "FUNCIONARIO";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LojaGames.Properties.Resources.Minimalistic_Mountain_Sunset_562023__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(785, 461);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toggleButton1
+            // 
+            this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Location = new System.Drawing.Point(164, 170);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleButton1.OnBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.toggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleButton1.Size = new System.Drawing.Size(45, 22);
+            this.toggleButton1.TabIndex = 2;
+            this.toggleButton1.UseVisualStyleBackColor = true;
+            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::LojaGames.Properties.Resources.Minimalistic_Mountain_Sunset_562023__1_;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -225,6 +237,7 @@
             this.Load += new System.EventHandler(this.loginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +258,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -61,5 +61,10 @@ namespace LojaGames.Resources
         {
             panelBtn_Dashboard.BackColor = Color.Green;
         }
+
+        private void panelBtn_Desconectar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

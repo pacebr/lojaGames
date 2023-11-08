@@ -73,6 +73,26 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_desligar_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-desligar-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_desligar_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-desligar-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap illustration_mountains_minimalism_artwork_silhouette_symmetry_242619_wallhere_com {
             get {
                 object obj = ResourceManager.GetObject("illustration-mountains-minimalism-artwork-silhouette-symmetry-242619-wallhere.com" +

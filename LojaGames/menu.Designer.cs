@@ -35,6 +35,7 @@
             this.lblUsers = new System.Windows.Forms.Label();
             this.panelBtn_Games = new System.Windows.Forms.Panel();
             this.lblGames = new System.Windows.Forms.Label();
+            this.panelBtn_Desconectar = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelBtn_Dashboard.SuspendLayout();
             this.panelBtn_Users.SuspendLayout();
@@ -119,12 +120,24 @@
             this.lblGames.Text = "Games";
             this.lblGames.MouseEnter += new System.EventHandler(this.lblGames_MouseEnter);
             // 
+            // panelBtn_Desconectar
+            // 
+            this.panelBtn_Desconectar.BackgroundImage = global::LojaGames.Properties.Resources.icons8_desligar_25;
+            this.panelBtn_Desconectar.Location = new System.Drawing.Point(775, 426);
+            this.panelBtn_Desconectar.Name = "panelBtn_Desconectar";
+            this.panelBtn_Desconectar.Size = new System.Drawing.Size(25, 25);
+            this.panelBtn_Desconectar.TabIndex = 3;
+            this.panelBtn_Desconectar.Click += new System.EventHandler(this.panelBtn_Desconectar_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.panelBtn_Desconectar);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
@@ -148,5 +161,6 @@
         private System.Windows.Forms.Label lblUsers;
         private System.Windows.Forms.Panel panelBtn_Games;
         private System.Windows.Forms.Label lblGames;
+        private System.Windows.Forms.Panel panelBtn_Desconectar;
     }
 }

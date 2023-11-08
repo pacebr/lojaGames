@@ -106,5 +106,11 @@
   <ItemGroup>
     <None Include="Resources\Minimalistic Mountain Sunset 562023 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-desligar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-desligar-25.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

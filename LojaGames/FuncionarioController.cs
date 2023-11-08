@@ -14,11 +14,24 @@ namespace LojaGames
         private static SqlConnection conexao;
         private static SqlConnection conexaoBanco()
         {
-            conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb");
-            conexao.Open();
+            var conexaoCasa = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb; Connection Timeout = 1;");
+            var conexaoCurso = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");
+
+            try
+            {
+                conexao = conexaoCasa;
+
+                conexao.Open();
+            }
+            catch (Exception e)
+            {
+                conexao = conexaoCurso;
+                conexao.Open();
+            }
+
             return conexao;
         }
-        //Funções Gerais
+//Funções Gerais
         public static DataTable dql(string sql) // Select
         {
             SqlDataAdapter da = null;
