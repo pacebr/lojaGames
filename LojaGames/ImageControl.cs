@@ -1,24 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
-using System.Drawing;
 
 namespace LojaGames
 {
     public static class ImageControl
     {
         private static SqlConnection conexao;
+
         private static SqlConnection conexaoBanco()
         {
-            var conexaoCasa = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb; Connection Timeout = 1;");
-            var conexaoCurso = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");
+            var conexaoCasa = new SqlConnection(
+                @"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb; Connection Timeout = 1;"
+            );
+            var conexaoCurso = new SqlConnection(
+                @"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb"
+            );
 
             try
             {
@@ -34,6 +40,7 @@ namespace LojaGames
 
             return conexao;
         }
+
         //Funções Gerais
         public static DataTable dql(string sql) // Select
         {
@@ -54,6 +61,7 @@ namespace LojaGames
                 throw ex;
             }
         }
+
         public static void dml(string q, string msgOK = null, string msgERRO = null) // Insert, Delete e Update
         {
             SqlDataAdapter da = null;
@@ -79,14 +87,31 @@ namespace LojaGames
                 }
                 throw ex;
             }
-
         }
+
         public static Image Imgcontrol()
         {
-            string imagePath = @"C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\Resources\5260498.png";
+            string imagePath =
+                @"C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\Resources\5260498.png";
             Image image = Image.FromFile(imagePath);
 
             return image;
+        }
+
+        public static Image GetImage()
+        {
+            string sql = "SELECT (imagem) from jogos.dados";
+            using (SqlConnection conn = conexaoBanco())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                var arrByte = cmd.ExecuteScalar() as byte[];
+
+                using (var ms = new MemoryStream(arrByte))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+            
         }
     }
 }

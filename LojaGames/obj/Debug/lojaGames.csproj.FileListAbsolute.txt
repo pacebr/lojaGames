@@ -7,7 +7,6 @@ C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.Gener
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\lojaGames.csproj.CoreCompileInputs.cache
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.exe
 C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.pdb
-C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.login.resources
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\bin\Debug\LojaGames.exe.config
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\bin\Debug\LojaGames.exe
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\bin\Debug\LojaGames.pdb
@@ -151,3 +150,4 @@ C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\bin\Debug\Bunifu.UI.
 C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\LojaGames.exe.licenses
 C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\lojaGames.csproj.CopyComplete
 C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\LojaGames.menu.resources
+C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.menu.resources

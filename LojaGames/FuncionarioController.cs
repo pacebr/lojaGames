@@ -6,103 +6,43 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using senac_biblioteca.Controllers;
 
 namespace LojaGames
 {
     internal class FuncionarioController
     {
-        private static SqlConnection conexao;
-        private static SqlConnection conexaoBanco()
-        {
-            var conexaoCasa = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb; Connection Timeout = 1;");
-            var conexaoCurso = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");
 
-            try
-            {
-                conexao = conexaoCasa;
-
-                conexao.Open();
-            }
-            catch (Exception)
-            {
-                conexao = conexaoCurso;
-                conexao.Open();
-            }
-
-            return conexao;
-        }
-//Funções Gerais
-        public static DataTable dql(string sql) // Select
-        {
-            SqlDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                var conn = conexaoBanco();
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = sql;
-                da = new SqlDataAdapter(cmd.CommandText, conn);
-                da.Fill(dt);
-                conn.Close();
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void dml(string q, string msgOK = null, string msgERRO = null) // Insert, Delete e Update
-        {
-            SqlDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                var conn = conexaoBanco();
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = q;
-                da = new SqlDataAdapter(cmd.CommandText, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                if (msgOK != null)
-                {
-                    MessageBox.Show(msgOK);
-                }
-            }
-            catch (Exception ex)
-            {
-                if (msgERRO != null)
-                {
-                    MessageBox.Show(msgERRO + "\n" + ex.Message);
-                }
-                throw ex;
-            }
-
-        }
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
-            int count;
-            string sql = "SELECT COUNT(*) FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
-            using (SqlConnection conn = conexaoBanco())
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                cmd.Parameters.AddWithValue("@usuario", usuario);
-                cmd.Parameters.AddWithValue("@senha", senha);
+            Conexao.Conectar();
+            string sql = "SELECT * FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
-                count = (int)cmd.ExecuteScalar();
-                FecharConexao();
-                return count > 0;
+            cmd.Parameters.AddWithValue("usuario", usuario);
+            cmd.Parameters.AddWithValue("senha", senha);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                Conexao.Fechar();
+                return true;
             }
+            Conexao.Fechar();
+            return false;
         }
-        public static bool VerificarGerencia(string usuario) // verificar cargo
+         public static bool VerificarGerencia(string usuario) // verificar cargo
         {
+            Conexao.Conectar();
+
             string cargo = "";
             bool isGerente = false;
 
             string sql = "SELECT cargo FROM funcionarios.dados WHERE usuario = @usuario";
-            using (SqlConnection conn = conexaoBanco())
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
+
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -110,35 +50,29 @@ namespace LojaGames
                         cargo = reader["cargo"] as string;
                     }
                 }
-            }
             if (cargo == "Gerente")
                 isGerente = true;
 
+            Conexao.Fechar();
+
             return isGerente;
         }
-        public static void FecharConexao()
-        {
-            if (conexao != null && conexao.State == ConnectionState.Open)
-            {
-                conexao.Close();
-            }
-        }
+
         public static void AddCliente(byte[] foto)
         {
-            
 
+            Conexao.Conectar();
             string sql = "INSERT INTO jogos.dados (imagem) " +
                 "VALUES (@imagem)";
-            var conn = conexaoBanco();
-            var cmd = conn.CreateCommand();
-            cmd = new SqlCommand(sql, conn);
+
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
 
             cmd.Parameters.AddWithValue("@imagem", foto);
             
             cmd.ExecuteNonQuery();
 
-            conexao.Close();
+            Conexao.Fechar();
         }
     }
 }

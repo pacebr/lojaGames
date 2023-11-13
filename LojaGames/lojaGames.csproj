@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteController.cs" />
+    <Compile Include="Conexão.cs" />
     <Compile Include="FuncionarioController.cs" />
     <Compile Include="ImageControl.cs" />
     <Compile Include="menu.cs">

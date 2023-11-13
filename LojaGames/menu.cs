@@ -20,10 +20,6 @@ namespace LojaGames
         {
             InitializeComponent();
         }
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
@@ -50,27 +46,6 @@ namespace LojaGames
             bunifuPages1.SetPage(1);
         }
 
-        private void bunifuButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            bunifuButton1.LeftIcon.Image = ImageControl.Imgcontrol();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -90,6 +65,11 @@ namespace LojaGames
   
       
             FuncionarioController.AddCliente(imagem);
+        }
+        private void menu_Activated(object sender, EventArgs e)
+        {
+            bunifuButton1.LeftIcon.Image = ImageControl.GetImage();
+            bunifuButton1.Refresh();
         }
     }
 }
