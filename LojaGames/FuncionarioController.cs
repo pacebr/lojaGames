@@ -123,5 +123,22 @@ namespace LojaGames
                 conexao.Close();
             }
         }
+        public static void AddCliente(byte[] foto)
+        {
+            
+
+            string sql = "INSERT INTO jogos.dados (imagem) " +
+                "VALUES (@imagem)";
+            var conn = conexaoBanco();
+            var cmd = conn.CreateCommand();
+            cmd = new SqlCommand(sql, conn);
+
+
+            cmd.Parameters.AddWithValue("@imagem", foto);
+            
+            cmd.ExecuteNonQuery();
+
+            conexao.Close();
+        }
     }
 }
