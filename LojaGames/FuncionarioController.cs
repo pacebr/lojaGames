@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using senac_biblioteca.Controllers;
+using System.Drawing;
 
 namespace LojaGames
 {
@@ -58,21 +59,22 @@ namespace LojaGames
             return isGerente;
         }
 
-        public static void AddCliente(byte[] foto)
+        public static void Enviar(byte[] foto, string valor)
         {
-
             Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem) " +
-                "VALUES (@imagem)";
+            string sql = "INSERT INTO jogos.dados (imagem, nome) " +
+                "VALUES (@imagem, @valor)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
 
             cmd.Parameters.AddWithValue("@imagem", foto);
+            cmd.Parameters.AddWithValue(@"valor", valor);
             
             cmd.ExecuteNonQuery();
 
             Conexao.Fechar();
         }
+      
     }
 }

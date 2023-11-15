@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using System.IO;
+using senac_biblioteca.Controllers;
+using System.Data.SqlClient;
 
 namespace LojaGames
 {
@@ -48,28 +50,34 @@ namespace LojaGames
 
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void EscolherImagem_Click(object sender, EventArgs e)
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg|*.jpg;*.png;*.jpeg";
+            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
 
                 string caminhoArquivo = openFileDialog.FileName;
                 imagem = File.ReadAllBytes(caminhoArquivo);
 
-                pictureBox2.Image = Image.FromFile(caminhoArquivo);
+                pcbEscolher.Image = Image.FromFile(caminhoArquivo);
             }
         }
 
-        private void bunifuButton7_Click(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
-  
-      
-            FuncionarioController.AddCliente(imagem);
+            string texto = txtNomeJogo.Text;
+            FuncionarioController.Enviar(imagem, texto);
         }
-        private void menu_Activated(object sender, EventArgs e)
+
+        private void tabPage1_Enter(object sender, EventArgs e)
         {
-            bunifuButton1.LeftIcon.Image = ImageControl.GetImage();
+            bunifuButton1.LeftIcon.Image = ButtonController.PegarImagem();
             bunifuButton1.Refresh();
+            bunifuButton1.Text = ButtonController.PegarTexto();
         }
     }
 }

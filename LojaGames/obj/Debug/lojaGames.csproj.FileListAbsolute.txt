@@ -151,3 +151,4 @@ C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\LojaGames.
 C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\lojaGames.csproj.CopyComplete
 C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\obj\Debug\LojaGames.menu.resources
 C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.menu.resources
+C:\Users\vgdsn\source\repos\LojaGames\LojaGames\obj\Debug\LojaGames.login.resources
