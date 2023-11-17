@@ -16,20 +16,10 @@ namespace LojaGames
 {
     public static class ButtonController
     {
-
-        public static Image Imgcontrol()
-        {
-            string imagePath =
-                @"C:\Users\victor.gsnogueira\source\repos\lojaGames\LojaGames\Resources\5260498.png";
-            Image image = Image.FromFile(imagePath);
-
-            return image;
-        }
-
-        public static Image PegarImagem()
+        public static Image PegarImagem(int id)
         {
             Conexao.Conectar();
-            string sql = "SELECT (imagem) from jogos.dados";
+            string sql = "select imagem from jogos.dados where id = " + id;
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
             {
                 var arrByte = cmd.ExecuteScalar() as byte[];
@@ -39,18 +29,31 @@ namespace LojaGames
                     return Image.FromStream(ms);
                 }
             }
-            
+
         }
-        public static string PegarTexto()
+        public static string PegarTexto(int id)
         {
             Conexao.Conectar();
-            string sql = "select nome from jogos.dados where id = 1";
+            string sql = "select nome from jogos.dados where id = " + id;
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-            
+
             string buttonText = cmd.ExecuteScalar().ToString();
             Conexao.Fechar();
             return buttonText;
         }
-      
+        public static Image PegarImagemJogo(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select imagem from carousel.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            {
+                var arrByte = cmd.ExecuteScalar() as byte[];
+
+                using (var ms = new MemoryStream(arrByte))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+        }
     }
 }
