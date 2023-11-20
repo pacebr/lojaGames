@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using senac_biblioteca.Controllers;
 using System.Drawing;
 
 namespace LojaGames
 {
-    internal class FuncionarioController
+    internal class ControleFuncionario
     {
 
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
@@ -57,23 +56,6 @@ namespace LojaGames
             Conexao.Fechar();
 
             return isGerente;
-        }
-
-        public static void Enviar(byte[] foto, string valor)
-        {
-            Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, nome) " +
-                "VALUES (@imagem, @valor)";
-
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-
-
-            cmd.Parameters.AddWithValue("@imagem", foto);
-            cmd.Parameters.AddWithValue(@"valor", valor);
-            
-            cmd.ExecuteNonQuery();
-
-            Conexao.Fechar();
         }
       
     }

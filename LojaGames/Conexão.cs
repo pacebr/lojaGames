@@ -5,9 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using senac_biblioteca.Controllers;
 
-namespace senac_biblioteca.Controllers
+namespace LojaGames
 {
     public static class Conexao
     {

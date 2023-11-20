@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    internal class ClienteController
+    internal class ControleCliente
     {
         private static SqlConnection conexao;
         private static SqlConnection conexaoBanco()

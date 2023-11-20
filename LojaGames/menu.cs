@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
-using System.IO;
-using senac_biblioteca.Controllers;
-using System.Data.SqlClient;
 using LojaGames.Properties;
 
 namespace LojaGames
 {
-
     public partial class menu : Form
     {
         byte[] imagem;
+        byte[] icone;
+
         public menu()
         {
             InitializeComponent();
+            bunifuPanel3.Parent = pcbJogoCarousel1;
         }
-
         private void menu_Load(object sender, EventArgs e)
         {
             btnCasa.Image = Resources.Home_Page_Active;
@@ -102,37 +102,47 @@ namespace LojaGames
             openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-
                 string caminhoArquivo = openFileDialog.FileName;
                 imagem = File.ReadAllBytes(caminhoArquivo);
 
-                pcbEscolher.Image = Image.FromFile(caminhoArquivo);
+                pcbImagemJogo.Image = Image.FromFile(caminhoArquivo);
             }
         }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
+        private void btnEnviarjogo_Click(object sender, EventArgs e)
         {
-            string texto = txtNomeJogo.Text;
-            FuncionarioController.Enviar(imagem, texto);
+            string nome = txtNomeJogo.Text;
+            string descricao = txtDescricao.Text;
+            DadosJogo.EnviarDadosJogo(imagem, nome, descricao);
+        }
+        private void btnEnviarCarrousel_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeJogoCarousel.Text;
+            string descricao = txtCarousel.Text;
+            DadosJogo.EnviarDadosCarousel(icone, imagem, nome, descricao);
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            btnJogo1.LeftIcon.Image = ButtonController.PegarImagem(1);
+            btnJogo1.LeftIcon.Image = DadosJogo.PegarImagemPequena(1);
+            pcbJogoCarousel1.Image = DadosJogo.PegarImagemCarrousel(1);
             btnJogo1.Refresh();
-            btnJogo1.Text = ButtonController.PegarTexto(1);
-            btnJogo2.LeftIcon.Image = ButtonController.PegarImagem(2);
+            btnJogo1.Text = DadosJogo.PegarTexto(1);
+            btnJogo2.LeftIcon.Image = DadosJogo.PegarImagemPequena(2);
+            pcbJogoCarousel2.Image = DadosJogo.PegarImagemCarrousel(2);
             btnJogo2.Refresh();
-            btnJogo2.Text = ButtonController.PegarTexto(2);
-            btnJogo3.LeftIcon.Image = ButtonController.PegarImagem(3);
+            btnJogo2.Text = DadosJogo.PegarTexto(2);
+            btnJogo3.LeftIcon.Image = DadosJogo.PegarImagemPequena(3);
+            pcbJogoCarousel3.Image = DadosJogo.PegarImagemCarrousel(3);
             btnJogo3.Refresh();
-            btnJogo3.Text = ButtonController.PegarTexto(3);
-            btnJogo4.LeftIcon.Image = ButtonController.PegarImagem(2);
+            btnJogo3.Text = DadosJogo.PegarTexto(3);
+            btnJogo4.LeftIcon.Image = DadosJogo.PegarImagemPequena(4);
+            pcbJogoCarousel4.Image = DadosJogo.PegarImagemCarrousel(4);
             btnJogo4.Refresh();
-            btnJogo4.Text = ButtonController.PegarTexto(2);
-            btnJogo5.LeftIcon.Image = ButtonController.PegarImagem(1);
+            btnJogo4.Text = DadosJogo.PegarTexto(4);
+            btnJogo5.LeftIcon.Image = DadosJogo.PegarImagemPequena(5);
+            pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
-            btnJogo5.Text = ButtonController.PegarTexto(1);
+            btnJogo5.Text = DadosJogo.PegarTexto(5);
         }
 
         private void btnJogo1_Click(object sender, EventArgs e)
@@ -162,7 +172,7 @@ namespace LojaGames
 
         private void jogo1_Enter(object sender, EventArgs e)
         {
-            jogo1.BackgroundImage = ButtonController.PegarImagemJogo(1);
+            jogo1.BackgroundImage = DadosJogo.PegarImagemCarrousel(1);
             jogo1.Refresh();
         }
 
@@ -174,6 +184,41 @@ namespace LojaGames
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             pgAdd.SetPage(2);
+        }
+
+        private void tabPage2_Enter(object sender, EventArgs e)
+        {
+            pbJogo1.Image = DadosJogo.PegarImagemGrande(1);
+        }
+
+        private void btnIcone_Click(object sender, EventArgs e)
+        {
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string caminhoArquivo = openFileDialog.FileName;
+                    icone = File.ReadAllBytes(caminhoArquivo);
+
+                    pcbIcone.Image = Image.FromFile(caminhoArquivo);
+                }
+            }
+        }
+
+        private void btnCarrousel_Click(object sender, EventArgs e)
+        {
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string caminhoArquivo = openFileDialog.FileName;
+                    imagem = File.ReadAllBytes(caminhoArquivo);
+
+                    pcbCarousel.Image = Image.FromFile(caminhoArquivo);
+                }
+            }
         }
     }
 }

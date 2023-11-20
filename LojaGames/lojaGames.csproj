@@ -145,10 +145,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteController.cs" />
+    <Compile Include="ControleCliente.cs" />
     <Compile Include="Conexão.cs" />
-    <Compile Include="FuncionarioController.cs" />
-    <Compile Include="ButtonController.cs" />
+    <Compile Include="ControleFuncionario.cs" />
+    <Compile Include="DadosJogo.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +247,7 @@
     <None Include="Resources\Wrench Active.png" />
     <None Include="Resources\Cash Active.png" />
     <None Include="Resources\Add New Active.png" />
+    <None Include="Resources\Error.png" />
     <Content Include="Resources\Game Controller Active.png" />
     <None Include="Resources\Home Page Active.png" />
     <None Include="Resources\Home Page.png" />

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using senac_biblioteca.Controllers;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LojaGames
@@ -24,7 +23,7 @@ namespace LojaGames
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
 
-            bool loginSucesso = FuncionarioController.VerificarCredenciais(usuario, senha);
+            bool loginSucesso = ControleFuncionario.VerificarCredenciais(usuario, senha);
 
             if (loginSucesso)
             {
