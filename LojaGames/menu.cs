@@ -22,7 +22,11 @@ namespace LojaGames
         public menu()
         {
             InitializeComponent();
-            bunifuPanel3.Parent = pcbJogoCarousel1;
+            pcbJogoCarousel1.Controls.Add(panelJogo1);
+            pcbJogoCarousel2.Controls.Add(panelJogo2);
+            pcbJogoCarousel3.Controls.Add(panelJogo3);
+            pcbJogoCarousel4.Controls.Add(panelJogo4);
+            pcbJogoCarousel5.Controls.Add(panelJogo5);
         }
         private void menu_Load(object sender, EventArgs e)
         {

@@ -243,11 +243,15 @@
     <None Include="Resources\Control Panel Active.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\OIG.jpeg" />
+    <None Include="Resources\Logo sem fundo.png" />
     <None Include="Resources\Blaidd_Elden_Ring.jpg" />
     <None Include="Resources\Wrench Active.png" />
     <None Include="Resources\Cash Active.png" />
     <None Include="Resources\Add New Active.png" />
     <None Include="Resources\Error.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\AddCinza.png" />
     <Content Include="Resources\Game Controller Active.png" />
     <None Include="Resources\Home Page Active.png" />
     <None Include="Resources\Home Page.png" />

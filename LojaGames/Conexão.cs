@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LojaGames
@@ -15,7 +16,7 @@ namespace LojaGames
         private static SqlConnection conexaoBanco()
         {
             var conexaoCasa = new SqlConnection(
-                @"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb; Connection Timeout = 1;"
+                @"Data Source=exodusgamestore.database.windows.net; User ID=vgdsno; Password=Vgdsn@05031906; initial catalog=exodusDb;"  //Connection Timeout = 1;
             );
             var conexaoCurso = new SqlConnection(
                 @"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb"

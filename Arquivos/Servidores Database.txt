@@ -1,0 +1,12 @@
+Servidor:
+exodusgamestore.database.windows.net
+
+Login: vgdsno
+Senha: Vgdsn@05031906
+
+
+
+
+Servidor Local:
+Login: localhost\SQLEXPRESS
+Senha: Autenticação do Windows

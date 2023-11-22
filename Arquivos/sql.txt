@@ -1,0 +1,81 @@
+use master
+go
+drop database if exists exodusDb
+go
+create database exodusDb
+go
+use exodusDb
+go
+create schema funcionarios authorization dbo 
+go
+create table funcionarios.dados
+(
+id int primary key identity(1,1) not null,
+nome varchar(50) not null,
+cargo varchar(50) not null,
+usuario varchar(12) not null,
+senha varchar(12) not null
+)
+go
+create schema clientes authorization dbo 
+go
+create table clientes.dados
+(
+id int primary key identity (1,1)not null,
+nome varchar(50) not null,
+usuario varchar(12) not null,
+senha varchar(12) not null
+)
+go
+create schema icone authorization dbo
+go
+create table icone.dados
+(
+id int primary key identity(1,1),
+nome varchar(100) not null,
+imagem varbinary(max) not null
+)
+go
+create schema carousel authorization dbo
+go
+create table carousel.dados
+(
+id int primary key identity(1,1) not null,
+icone varbinary(max) not null,
+imagem varbinary(max) not null,
+Jogo varchar(100) not null,
+descricao varchar(255) not null
+)
+go
+create schema jogos authorization dbo
+go
+create table jogos.dados
+(
+id int primary key identity(1,1),
+imagem varbinary(max) not null,
+nome varchar(100) not null,
+descricao varchar(255) not null
+)
+insert into funcionarios.dados 
+values ('victor','Gerente','lala','0503')
+go
+insert into clientes.dados 
+values ('victor','lala','0503')
+go
+select * from funcionarios.dados
+select * from clientes.dados
+select * from icone.dados
+select * from carousel.dados
+select * from jogos.dados
+
+
+--delete from jogos.dados
+--where id = 2
+
+SELECT (imagem) from icone.dados order by newid()
+
+
+SELECT nome FROM icone.dados ORDER BY id OFFSET 0 ROWS
+
+
+select imagem from icone.dados where id = 1

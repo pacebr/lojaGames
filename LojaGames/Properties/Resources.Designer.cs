@@ -73,6 +73,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_New {
             get {
                 object obj = ResourceManager.GetObject("Add New", resourceCulture);
@@ -86,6 +96,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Add_New_Active {
             get {
                 object obj = ResourceManager.GetObject("Add New Active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AddCinza {
+            get {
+                object obj = ResourceManager.GetObject("AddCinza", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +296,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_sem_fundo {
+            get {
+                object obj = ResourceManager.GetObject("Logo sem fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimalistic_Mountain_Sunset_562023__1_ {
             get {
                 object obj = ResourceManager.GetObject("Minimalistic Mountain Sunset 562023 (1)", resourceCulture);
@@ -329,6 +359,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Notification1 {
             get {
                 object obj = ResourceManager.GetObject("Notification1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIG {
+            get {
+                object obj = ResourceManager.GetObject("OIG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
