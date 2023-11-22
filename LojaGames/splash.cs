@@ -26,6 +26,7 @@ namespace LojaGames
             {
                 timer1.Enabled = false;
                 new login().Show();
+                this.Hide();
             }
         }
     }
