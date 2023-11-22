@@ -11,6 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using LojaGames.Properties;
 using System.IO;
 using System.Threading;
+using Utilities.BunifuTextBox.Transitions;
 
 namespace LojaGames
 {
@@ -100,6 +101,18 @@ namespace LojaGames
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            bunifuPages2.Transition.SlideCoeff = new PointF(1, 0);
+            bunifuPages2.SetPage(1);
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            bunifuPages2.Transition.SlideCoeff = new PointF(-1, 0);
+            bunifuPages2.SetPage(0);
         }
     }
 }
