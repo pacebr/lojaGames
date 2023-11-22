@@ -224,5 +224,23 @@ namespace LojaGames
                 }
             }
         }
+
+        private void btnSair_MouseEnter(object sender, EventArgs e)
+        {
+            btnSair.BackColor = Color.FromArgb(152, 145, 202);
+            btnSair.Image = Resources.Exit;
+        }
+
+        private void btnSair_MouseLeave(object sender, EventArgs e)
+        {
+            btnSair.BackColor = Color.FromArgb (147, 140, 197);
+            btnSair.Image = Resources.ExitCinza;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+            new login().Show();
+        }
     }
 }
