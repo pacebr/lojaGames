@@ -32,7 +32,7 @@ namespace LojaGames
             Conexao.Fechar();
             return false;
         }
-         public static bool VerificarGerencia(string usuario) // verificar cargo
+        public static bool VerificarGerencia(string usuario) // verificar cargo
         {
             Conexao.Conectar();
 
@@ -41,15 +41,15 @@ namespace LojaGames
 
             string sql = "SELECT cargo FROM funcionarios.dados WHERE usuario = @usuario";
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-                cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                using (SqlDataReader reader = cmd.ExecuteReader())
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        cargo = reader["cargo"] as string;
-                    }
+                    cargo = reader["cargo"] as string;
                 }
+            }
             if (cargo == "Gerente")
                 isGerente = true;
 
@@ -57,6 +57,6 @@ namespace LojaGames
 
             return isGerente;
         }
-      
+
     }
 }

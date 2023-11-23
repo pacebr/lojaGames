@@ -20,13 +20,38 @@ namespace LojaGames
         public login()
         {
             InitializeComponent();
-            txtUsuario.Select();
+            txtUsuarioCliente.Select();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void btnEntrarCliente_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string senha = txtSenha.Text;
+            string usuario = txtUsuarioCliente.Text;
+            string senha = txtSenhaCliente.Text;
+
+            bool loginSucesso = ControleCliente.VerificarCredenciais(usuario, senha);
+
+            if (loginSucesso)
+            {
+                new menu().Show();
+                this.Close();
+                Conexao.Fechar();
+            }
+            else
+            {
+                Conexao.Fechar();
+                bunifuSnackbar1.Show(
+                   this,
+                   "Usuário ou senha incorretos.",
+                   Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
+            txtUsuarioCliente.Clear();
+            txtSenhaCliente.Clear();
+        }
+
+        private void btnEntrarFunc_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuarioFunc.Text;
+            string senha = txtSenhaFunc.Text;
 
             bool loginSucesso = ControleFuncionario.VerificarCredenciais(usuario, senha);
 
@@ -44,18 +69,19 @@ namespace LojaGames
                    "Usuário ou senha incorretos.",
                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
-            txtUsuario.Clear();
-            txtSenha.Clear();
+            txtUsuarioCliente.Clear();
+            txtSenhaCliente.Clear();
         }
+
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtSenha.Text.Length > 0)
+            if (txtSenhaCliente.Text.Length > 0)
             {
-                txtSenha.PasswordChar = '*';
+                txtSenhaCliente.PasswordChar = '*';
             }
             else
             {
-                txtSenha.PasswordChar = '\0';
+                txtSenhaCliente.PasswordChar = '\0';
             }
         }
 
@@ -107,12 +133,16 @@ namespace LojaGames
         {
             bunifuPages2.Transition.SlideCoeff = new PointF(1, 0);
             bunifuPages2.SetPage(1);
+            login form = this;
+            form.AcceptButton = btnEntrarFunc;
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
             bunifuPages2.Transition.SlideCoeff = new PointF(-1, 0);
             bunifuPages2.SetPage(0);
+            login form = this;
+            form.AcceptButton = btnEntrarCliente;
         }
     }
 }

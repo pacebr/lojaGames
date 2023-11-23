@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Arquivos",
-    "\\Arquivos\\icons",
     "\\LojaGames"
   ],
-  "SelectedNode": "\\LojaGames.sln",
+  "SelectedNode": "\\LojaGames\\login.cs",
   "PreviewInSolutionExplorer": false
 }

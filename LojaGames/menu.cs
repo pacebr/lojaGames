@@ -28,6 +28,14 @@ namespace LojaGames
             pcbJogoCarousel4.Controls.Add(panelJogo4);
             pcbJogoCarousel5.Controls.Add(panelJogo5);
         }
+
+        private void CycleButtons()
+        {
+            int currentButtonIndex = pgJogos.SelectedIndex;
+            int nextButtonIndex = (currentButtonIndex + 1) % 5;
+            pgJogos.SetPage(nextButtonIndex);
+        }
+
         private void menu_Load(object sender, EventArgs e)
         {
             btnCasa.Image = Resources.Home_Page_Active;
@@ -147,6 +155,8 @@ namespace LojaGames
             pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
             btnJogo5.Text = DadosJogo.PegarTexto(5);
+            timer1.Start();
+            CycleButtons();
         }
 
         private void btnJogo1_Click(object sender, EventArgs e)
@@ -233,7 +243,7 @@ namespace LojaGames
 
         private void btnSair_MouseLeave(object sender, EventArgs e)
         {
-            btnSair.BackColor = Color.FromArgb (147, 140, 197);
+            btnSair.BackColor = Color.FromArgb(147, 140, 197);
             btnSair.Image = Resources.ExitCinza;
         }
 
@@ -241,6 +251,11 @@ namespace LojaGames
         {
             Close();
             new login().Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            CycleButtons();
         }
     }
 }
