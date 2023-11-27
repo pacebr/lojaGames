@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sha256.cs" />
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +253,8 @@
     <None Include="Resources\Control Panel Active.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-homtem-turista-96 %281%29.png" />
+    <None Include="Resources\icons8-homtem-turista-96.png" />
     <None Include="Resources\Logo sem fundo1.png" />
     <None Include="Resources\Line.png" />
     <None Include="Resources\LineCinza.png" />
@@ -269,6 +272,8 @@
     <None Include="Resources\AddCinza.png" />
     <None Include="Resources\ExitCinza.png" />
     <None Include="Resources\Exit.png" />
+    <None Include="Resources\Add Imagem.png" />
+    <None Include="Resources\Add Imagem Cinza.png" />
     <Content Include="Resources\Game Controller Active.png" />
     <None Include="Resources\Home Page Active.png" />
     <None Include="Resources\Home Page.png" />

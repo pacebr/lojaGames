@@ -44,8 +44,8 @@
             // 
             this.bunifuColorTransition1.AutoTransition = true;
             this.bunifuColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
             this.bunifuColorTransition1.EndColor = System.Drawing.Color.White;
             this.bunifuColorTransition1.Interval = 10;
             this.bunifuColorTransition1.ProgessValue = 0;
@@ -82,9 +82,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LojaGames.Properties.Resources.Logo_sem_fundo1;
-            this.pictureBox1.Location = new System.Drawing.Point(212, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(212, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 209);
+            this.pictureBox1.Size = new System.Drawing.Size(265, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(32)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(689, 379);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);

@@ -387,3 +387,5 @@ C:\Users\vgdsn\Source\Repos\pacebr\lojaaGames\LojaGames\obj\Debug\lojaGames.cspr
 C:\Users\vgdsn\Source\Repos\pacebr\lojaaGames\LojaGames\obj\Debug\lojaGames.csproj.CopyComplete
 C:\Users\vgdsn\Source\Repos\pacebr\lojaaGames\LojaGames\obj\Debug\LojaGames.exe
 C:\Users\vgdsn\Source\Repos\pacebr\lojaaGames\LojaGames\obj\Debug\LojaGames.pdb
+C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.login.resources
+C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.splash.resources

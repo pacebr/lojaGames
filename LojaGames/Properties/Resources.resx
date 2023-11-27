@@ -211,6 +211,12 @@
   <data name="Control Panel Active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Control Panel Active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-homtem-turista-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-homtem-turista-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mountains-minimalism-1979973-wallhere.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountains-minimalism-1979973-wallhere.com (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -225,6 +231,9 @@
   </data>
   <data name="Wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-homtem-turista-96 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-homtem-turista-96 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Notification1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notification1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,10 +253,13 @@
   <data name="Super Mario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Super Mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mountains-minimalism-1979973-wallhere.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mountains-minimalism-1979973-wallhere.com (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Logo sem fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo sem fundo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Imagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Imagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Imagem Cinza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Imagem Cinza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

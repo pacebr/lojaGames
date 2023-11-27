@@ -83,6 +83,26 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Imagem {
+            get {
+                object obj = ResourceManager.GetObject("Add Imagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Add_Imagem_Cinza {
+            get {
+                object obj = ResourceManager.GetObject("Add Imagem Cinza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_New {
             get {
                 object obj = ResourceManager.GetObject("Add New", resourceCulture);
@@ -276,6 +296,26 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap icons8_desligar_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-desligar-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_homtem_turista_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-homtem-turista-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_homtem_turista_96__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-homtem-turista-96 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

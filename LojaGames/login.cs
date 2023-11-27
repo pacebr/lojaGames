@@ -17,6 +17,8 @@ namespace LojaGames
 {
     public partial class login : Form
     {
+        byte[] imagem;
+        bool fotoAdd;
         public login()
         {
             InitializeComponent();
@@ -143,6 +145,47 @@ namespace LojaGames
             bunifuPages2.SetPage(0);
             login form = this;
             form.AcceptButton = btnEntrarCliente;
+        }
+
+private void bunifuRadioButton3_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+                if (rdbtnOutro.Checked == true)
+                {
+                    bunifuDropdown1.Visible = true;
+                }
+                else
+                {
+                    bunifuDropdown1.Visible = false;
+                }
+        }
+
+        private void pcbImagemCadastro_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoArquivo = openFileDialog.FileName;
+                imagem = File.ReadAllBytes(caminhoArquivo);
+
+                pcbImagemCadastro.Image = Image.FromFile(caminhoArquivo);
+
+                fotoAdd = true;
+            }
+        }
+
+        private void pcbImagemCadastro_MouseEnter(object sender, EventArgs e)
+        {
+            if (fotoAdd)
+                return;
+            pcbImagemCadastro.Image = Resources.Add_Imagem_Cinza;
+        }
+
+        private void pcbImagemCadastro_MouseLeave(object sender, EventArgs e)
+        {
+            if (fotoAdd)
+                return;
+            pcbImagemCadastro.Image = Resources.Add_Imagem;
         }
     }
 }
