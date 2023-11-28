@@ -12,6 +12,7 @@ using LojaGames.Properties;
 using System.IO;
 using System.Threading;
 using Utilities.BunifuTextBox.Transitions;
+using System.Media;
 
 namespace LojaGames
 {
@@ -24,6 +25,7 @@ namespace LojaGames
         {
             InitializeComponent();
             txtUsuarioCliente.Select();
+            txtUsuario.MaxLength = 10;
         }
 
         private void btnEntrarCliente_Click(object sender, EventArgs e)
@@ -47,8 +49,7 @@ namespace LojaGames
                    "Usuário ou senha incorretos.",
                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
-            txtUsuarioCliente.Clear();
-            txtSenhaCliente.Clear();
+            LimparDados();
         }
 
         private void btnEntrarFunc_Click(object sender, EventArgs e)
@@ -72,8 +73,7 @@ namespace LojaGames
                    "Usuário ou senha incorretos.",
                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
-            txtUsuarioCliente.Clear();
-            txtSenhaCliente.Clear();
+            LimparDados();
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
@@ -233,8 +233,30 @@ namespace LojaGames
 
 
             ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
+            LimparDados();
 
+        }
 
+        private void LimparDados()
+        {
+            txtNome.Clear();
+            txtSobrenome.Clear();
+            txtUsuario.Clear();
+            txtSenha.Clear();
+            dropIdade.SelectedItem = string.Empty;
+            dropGenero.SelectedItem = string.Empty;
+            rdbtnMasculino.Checked = true;
+            rdbtnFeminino.Checked = false;
+            rdbtnOutro.Checked = false;
+            dropIdade.Text = "Idade";
+            dropGenero.Text = "Selecione";
+            txtCPF.Clear();
+            txtTelefone.Clear();
+            txtEndereco.Clear();
+            txtUsuarioFunc.Clear();
+            txtSenhaFunc.Clear();
+            txtUsuarioCliente.Clear();
+            txtSenhaCliente.Clear();
         }
 
         private void rdbtnMasculino_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)

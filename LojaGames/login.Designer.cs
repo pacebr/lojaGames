@@ -1275,7 +1275,7 @@
             this.dropGenero.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
             this.dropGenero.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(100)))), ((int)(((byte)(127)))));
             this.dropGenero.ItemHeight = 26;
-            this.dropGenero.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.dropGenero.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
             this.dropGenero.ItemHighLightForeColor = System.Drawing.Color.White;
             this.dropGenero.ItemTopMargin = 3;
             this.dropGenero.Location = new System.Drawing.Point(272, 215);
