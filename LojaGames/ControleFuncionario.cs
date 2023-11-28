@@ -16,11 +16,11 @@ namespace LojaGames
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
             Conexao.Conectar();
-            string sql = "SELECT * FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
+            string sql = "SELECT usuario, senha FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
             cmd.Parameters.AddWithValue("usuario", usuario);
-            cmd.Parameters.AddWithValue("senha", senha);
+            cmd.Parameters.AddWithValue("senha", Criptografia.ToSHA256(senha));
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -57,6 +57,31 @@ namespace LojaGames
 
             return isGerente;
         }
+        public static bool CriarUsuario(string nome, string cargo,string usuario, string senha, byte[] foto, string genero)
+        {
+            try
+            {
+                senha = Criptografia.ToSHA256(senha);
+                Conexao.Conectar();
+                string dml = "insert into funcionarios.dados (nome,cargo,usuario,senha,foto,genero) values (@nome, @cargo, @usuario, @senha, @foto, @genero)";
+                SqlCommand com = new SqlCommand(dml, Conexao.conn);
+                com.Parameters.AddWithValue("@nome", nome);
+                com.Parameters.AddWithValue("@cargo", cargo);
+                com.Parameters.AddWithValue("@usuario", usuario);
+                com.Parameters.AddWithValue("@senha", senha);
+                com.Parameters.AddWithValue("@foto", foto);
+                com.Parameters.AddWithValue("@genero", genero);
 
+                com.ExecuteNonQuery();
+                Conexao.Fechar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Conexao.Fechar();
+                System.Windows.Forms.MessageBox.Show("erro:" + ex);
+                return false;
+            }
+        }
     }
 }

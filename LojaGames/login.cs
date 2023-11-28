@@ -19,6 +19,7 @@ namespace LojaGames
     {
         byte[] imagem;
         bool fotoAdd;
+        string lgenero = "masculino";
         public login()
         {
             InitializeComponent();
@@ -103,10 +104,21 @@ namespace LojaGames
             btnSair.Image = Resources.X;
         }
 
+        private void btnSair2_MouseEnter(object sender, EventArgs e)
+        {
+            btnSair2.BackColor = Color.FromArgb(32, 30, 52);
+            btnSair2.Image = Resources.X;
+        }
+
         private void btnSair_MouseLeave(object sender, EventArgs e)
         {
             btnSair.BackColor = Color.FromArgb(27, 25, 47);
             btnSair.Image = Resources.XCinza;
+        }
+        private void btnSair2_MouseLeave(object sender, EventArgs e)
+        {
+            btnSair2.BackColor = Color.FromArgb(27, 25, 47);
+            btnSair2.Image = Resources.XCinza;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -119,16 +131,36 @@ namespace LojaGames
             btnMinimizar.BackColor = Color.FromArgb(32, 30, 52);
             btnMinimizar.Image = Resources.Line;
         }
+        private void btnMinimizar2_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimizar2.BackColor = Color.FromArgb(32, 30, 52);
+            btnMinimizar2.Image = Resources.Line;
+        }
 
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
         {
             btnMinimizar.BackColor = Color.FromArgb(27, 25, 47);
             btnMinimizar.Image = Resources.LineCinza;
         }
+        private void btnMinimizar2_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimizar2.BackColor = Color.FromArgb(27, 25, 47);
+            btnMinimizar2.Image = Resources.LineCinza;
+        }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMinimizar2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSair2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnFuncionario_Click(object sender, EventArgs e)
@@ -145,18 +177,6 @@ namespace LojaGames
             bunifuPages2.SetPage(0);
             login form = this;
             form.AcceptButton = btnEntrarCliente;
-        }
-
-private void bunifuRadioButton3_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
-        {
-                if (rdbtnOutro.Checked == true)
-                {
-                    bunifuDropdown1.Visible = true;
-                }
-                else
-                {
-                    bunifuDropdown1.Visible = false;
-                }
         }
 
         private void pcbImagemCadastro_Click(object sender, EventArgs e)
@@ -186,6 +206,71 @@ private void bunifuRadioButton3_CheckedChanged2(object sender, Bunifu.UI.WinForm
             if (fotoAdd)
                 return;
             pcbImagemCadastro.Image = Resources.Add_Imagem;
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'exodusDbDataSet.dados'. Você pode movê-la ou removê-la conforme necessário.
+            this.dadosTableAdapter.Fill(this.exodusDbDataSet.dados);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+            string sobrenome = txtSobrenome.Text;
+            string usuario = txtUsuario.Text;
+            string senha = txtSenha.Text;
+            string idade = dropIdade.Text;
+            string genero = lgenero;
+            string CPF = txtCPF.Text;
+            string telefone = txtTelefone.Text;
+            string endereco = txtEndereco.Text;
+
+
+            ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
+
+
+        }
+
+        private void rdbtnMasculino_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+            if(rdbtnMasculino.Checked)
+            {
+                lgenero = "Masculino";
+            }
+        }
+
+        private void rdbtnFeminino_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+            if (rdbtnFeminino.Checked)
+            {
+                lgenero = "Feminino";
+            }
+        }
+
+        private void rdbtnOutro_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+            if (rdbtnOutro.Checked)
+            {
+                dropGenero.Visible = true;
+                lgenero = dropGenero.SelectedValue.ToString();
+            }
+            else
+            {
+                dropGenero.Visible = false;
+            }
+        }
+        private void dropGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dropGenero.SelectedIndex != -1)
+            {
+                lgenero = dropGenero.SelectedValue.ToString();
+            }
         }
     }
 }

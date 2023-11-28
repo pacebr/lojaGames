@@ -83,6 +83,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Image {
+            get {
+                object obj = ResourceManager.GetObject("Add Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_Imagem {
             get {
                 object obj = ResourceManager.GetObject("Add Imagem", resourceCulture);
@@ -116,6 +126,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Add_New_Active {
             get {
                 object obj = ResourceManager.GetObject("Add New Active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Add_User_Male {
+            get {
+                object obj = ResourceManager.GetObject("Add User Male", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
