@@ -20,6 +20,10 @@ namespace LojaGames
                 {
                     ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex= -1;
                 }
+                else if (c is Bunifu.UI.WinForms.BunifuToggleSwitch)
+                {
+                    ((Bunifu.UI.WinForms.BunifuToggleSwitch)c).Checked = false;
+                }
                 if (c.HasChildren)
                 {
                     limparCampos(c);

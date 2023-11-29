@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using LojaGames.Properties;
 using System.IO;
 using System.Threading;
@@ -79,26 +78,12 @@ namespace LojaGames
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtSenhaCliente.Text.Length > 0)
-            {
-                txtSenhaCliente.PasswordChar = '*';
-            }
-            else
-            {
-                txtSenhaCliente.PasswordChar = '\0';
-            }
+            tglbtnMostrarSenhaCli_CheckedChanged(sender, e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs);
         }
 
-        private void txtSenhaFunc_TextChange(object sender, EventArgs e)
+        private void txtSenhaFunc_TextChanged(object sender, EventArgs e)
         {
-            if (txtSenhaFunc.Text.Length > 0)
-            {
-                txtSenhaFunc.PasswordChar = '*';
-            }
-            else
-            {
-                txtSenhaFunc.PasswordChar = '\0';
-            }
+            tglbtnMostrarSenhaFunc_CheckedChanged(sender, e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -190,6 +175,7 @@ namespace LojaGames
         {
             bunifuPages2.Transition.SlideCoeff = new PointF(1, 0);
             bunifuPages2.SetPage(1);
+            Utilidades.limparCampos(this);
             login form = this;
             form.AcceptButton = btnEntrarFunc;
         }
@@ -198,6 +184,7 @@ namespace LojaGames
         {
             bunifuPages2.Transition.SlideCoeff = new PointF(-1, 0);
             bunifuPages2.SetPage(0);
+            Utilidades.limparCampos(this);
             login form = this;
             form.AcceptButton = btnEntrarCliente;
         }
@@ -322,6 +309,36 @@ namespace LojaGames
         private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             LimiteCaracteres(e, 11);
+        }
+
+        private void tglbtnMostrarSenhaCli_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            if (txtSenhaCliente.Text.Length > 0)
+            {
+                if (tglbtnMostrarSenhaCli.Checked)
+                    txtSenhaCliente.PasswordChar = '\0';
+                if (!tglbtnMostrarSenhaCli.Checked)
+                    txtSenhaCliente.PasswordChar = '*';
+            }
+            if (txtSenhaCliente.Text.Length == 0 && !tglbtnMostrarSenhaCli.Checked)
+            {
+                txtSenhaCliente.PasswordChar = '\0';
+            }
+        }
+
+        private void tglbtnMostrarSenhaFunc_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            if (txtSenhaFunc.Text.Length > 0)
+            {
+                if (tglbtnMostrarSenhaFunc.Checked)
+                    txtSenhaFunc.PasswordChar = '\0';
+                if (!tglbtnMostrarSenhaFunc.Checked)
+                   txtSenhaFunc.PasswordChar = '*';
+            }
+            if (txtSenhaFunc.Text.Length == 0 && !tglbtnMostrarSenhaFunc.Checked)
+            {
+                txtSenhaFunc.PasswordChar = '\0';
+            }
         }
     }
 }

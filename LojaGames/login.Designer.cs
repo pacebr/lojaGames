@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -73,6 +76,9 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -85,6 +91,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tglbtnMostrarSenhaCli = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.btnFuncionario = new Bunifu.UI.WinForms.BunifuImageButton();
             this.txtSenhaCliente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -136,6 +143,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuPages3 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tglbtnMostrarSenhaFunc = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.btnCliente = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton4 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -183,10 +191,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage1;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "tabPage1";
+            this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(461, 426);
             this.bunifuPages1.TabIndex = 0;
@@ -211,6 +219,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            this.tabPage1.Controls.Add(this.tglbtnMostrarSenhaCli);
             this.tabPage1.Controls.Add(this.btnFuncionario);
             this.tabPage1.Controls.Add(this.txtSenhaCliente);
             this.tabPage1.Controls.Add(this.panel1);
@@ -223,6 +232,49 @@
             this.tabPage1.Size = new System.Drawing.Size(453, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            // 
+            // tglbtnMostrarSenhaCli
+            // 
+            this.tglbtnMostrarSenhaCli.Animation = 5;
+            this.tglbtnMostrarSenhaCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
+            this.tglbtnMostrarSenhaCli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tglbtnMostrarSenhaCli.BackgroundImage")));
+            this.tglbtnMostrarSenhaCli.Checked = false;
+            this.tglbtnMostrarSenhaCli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tglbtnMostrarSenhaCli.InnerCirclePadding = 3;
+            this.tglbtnMostrarSenhaCli.Location = new System.Drawing.Point(359, 194);
+            this.tglbtnMostrarSenhaCli.Name = "tglbtnMostrarSenhaCli";
+            this.tglbtnMostrarSenhaCli.Size = new System.Drawing.Size(32, 18);
+            this.tglbtnMostrarSenhaCli.TabIndex = 20;
+            this.tglbtnMostrarSenhaCli.ThumbMargin = 3;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaCli.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.White;
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 11;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaCli.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.White;
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaCli.ToggleStateOn = toggleState3;
+            this.tglbtnMostrarSenhaCli.Value = false;
+            this.tglbtnMostrarSenhaCli.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.tglbtnMostrarSenhaCli_CheckedChanged);
             // 
             // btnFuncionario
             // 
@@ -1855,10 +1907,10 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage4;
-            this.bunifuPages2.PageIndex = 1;
-            this.bunifuPages2.PageName = "tabPage4";
-            this.bunifuPages2.PageTitle = "tabPage4";
+            this.bunifuPages2.Page = this.tabPage3;
+            this.bunifuPages2.PageIndex = 0;
+            this.bunifuPages2.PageName = "tabPage3";
+            this.bunifuPages2.PageTitle = "tabPage3";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(723, 426);
             this.bunifuPages2.TabIndex = 20;
@@ -2007,7 +2059,7 @@
             this.bunifuPages3.Page = this.tabPage5;
             this.bunifuPages3.PageIndex = 0;
             this.bunifuPages3.PageName = "tabPage5";
-            this.bunifuPages3.PageTitle = "tabPage5";
+            this.bunifuPages3.PageTitle = "";
             this.bunifuPages3.SelectedIndex = 0;
             this.bunifuPages3.Size = new System.Drawing.Size(476, 426);
             this.bunifuPages3.TabIndex = 1;
@@ -2032,6 +2084,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            this.tabPage5.Controls.Add(this.tglbtnMostrarSenhaFunc);
             this.tabPage5.Controls.Add(this.btnCliente);
             this.tabPage5.Controls.Add(this.bunifuImageButton3);
             this.tabPage5.Controls.Add(this.bunifuImageButton4);
@@ -2045,7 +2098,49 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(449, 418);
             this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "tabPage5";
+            // 
+            // tglbtnMostrarSenhaFunc
+            // 
+            this.tglbtnMostrarSenhaFunc.Animation = 5;
+            this.tglbtnMostrarSenhaFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
+            this.tglbtnMostrarSenhaFunc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tglbtnMostrarSenhaFunc.BackgroundImage")));
+            this.tglbtnMostrarSenhaFunc.Checked = false;
+            this.tglbtnMostrarSenhaFunc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tglbtnMostrarSenhaFunc.InnerCirclePadding = 3;
+            this.tglbtnMostrarSenhaFunc.Location = new System.Drawing.Point(359, 194);
+            this.tglbtnMostrarSenhaFunc.Name = "tglbtnMostrarSenhaFunc";
+            this.tglbtnMostrarSenhaFunc.Size = new System.Drawing.Size(32, 18);
+            this.tglbtnMostrarSenhaFunc.TabIndex = 19;
+            this.tglbtnMostrarSenhaFunc.ThumbMargin = 3;
+            toggleState4.BackColor = System.Drawing.Color.DarkGray;
+            toggleState4.BackColorInner = System.Drawing.Color.White;
+            toggleState4.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState4.BorderColorInner = System.Drawing.Color.White;
+            toggleState4.BorderRadius = 17;
+            toggleState4.BorderRadiusInner = 11;
+            toggleState4.BorderThickness = 1;
+            toggleState4.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaFunc.ToggleStateDisabled = toggleState4;
+            toggleState5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
+            toggleState5.BackColorInner = System.Drawing.Color.White;
+            toggleState5.BorderColor = System.Drawing.Color.White;
+            toggleState5.BorderColorInner = System.Drawing.Color.White;
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 11;
+            toggleState5.BorderThickness = 1;
+            toggleState5.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaFunc.ToggleStateOff = toggleState5;
+            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            toggleState6.BackColorInner = System.Drawing.Color.White;
+            toggleState6.BorderColor = System.Drawing.Color.White;
+            toggleState6.BorderColorInner = System.Drawing.Color.White;
+            toggleState6.BorderRadius = 17;
+            toggleState6.BorderRadiusInner = 11;
+            toggleState6.BorderThickness = 1;
+            toggleState6.BorderThicknessInner = 1;
+            this.tglbtnMostrarSenhaFunc.ToggleStateOn = toggleState6;
+            this.tglbtnMostrarSenhaFunc.Value = false;
+            this.tglbtnMostrarSenhaFunc.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.tglbtnMostrarSenhaFunc_CheckedChanged);
             // 
             // btnCliente
             // 
@@ -2226,7 +2321,7 @@
             this.txtSenhaFunc.TextPlaceholder = "Insira sua senha";
             this.txtSenhaFunc.UseSystemPasswordChar = false;
             this.txtSenhaFunc.WordWrap = true;
-            this.txtSenhaFunc.TextChange += new System.EventHandler(this.txtSenhaFunc_TextChange);
+            this.txtSenhaFunc.TextChange += new System.EventHandler(this.txtSenhaFunc_TextChanged);
             // 
             // panel3
             // 
@@ -2688,5 +2783,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtEndereco;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnRegistro;
         private System.Windows.Forms.BindingSource dadosBindingSource1;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch tglbtnMostrarSenhaFunc;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch tglbtnMostrarSenhaCli;
     }
 }
