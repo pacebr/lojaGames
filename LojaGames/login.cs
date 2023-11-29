@@ -263,7 +263,8 @@ namespace LojaGames
             if (rdbtnOutro.Checked)
             {
                 dropGenero.Visible = true;
-                lgenero = dropGenero.SelectedValue.ToString();
+                if (dropGenero.SelectedIndex != -1 )
+                    lgenero = dropGenero.SelectedValue.ToString();
             }
             else
             {

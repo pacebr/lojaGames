@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bunifu.UI.WinForms;
-
 namespace LojaGames
 {
     public class Utilidades
@@ -14,13 +12,13 @@ namespace LojaGames
         {
             foreach (Control c in ctrl.Controls)
             {
-                if (c is BunifuTextBox)
+                if (c is Bunifu.UI.WinForms.BunifuTextBox)
                 {
-                    c.Text = "";
+                    ((Bunifu.UI.WinForms.BunifuTextBox)c).Text = "";
                 }
-                else if (c is BunifuDropdown)
+                else if (c is Bunifu.UI.WinForms.BunifuDropdown)
                 {
-                    ((BunifuDropdown)(c)).SelectedItem = String.Empty;
+                    ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex = -1;
                 }
                 if (c.HasChildren)
                 {
