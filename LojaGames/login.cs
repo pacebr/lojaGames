@@ -21,11 +21,12 @@ namespace LojaGames
         byte[] imagem;
         bool fotoAdd;
         string lgenero = "masculino";
+        bool limiteUsuario = true;
         public login()
         {
             InitializeComponent();
             txtUsuarioCliente.Select();
-            txtUsuario.MaxLength = 10;
+
         }
 
         private void btnEntrarCliente_Click(object sender, EventArgs e)
@@ -91,11 +92,13 @@ namespace LojaGames
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(1);
+            LimparDados();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(0);
+            LimparDados();
         }
 
         private void btnSair_MouseEnter(object sender, EventArgs e)
@@ -221,6 +224,8 @@ namespace LojaGames
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+
+
             string nome = txtNome.Text;
             string sobrenome = txtSobrenome.Text;
             string usuario = txtUsuario.Text;
@@ -243,8 +248,8 @@ namespace LojaGames
             txtSobrenome.Clear();
             txtUsuario.Clear();
             txtSenha.Clear();
-            dropIdade.SelectedItem = string.Empty;
-            dropGenero.SelectedItem = string.Empty;
+            dropIdade.SelectedItem = String.Empty;
+            dropGenero.SelectedItem = String.Empty;
             rdbtnMasculino.Checked = true;
             rdbtnFeminino.Checked = false;
             rdbtnOutro.Checked = false;
@@ -293,6 +298,36 @@ namespace LojaGames
             {
                 lgenero = dropGenero.SelectedValue.ToString();
             }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {           
+            LimiteCaracteres(e, 10);
+        }
+        private void LimiteCaracteres (KeyPressEventArgs e, int limite)
+        {
+            if (e.KeyChar == '\b')
+            {
+                limiteUsuario = true;
+                return;
+            }
+            if (!limiteUsuario)
+                return;
+            if (txtUsuario.Text.Length >= limite)
+            {
+                limiteUsuario = false;
+                bunifuSnackbar1.Show(this, "Máximo de caracteres atingido.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+        }
+
+        private void txtCPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LimiteCaracteres(e, 11);
+        }
+
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LimiteCaracteres(e, 11);
         }
     }
 }

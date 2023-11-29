@@ -105,7 +105,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.rdbtnOutro = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.dropGenero = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.dadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.exodusDbDataSet = new LojaGames.exodusDbDataSet();
             this.rdbtnFeminino = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rdbtnMasculino = new Bunifu.UI.WinForms.BunifuRadioButton();
@@ -117,6 +117,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVoltar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.dadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnSair = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -156,10 +157,11 @@
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exodusDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPages2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -856,7 +858,7 @@
             this.txtTelefone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefone.Lines = new string[0];
             this.txtTelefone.Location = new System.Drawing.Point(0, 253);
-            this.txtTelefone.MaxLength = 32767;
+            this.txtTelefone.MaxLength = 11;
             this.txtTelefone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefone.Modified = false;
             this.txtTelefone.Multiline = false;
@@ -901,6 +903,7 @@
             this.txtTelefone.TextPlaceholder = "Telefone";
             this.txtTelefone.UseSystemPasswordChar = false;
             this.txtTelefone.WordWrap = true;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // txtCPF
             // 
@@ -931,7 +934,7 @@
             this.txtCPF.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCPF.Lines = new string[0];
             this.txtCPF.Location = new System.Drawing.Point(3, 215);
-            this.txtCPF.MaxLength = 32767;
+            this.txtCPF.MaxLength = 11;
             this.txtCPF.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCPF.Modified = false;
             this.txtCPF.Multiline = false;
@@ -976,6 +979,7 @@
             this.txtCPF.TextPlaceholder = "CPF";
             this.txtCPF.UseSystemPasswordChar = false;
             this.txtCPF.WordWrap = true;
+            this.txtCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCPF_KeyPress);
             // 
             // dropIdade
             // 
@@ -1249,7 +1253,7 @@
             this.dropGenero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
             this.dropGenero.BorderRadius = 15;
             this.dropGenero.Color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
-            this.dropGenero.DataSource = this.dadosBindingSource;
+            this.dropGenero.DataSource = this.dadosBindingSource1;
             this.dropGenero.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.dropGenero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dropGenero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1289,10 +1293,10 @@
             this.dropGenero.Visible = false;
             this.dropGenero.SelectedIndexChanged += new System.EventHandler(this.dropGenero_SelectedIndexChanged);
             // 
-            // dadosBindingSource
+            // dadosBindingSource1
             // 
-            this.dadosBindingSource.DataMember = "dados";
-            this.dadosBindingSource.DataSource = this.exodusDbDataSet;
+            this.dadosBindingSource1.DataMember = "dados";
+            this.dadosBindingSource1.DataSource = this.exodusDbDataSet;
             // 
             // exodusDbDataSet
             // 
@@ -1369,7 +1373,7 @@
             this.pcbImagemCadastro.Location = new System.Drawing.Point(330, 3);
             this.pcbImagemCadastro.Name = "pcbImagemCadastro";
             this.pcbImagemCadastro.Size = new System.Drawing.Size(91, 91);
-            this.pcbImagemCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbImagemCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImagemCadastro.TabIndex = 4;
             this.pcbImagemCadastro.TabStop = false;
             this.pcbImagemCadastro.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
@@ -1481,7 +1485,7 @@
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
             this.txtUsuario.Location = new System.Drawing.Point(3, 89);
-            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.MaxLength = 10;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuario.Modified = false;
             this.txtUsuario.Multiline = false;
@@ -1526,6 +1530,7 @@
             this.txtUsuario.TextPlaceholder = "Usuario";
             this.txtUsuario.UseSystemPasswordChar = false;
             this.txtUsuario.WordWrap = true;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // panel2
             // 
@@ -1637,6 +1642,11 @@
             this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Já tem uma conta?";
+            // 
+            // dadosBindingSource
+            // 
+            this.dadosBindingSource.DataMember = "dados";
+            this.dadosBindingSource.DataSource = this.exodusDbDataSet;
             // 
             // btnMinimizar
             // 
@@ -2582,11 +2592,12 @@
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exodusDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPages2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -2676,5 +2687,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtCPF;
         public Bunifu.UI.WinForms.BunifuTextBox txtEndereco;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnRegistro;
+        private System.Windows.Forms.BindingSource dadosBindingSource1;
     }
 }
