@@ -18,7 +18,7 @@ namespace LojaGames
                 }
                 else if (c is Bunifu.UI.WinForms.BunifuDropdown)
                 {
-                    ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex = -1;
+                    ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex= -1;
                 }
                 if (c.HasChildren)
                 {

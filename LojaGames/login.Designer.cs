@@ -1855,10 +1855,10 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage3;
-            this.bunifuPages2.PageIndex = 0;
-            this.bunifuPages2.PageName = "tabPage3";
-            this.bunifuPages2.PageTitle = "tabPage3";
+            this.bunifuPages2.Page = this.tabPage4;
+            this.bunifuPages2.PageIndex = 1;
+            this.bunifuPages2.PageName = "tabPage4";
+            this.bunifuPages2.PageTitle = "tabPage4";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(723, 426);
             this.bunifuPages2.TabIndex = 20;
@@ -2226,6 +2226,7 @@
             this.txtSenhaFunc.TextPlaceholder = "Insira sua senha";
             this.txtSenhaFunc.UseSystemPasswordChar = false;
             this.txtSenhaFunc.WordWrap = true;
+            this.txtSenhaFunc.TextChange += new System.EventHandler(this.txtSenhaFunc_TextChange);
             // 
             // panel3
             // 
@@ -2583,7 +2584,6 @@
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
-            this.Load += new System.EventHandler(this.login_Load);
             this.bunifuPages1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

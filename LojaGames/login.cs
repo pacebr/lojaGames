@@ -89,10 +89,30 @@ namespace LojaGames
             }
         }
 
+        private void txtSenhaFunc_TextChange(object sender, EventArgs e)
+        {
+            if (txtSenhaFunc.Text.Length > 0)
+            {
+                txtSenhaFunc.PasswordChar = '*';
+            }
+            else
+            {
+                txtSenhaFunc.PasswordChar = '\0';
+            }
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(1);
+            this.dadosTableAdapter.Fill(this.exodusDbDataSet.dados);
             Utilidades.limparCampos(this);
+            voltarTextoDrop();
+        }
+
+        private void voltarTextoDrop()
+        {
+            dropGenero.Text = "Selecione";
+            dropIdade.Text = "Idade";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -211,12 +231,6 @@ namespace LojaGames
             pcbImagemCadastro.Image = Resources.Add_Imagem;
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'exodusDbDataSet.dados'. Você pode movê-la ou removê-la conforme necessário.
-            this.dadosTableAdapter.Fill(this.exodusDbDataSet.dados);
-        }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -239,6 +253,7 @@ namespace LojaGames
 
             //ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
             Utilidades.limparCampos(this);
+            voltarTextoDrop();
 
         }
 
