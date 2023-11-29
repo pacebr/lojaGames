@@ -155,7 +155,7 @@ namespace LojaGames
             pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
             btnJogo5.Text = DadosJogo.PegarTexto(5);
-            timer1.Start();
+            //timer1.Start();
             CycleButtons();
         }
 
@@ -202,7 +202,23 @@ namespace LojaGames
 
         private void tabPage2_Enter(object sender, EventArgs e)
         {
+            ListarJogos();
+        }
+
+        private void ListarJogos()
+        {
             pbJogo1.Image = DadosJogo.PegarImagemGrande(1);
+            pbJogo2.Image = DadosJogo.PegarImagemGrande(2);
+            pbJogo3.Image = DadosJogo.PegarImagemGrande(3);
+            pbJogo4.Image = DadosJogo.PegarImagemGrande(4);
+            pbJogo5.Image = DadosJogo.PegarImagemGrande(5);
+            pbJogo6.Image = DadosJogo.PegarImagemGrande(6);
+            pbJogo7.Image = DadosJogo.PegarImagemGrande(7);
+            pbJogo8.Image = DadosJogo.PegarImagemGrande(8);
+            pbJogo9.Image = DadosJogo.PegarImagemGrande(9);
+            pbJogo10.Image = DadosJogo.PegarImagemGrande(10);
+            pbJogo11.Image = DadosJogo.PegarImagemGrande(11);
+            pbJogo12.Image = DadosJogo.PegarImagemGrande(12);
         }
 
         private void btnIcone_Click(object sender, EventArgs e)

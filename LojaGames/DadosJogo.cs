@@ -33,12 +33,12 @@ namespace LojaGames
         public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao)
         {
             Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao) " + "VALUES (@imagem, @jogo, @descricao)";
+            string sql = "INSERT INTO jogos.dados (imagem, nome, descricao) " + "VALUES (@imagem, @nome, @descricao)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
             cmd.Parameters.AddWithValue("@imagem", imagem);
-            cmd.Parameters.AddWithValue(@"jogo", jogo);
+            cmd.Parameters.AddWithValue(@"nome", jogo);
             cmd.Parameters.AddWithValue(@"descricao", descricao);
 
             cmd.ExecuteNonQuery();
