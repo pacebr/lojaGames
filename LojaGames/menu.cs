@@ -276,5 +276,10 @@ namespace LojaGames
         {
             CycleButtons();
         }
+
+        private void pbJogo1_Click(object sender, EventArgs e)
+        {
+            pgMenu.SetPage(6);
+        }
     }
 }
