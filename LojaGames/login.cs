@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaGames.Properties;
-using System.IO;
-using System.Threading;
 using Utilities.BunifuTextBox.Transitions;
-using System.Media;
 
 namespace LojaGames
 {
@@ -21,11 +21,11 @@ namespace LojaGames
         bool fotoAdd;
         string lgenero = "masculino";
         bool limiteUsuario = true;
+
         public login()
         {
             InitializeComponent();
             txtUsuarioCliente.Select();
-
         }
 
         private void btnEntrarCliente_Click(object sender, EventArgs e)
@@ -45,9 +45,10 @@ namespace LojaGames
             {
                 Conexao.Fechar();
                 bunifuSnackbar1.Show(
-                   this,
-                   "Usuário ou senha incorretos.",
-                   Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    this,
+                    "Usuário ou senha incorretos.",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error
+                );
             }
             Utilidades.limparCampos(this);
         }
@@ -69,21 +70,28 @@ namespace LojaGames
             {
                 Conexao.Fechar();
                 bunifuSnackbar1.Show(
-                   this,
-                   "Usuário ou senha incorretos.",
-                   Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    this,
+                    "Usuário ou senha incorretos.",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error
+                );
             }
             Utilidades.limparCampos(this);
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            tglbtnMostrarSenhaCli_CheckedChanged(sender, e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs);
+            tglbtnMostrarSenhaCli_CheckedChanged(
+                sender,
+                e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs
+            );
         }
 
         private void txtSenhaFunc_TextChanged(object sender, EventArgs e)
         {
-            tglbtnMostrarSenhaFunc_CheckedChanged(sender, e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs);
+            tglbtnMostrarSenhaFunc_CheckedChanged(
+                sender,
+                e as Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs
+            );
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -123,6 +131,7 @@ namespace LojaGames
             btnSair.BackColor = Color.FromArgb(27, 25, 47);
             btnSair.Image = Resources.XCinza;
         }
+
         private void btnSair2_MouseLeave(object sender, EventArgs e)
         {
             btnSair2.BackColor = Color.FromArgb(27, 25, 47);
@@ -139,6 +148,7 @@ namespace LojaGames
             btnMinimizar.BackColor = Color.FromArgb(32, 30, 52);
             btnMinimizar.Image = Resources.Line;
         }
+
         private void btnMinimizar2_MouseEnter(object sender, EventArgs e)
         {
             btnMinimizar2.BackColor = Color.FromArgb(32, 30, 52);
@@ -150,6 +160,7 @@ namespace LojaGames
             btnMinimizar.BackColor = Color.FromArgb(27, 25, 47);
             btnMinimizar.Image = Resources.LineCinza;
         }
+
         private void btnMinimizar2_MouseLeave(object sender, EventArgs e)
         {
             btnMinimizar2.BackColor = Color.FromArgb(27, 25, 47);
@@ -225,8 +236,6 @@ namespace LojaGames
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-
-
             string nome = txtNome.Text;
             string sobrenome = txtSobrenome.Text;
             string usuario = txtUsuario.Text;
@@ -237,22 +246,26 @@ namespace LojaGames
             string telefone = txtTelefone.Text;
             string endereco = txtEndereco.Text;
 
-
             //ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
             Utilidades.limparCampos(this);
             voltarTextoDrop();
-
         }
 
-        private void rdbtnMasculino_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        private void rdbtnMasculino_CheckedChanged2(
+            object sender,
+            Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e
+        )
         {
-            if(rdbtnMasculino.Checked)
+            if (rdbtnMasculino.Checked)
             {
                 lgenero = "Masculino";
             }
         }
 
-        private void rdbtnFeminino_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        private void rdbtnFeminino_CheckedChanged2(
+            object sender,
+            Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e
+        )
         {
             if (rdbtnFeminino.Checked)
             {
@@ -260,12 +273,15 @@ namespace LojaGames
             }
         }
 
-        private void rdbtnOutro_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        private void rdbtnOutro_CheckedChanged2(
+            object sender,
+            Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e
+        )
         {
             if (rdbtnOutro.Checked)
             {
                 dropGenero.Visible = true;
-                if (dropGenero.SelectedIndex != -1 )
+                if (dropGenero.SelectedIndex != -1)
                     lgenero = dropGenero.SelectedValue.ToString();
             }
             else
@@ -273,6 +289,7 @@ namespace LojaGames
                 dropGenero.Visible = false;
             }
         }
+
         private void dropGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (dropGenero.SelectedIndex != -1)
@@ -282,10 +299,11 @@ namespace LojaGames
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {           
+        {
             LimiteCaracteres(e, 10);
         }
-        private void LimiteCaracteres (KeyPressEventArgs e, int limite)
+
+        private void LimiteCaracteres(KeyPressEventArgs e, int limite)
         {
             if (e.KeyChar == '\b')
             {
@@ -297,7 +315,11 @@ namespace LojaGames
             if (txtUsuario.Text.Length >= limite)
             {
                 limiteUsuario = false;
-                bunifuSnackbar1.Show(this, "Máximo de caracteres atingido.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                bunifuSnackbar1.Show(
+                    this,
+                    "Máximo de caracteres atingido.",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning
+                );
             }
         }
 
@@ -311,7 +333,10 @@ namespace LojaGames
             LimiteCaracteres(e, 11);
         }
 
-        private void tglbtnMostrarSenhaCli_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        private void tglbtnMostrarSenhaCli_CheckedChanged(
+            object sender,
+            Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e
+        )
         {
             if (txtSenhaCliente.Text.Length > 0)
             {
@@ -326,14 +351,17 @@ namespace LojaGames
             }
         }
 
-        private void tglbtnMostrarSenhaFunc_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        private void tglbtnMostrarSenhaFunc_CheckedChanged(
+            object sender,
+            Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e
+        )
         {
             if (txtSenhaFunc.Text.Length > 0)
             {
                 if (tglbtnMostrarSenhaFunc.Checked)
                     txtSenhaFunc.PasswordChar = '\0';
                 if (!tglbtnMostrarSenhaFunc.Checked)
-                   txtSenhaFunc.PasswordChar = '*';
+                    txtSenhaFunc.PasswordChar = '*';
             }
             if (txtSenhaFunc.Text.Length == 0 && !tglbtnMostrarSenhaFunc.Checked)
             {

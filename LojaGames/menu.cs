@@ -120,12 +120,14 @@ namespace LojaGames
                 pcbImagemJogo.Image = Image.FromFile(caminhoArquivo);
             }
         }
+
         private void btnEnviarjogo_Click(object sender, EventArgs e)
         {
             string nome = txtNomeJogo.Text;
             string descricao = txtDescricao.Text;
             DadosJogo.EnviarDadosJogo(imagem, nome, descricao);
         }
+
         private void btnEnviarCarrousel_Click(object sender, EventArgs e)
         {
             string nome = txtNomeJogoCarousel.Text;
@@ -155,7 +157,6 @@ namespace LojaGames
             pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
             btnJogo5.Text = DadosJogo.PegarTexto(5);
-            //timer1.Start();
             CycleButtons();
         }
 
@@ -225,7 +226,8 @@ namespace LojaGames
         {
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+                openFileDialog.Filter =
+                    "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string caminhoArquivo = openFileDialog.FileName;
@@ -240,7 +242,8 @@ namespace LojaGames
         {
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+                openFileDialog.Filter =
+                    "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string caminhoArquivo = openFileDialog.FileName;
