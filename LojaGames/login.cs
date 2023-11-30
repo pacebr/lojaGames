@@ -26,6 +26,9 @@ namespace LojaGames
         {
             InitializeComponent();
             txtUsuarioCliente.Select();
+            pictureBox3.Parent = pictureBox1;
+            label3.Parent = pictureBox1;
+            pictureBox2.Parent = pictureBox4;
         }
 
         private void btnEntrarCliente_Click(object sender, EventArgs e)
@@ -114,57 +117,9 @@ namespace LojaGames
             Utilidades.limparCampos(this);
         }
 
-        private void btnSair_MouseEnter(object sender, EventArgs e)
-        {
-            btnSair.BackColor = Color.FromArgb(32, 30, 52);
-            btnSair.Image = Resources.X;
-        }
-
-        private void btnSair2_MouseEnter(object sender, EventArgs e)
-        {
-            btnSair2.BackColor = Color.FromArgb(32, 30, 52);
-            btnSair2.Image = Resources.X;
-        }
-
-        private void btnSair_MouseLeave(object sender, EventArgs e)
-        {
-            btnSair.BackColor = Color.FromArgb(27, 25, 47);
-            btnSair.Image = Resources.XCinza;
-        }
-
-        private void btnSair2_MouseLeave(object sender, EventArgs e)
-        {
-            btnSair2.BackColor = Color.FromArgb(27, 25, 47);
-            btnSair2.Image = Resources.XCinza;
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnMinimizar_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(32, 30, 52);
-            btnMinimizar.Image = Resources.Line;
-        }
-
-        private void btnMinimizar2_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimizar2.BackColor = Color.FromArgb(32, 30, 52);
-            btnMinimizar2.Image = Resources.Line;
-        }
-
-        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(27, 25, 47);
-            btnMinimizar.Image = Resources.LineCinza;
-        }
-
-        private void btnMinimizar2_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar2.BackColor = Color.FromArgb(27, 25, 47);
-            btnMinimizar2.Image = Resources.LineCinza;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -367,6 +322,11 @@ namespace LojaGames
             {
                 txtSenhaFunc.PasswordChar = '\0';
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

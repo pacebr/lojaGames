@@ -93,7 +93,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tglbtnMostrarSenhaCli = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.btnFuncionario = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.txtSenhaCliente = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnSair = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -124,25 +126,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVoltar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnSair = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.bunifuPages2 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnMinimizar2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnSair2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuPages3 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnMinimizar2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.tglbtnMostrarSenhaFunc = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.btnSair2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnCliente = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton4 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -156,9 +158,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dadosTableAdapter = new LojaGames.exodusDbDataSetTableAdapters.dadosTableAdapter();
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPages1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -168,16 +171,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.exodusDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPages2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuPages3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPages1
@@ -219,7 +224,9 @@
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
             this.tabPage1.Controls.Add(this.tglbtnMostrarSenhaCli);
             this.tabPage1.Controls.Add(this.btnFuncionario);
+            this.tabPage1.Controls.Add(this.btnMinimizar);
             this.tabPage1.Controls.Add(this.txtSenhaCliente);
+            this.tabPage1.Controls.Add(this.btnSair);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.btnEntrarCliente);
             this.tabPage1.Controls.Add(this.bunifuLabel1);
@@ -285,7 +292,7 @@
             this.btnFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.btnFuncionario.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFuncionario.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.ErrorImage")));
-            this.btnFuncionario.FadeWhenInactive = false;
+            this.btnFuncionario.FadeWhenInactive = true;
             this.btnFuncionario.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.btnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.Image")));
             this.btnFuncionario.ImageActive = null;
@@ -308,6 +315,42 @@
             this.btnFuncionario.Zoom = 40;
             this.btnFuncionario.ZoomSpeed = 10;
             this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.ActiveImage = null;
+            this.btnMinimizar.AllowAnimations = true;
+            this.btnMinimizar.AllowBuffering = false;
+            this.btnMinimizar.AllowToggling = false;
+            this.btnMinimizar.AllowZooming = false;
+            this.btnMinimizar.AllowZoomingOnFocus = false;
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnMinimizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ErrorImage")));
+            this.btnMinimizar.FadeWhenInactive = true;
+            this.btnMinimizar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.Image = global::LojaGames.Properties.Resources.Line;
+            this.btnMinimizar.ImageActive = null;
+            this.btnMinimizar.ImageLocation = null;
+            this.btnMinimizar.ImageMargin = 0;
+            this.btnMinimizar.ImageSize = new System.Drawing.Size(27, 29);
+            this.btnMinimizar.ImageZoomSize = new System.Drawing.Size(27, 29);
+            this.btnMinimizar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.InitialImage")));
+            this.btnMinimizar.Location = new System.Drawing.Point(27, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Rotation = 0;
+            this.btnMinimizar.ShowActiveImage = true;
+            this.btnMinimizar.ShowCursorChanges = true;
+            this.btnMinimizar.ShowImageBorders = true;
+            this.btnMinimizar.ShowSizeMarkers = false;
+            this.btnMinimizar.Size = new System.Drawing.Size(27, 29);
+            this.btnMinimizar.TabIndex = 18;
+            this.btnMinimizar.ToolTipText = "";
+            this.btnMinimizar.WaitOnLoad = false;
+            this.btnMinimizar.Zoom = 0;
+            this.btnMinimizar.ZoomSpeed = 10;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // txtSenhaCliente
             // 
@@ -384,6 +427,42 @@
             this.txtSenhaCliente.UseSystemPasswordChar = false;
             this.txtSenhaCliente.WordWrap = true;
             this.txtSenhaCliente.TextChange += new System.EventHandler(this.txtSenha_TextChanged);
+            // 
+            // btnSair
+            // 
+            this.btnSair.ActiveImage = null;
+            this.btnSair.AllowAnimations = true;
+            this.btnSair.AllowBuffering = false;
+            this.btnSair.AllowToggling = false;
+            this.btnSair.AllowZooming = false;
+            this.btnSair.AllowZoomingOnFocus = false;
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSair.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair.ErrorImage")));
+            this.btnSair.FadeWhenInactive = true;
+            this.btnSair.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnSair.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSair.Image = global::LojaGames.Properties.Resources.X;
+            this.btnSair.ImageActive = null;
+            this.btnSair.ImageLocation = null;
+            this.btnSair.ImageMargin = 0;
+            this.btnSair.ImageSize = new System.Drawing.Size(31, 29);
+            this.btnSair.ImageZoomSize = new System.Drawing.Size(31, 29);
+            this.btnSair.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair.InitialImage")));
+            this.btnSair.Location = new System.Drawing.Point(0, 0);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Rotation = 0;
+            this.btnSair.ShowActiveImage = true;
+            this.btnSair.ShowCursorChanges = true;
+            this.btnSair.ShowImageBorders = true;
+            this.btnSair.ShowSizeMarkers = false;
+            this.btnSair.Size = new System.Drawing.Size(31, 29);
+            this.btnSair.TabIndex = 17;
+            this.btnSair.ToolTipText = "";
+            this.btnSair.WaitOnLoad = false;
+            this.btnSair.Zoom = 0;
+            this.btnSair.ZoomSpeed = 10;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // panel1
             // 
@@ -1693,82 +1772,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Já tem uma conta?";
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.ActiveImage = null;
-            this.btnMinimizar.AllowAnimations = true;
-            this.btnMinimizar.AllowBuffering = false;
-            this.btnMinimizar.AllowToggling = false;
-            this.btnMinimizar.AllowZooming = false;
-            this.btnMinimizar.AllowZoomingOnFocus = false;
-            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.btnMinimizar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMinimizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ErrorImage")));
-            this.btnMinimizar.FadeWhenInactive = false;
-            this.btnMinimizar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.Image = global::LojaGames.Properties.Resources.LineCinza;
-            this.btnMinimizar.ImageActive = null;
-            this.btnMinimizar.ImageLocation = null;
-            this.btnMinimizar.ImageMargin = 0;
-            this.btnMinimizar.ImageSize = new System.Drawing.Size(27, 29);
-            this.btnMinimizar.ImageZoomSize = new System.Drawing.Size(27, 29);
-            this.btnMinimizar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.InitialImage")));
-            this.btnMinimizar.Location = new System.Drawing.Point(666, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Rotation = 0;
-            this.btnMinimizar.ShowActiveImage = true;
-            this.btnMinimizar.ShowCursorChanges = true;
-            this.btnMinimizar.ShowImageBorders = true;
-            this.btnMinimizar.ShowSizeMarkers = false;
-            this.btnMinimizar.Size = new System.Drawing.Size(27, 29);
-            this.btnMinimizar.TabIndex = 18;
-            this.btnMinimizar.ToolTipText = "";
-            this.btnMinimizar.WaitOnLoad = false;
-            this.btnMinimizar.Zoom = 0;
-            this.btnMinimizar.ZoomSpeed = 10;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseEnter += new System.EventHandler(this.btnMinimizar_MouseEnter);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            // 
-            // btnSair
-            // 
-            this.btnSair.ActiveImage = null;
-            this.btnSair.AllowAnimations = true;
-            this.btnSair.AllowBuffering = false;
-            this.btnSair.AllowToggling = false;
-            this.btnSair.AllowZooming = false;
-            this.btnSair.AllowZoomingOnFocus = false;
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSair.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair.ErrorImage")));
-            this.btnSair.FadeWhenInactive = false;
-            this.btnSair.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnSair.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSair.Image = global::LojaGames.Properties.Resources.XCinza;
-            this.btnSair.ImageActive = null;
-            this.btnSair.ImageLocation = null;
-            this.btnSair.ImageMargin = 0;
-            this.btnSair.ImageSize = new System.Drawing.Size(31, 29);
-            this.btnSair.ImageZoomSize = new System.Drawing.Size(31, 29);
-            this.btnSair.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair.InitialImage")));
-            this.btnSair.Location = new System.Drawing.Point(696, 0);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Rotation = 0;
-            this.btnSair.ShowActiveImage = true;
-            this.btnSair.ShowCursorChanges = true;
-            this.btnSair.ShowImageBorders = true;
-            this.btnSair.ShowSizeMarkers = false;
-            this.btnSair.Size = new System.Drawing.Size(31, 29);
-            this.btnSair.TabIndex = 17;
-            this.btnSair.ToolTipText = "";
-            this.btnSair.WaitOnLoad = false;
-            this.btnSair.Zoom = 0;
-            this.btnSair.ZoomSpeed = 10;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            this.btnSair.MouseEnter += new System.EventHandler(this.btnSair_MouseEnter);
-            this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -1856,18 +1859,8 @@
             // 
             this.bunifuDragControl3.Fixed = true;
             this.bunifuDragControl3.Horizontal = true;
-            this.bunifuDragControl3.TargetControl = this.pictureBox1;
+            this.bunifuDragControl3.TargetControl = null;
             this.bunifuDragControl3.Vertical = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LojaGames.Properties.Resources.OIG;
-            this.pictureBox1.Location = new System.Drawing.Point(463, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -1879,17 +1872,6 @@
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
-            this.label3.Location = new System.Drawing.Point(549, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 26);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Clientes";
-            // 
             // bunifuPages2
             // 
             this.bunifuPages2.Alignment = System.Windows.Forms.TabAlignment.Bottom;
@@ -1900,12 +1882,12 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage3;
-            this.bunifuPages2.PageIndex = 0;
-            this.bunifuPages2.PageName = "tabPage3";
-            this.bunifuPages2.PageTitle = "tabPage3";
+            this.bunifuPages2.Page = this.tabPage4;
+            this.bunifuPages2.PageIndex = 1;
+            this.bunifuPages2.PageName = "tabPage4";
+            this.bunifuPages2.PageTitle = "tabPage4";
             this.bunifuPages2.SelectedIndex = 0;
-            this.bunifuPages2.Size = new System.Drawing.Size(723, 426);
+            this.bunifuPages2.Size = new System.Drawing.Size(726, 426);
             this.bunifuPages2.TabIndex = 20;
             animation3.AnimateOnlyDifferences = true;
             animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
@@ -1927,118 +1909,72 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.tabPage3.Controls.Add(this.btnMinimizar);
-            this.tabPage3.Controls.Add(this.btnSair);
-            this.tabPage3.Controls.Add(this.bunifuPages1);
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.pictureBox3);
+            this.tabPage3.Controls.Add(this.bunifuPages1);
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(715, 400);
+            this.tabPage3.Size = new System.Drawing.Size(718, 400);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
+            this.label3.Location = new System.Drawing.Point(549, 273);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 25);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Clientes";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(501, 125);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(177, 150);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(739, 437);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.tabPage4.Controls.Add(this.btnMinimizar2);
-            this.tabPage4.Controls.Add(this.btnSair2);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.bunifuPages3);
             this.tabPage4.Controls.Add(this.pictureBox2);
+            this.tabPage4.Controls.Add(this.bunifuPages3);
+            this.tabPage4.Controls.Add(this.pictureBox4);
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(715, 400);
+            this.tabPage4.Size = new System.Drawing.Size(718, 400);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "tabPage4";
             // 
-            // btnMinimizar2
+            // pictureBox2
             // 
-            this.btnMinimizar2.ActiveImage = null;
-            this.btnMinimizar2.AllowAnimations = true;
-            this.btnMinimizar2.AllowBuffering = false;
-            this.btnMinimizar2.AllowToggling = false;
-            this.btnMinimizar2.AllowZooming = false;
-            this.btnMinimizar2.AllowZoomingOnFocus = false;
-            this.btnMinimizar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.btnMinimizar2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMinimizar2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar2.ErrorImage")));
-            this.btnMinimizar2.FadeWhenInactive = false;
-            this.btnMinimizar2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnMinimizar2.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar2.Image = global::LojaGames.Properties.Resources.LineCinza;
-            this.btnMinimizar2.ImageActive = null;
-            this.btnMinimizar2.ImageLocation = null;
-            this.btnMinimizar2.ImageMargin = 0;
-            this.btnMinimizar2.ImageSize = new System.Drawing.Size(27, 29);
-            this.btnMinimizar2.ImageZoomSize = new System.Drawing.Size(27, 29);
-            this.btnMinimizar2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar2.InitialImage")));
-            this.btnMinimizar2.Location = new System.Drawing.Point(24, 0);
-            this.btnMinimizar2.Name = "btnMinimizar2";
-            this.btnMinimizar2.Rotation = 0;
-            this.btnMinimizar2.ShowActiveImage = true;
-            this.btnMinimizar2.ShowCursorChanges = true;
-            this.btnMinimizar2.ShowImageBorders = true;
-            this.btnMinimizar2.ShowSizeMarkers = false;
-            this.btnMinimizar2.Size = new System.Drawing.Size(27, 29);
-            this.btnMinimizar2.TabIndex = 22;
-            this.btnMinimizar2.ToolTipText = "";
-            this.btnMinimizar2.WaitOnLoad = false;
-            this.btnMinimizar2.Zoom = 0;
-            this.btnMinimizar2.ZoomSpeed = 10;
-            this.btnMinimizar2.Click += new System.EventHandler(this.btnMinimizar2_Click);
-            this.btnMinimizar2.MouseEnter += new System.EventHandler(this.btnMinimizar2_MouseEnter);
-            this.btnMinimizar2.MouseLeave += new System.EventHandler(this.btnMinimizar2_MouseLeave);
-            // 
-            // btnSair2
-            // 
-            this.btnSair2.ActiveImage = null;
-            this.btnSair2.AllowAnimations = true;
-            this.btnSair2.AllowBuffering = false;
-            this.btnSair2.AllowToggling = false;
-            this.btnSair2.AllowZooming = false;
-            this.btnSair2.AllowZoomingOnFocus = false;
-            this.btnSair2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.btnSair2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSair2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair2.ErrorImage")));
-            this.btnSair2.FadeWhenInactive = false;
-            this.btnSair2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnSair2.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSair2.Image = global::LojaGames.Properties.Resources.XCinza;
-            this.btnSair2.ImageActive = null;
-            this.btnSair2.ImageLocation = null;
-            this.btnSair2.ImageMargin = 0;
-            this.btnSair2.ImageSize = new System.Drawing.Size(31, 29);
-            this.btnSair2.ImageZoomSize = new System.Drawing.Size(31, 29);
-            this.btnSair2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair2.InitialImage")));
-            this.btnSair2.Location = new System.Drawing.Point(-4, 0);
-            this.btnSair2.Name = "btnSair2";
-            this.btnSair2.Rotation = 0;
-            this.btnSair2.ShowActiveImage = true;
-            this.btnSair2.ShowCursorChanges = true;
-            this.btnSair2.ShowImageBorders = true;
-            this.btnSair2.ShowSizeMarkers = false;
-            this.btnSair2.Size = new System.Drawing.Size(31, 29);
-            this.btnSair2.TabIndex = 21;
-            this.btnSair2.ToolTipText = "";
-            this.btnSair2.WaitOnLoad = false;
-            this.btnSair2.Zoom = 0;
-            this.btnSair2.ZoomSpeed = 10;
-            this.btnSair2.Click += new System.EventHandler(this.btnSair2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
-            this.label6.Location = new System.Drawing.Point(63, 290);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 26);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Funcionarios";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(39, 125);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(177, 150);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // bunifuPages3
             // 
@@ -2046,7 +1982,7 @@
             this.bunifuPages3.AllowTransitions = true;
             this.bunifuPages3.Controls.Add(this.tabPage5);
             this.bunifuPages3.Controls.Add(this.tabPage6);
-            this.bunifuPages3.Location = new System.Drawing.Point(251, 3);
+            this.bunifuPages3.Location = new System.Drawing.Point(251, 0);
             this.bunifuPages3.Multiline = true;
             this.bunifuPages3.Name = "bunifuPages3";
             this.bunifuPages3.Page = this.tabPage5;
@@ -2054,7 +1990,7 @@
             this.bunifuPages3.PageName = "tabPage5";
             this.bunifuPages3.PageTitle = "";
             this.bunifuPages3.SelectedIndex = 0;
-            this.bunifuPages3.Size = new System.Drawing.Size(476, 426);
+            this.bunifuPages3.Size = new System.Drawing.Size(476, 425);
             this.bunifuPages3.TabIndex = 1;
             animation2.AnimateOnlyDifferences = true;
             animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
@@ -2077,7 +2013,10 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.btnMinimizar2);
             this.tabPage5.Controls.Add(this.tglbtnMostrarSenhaFunc);
+            this.tabPage5.Controls.Add(this.btnSair2);
             this.tabPage5.Controls.Add(this.btnCliente);
             this.tabPage5.Controls.Add(this.bunifuImageButton3);
             this.tabPage5.Controls.Add(this.bunifuImageButton4);
@@ -2089,8 +2028,55 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(449, 418);
+            this.tabPage5.Size = new System.Drawing.Size(449, 417);
             this.tabPage5.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
+            this.label6.Location = new System.Drawing.Point(30, 315);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 26);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Funcionarios";
+            // 
+            // btnMinimizar2
+            // 
+            this.btnMinimizar2.ActiveImage = null;
+            this.btnMinimizar2.AllowAnimations = true;
+            this.btnMinimizar2.AllowBuffering = false;
+            this.btnMinimizar2.AllowToggling = false;
+            this.btnMinimizar2.AllowZooming = false;
+            this.btnMinimizar2.AllowZoomingOnFocus = false;
+            this.btnMinimizar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            this.btnMinimizar2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnMinimizar2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar2.ErrorImage")));
+            this.btnMinimizar2.FadeWhenInactive = true;
+            this.btnMinimizar2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnMinimizar2.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar2.Image = global::LojaGames.Properties.Resources.Line;
+            this.btnMinimizar2.ImageActive = null;
+            this.btnMinimizar2.ImageLocation = null;
+            this.btnMinimizar2.ImageMargin = 0;
+            this.btnMinimizar2.ImageSize = new System.Drawing.Size(27, 29);
+            this.btnMinimizar2.ImageZoomSize = new System.Drawing.Size(27, 29);
+            this.btnMinimizar2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar2.InitialImage")));
+            this.btnMinimizar2.Location = new System.Drawing.Point(420, 0);
+            this.btnMinimizar2.Name = "btnMinimizar2";
+            this.btnMinimizar2.Rotation = 0;
+            this.btnMinimizar2.ShowActiveImage = true;
+            this.btnMinimizar2.ShowCursorChanges = true;
+            this.btnMinimizar2.ShowImageBorders = true;
+            this.btnMinimizar2.ShowSizeMarkers = false;
+            this.btnMinimizar2.Size = new System.Drawing.Size(27, 29);
+            this.btnMinimizar2.TabIndex = 22;
+            this.btnMinimizar2.ToolTipText = "";
+            this.btnMinimizar2.WaitOnLoad = false;
+            this.btnMinimizar2.Zoom = 0;
+            this.btnMinimizar2.ZoomSpeed = 10;
+            this.btnMinimizar2.Click += new System.EventHandler(this.btnMinimizar2_Click);
             // 
             // tglbtnMostrarSenhaFunc
             // 
@@ -2100,7 +2086,7 @@
             this.tglbtnMostrarSenhaFunc.Checked = false;
             this.tglbtnMostrarSenhaFunc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tglbtnMostrarSenhaFunc.InnerCirclePadding = 3;
-            this.tglbtnMostrarSenhaFunc.Location = new System.Drawing.Point(359, 194);
+            this.tglbtnMostrarSenhaFunc.Location = new System.Drawing.Point(359, 198);
             this.tglbtnMostrarSenhaFunc.Name = "tglbtnMostrarSenhaFunc";
             this.tglbtnMostrarSenhaFunc.Size = new System.Drawing.Size(32, 18);
             this.tglbtnMostrarSenhaFunc.TabIndex = 19;
@@ -2135,6 +2121,42 @@
             this.tglbtnMostrarSenhaFunc.Value = false;
             this.tglbtnMostrarSenhaFunc.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.tglbtnMostrarSenhaFunc_CheckedChanged);
             // 
+            // btnSair2
+            // 
+            this.btnSair2.ActiveImage = null;
+            this.btnSair2.AllowAnimations = true;
+            this.btnSair2.AllowBuffering = false;
+            this.btnSair2.AllowToggling = false;
+            this.btnSair2.AllowZooming = false;
+            this.btnSair2.AllowZoomingOnFocus = false;
+            this.btnSair2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
+            this.btnSair2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSair2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair2.ErrorImage")));
+            this.btnSair2.FadeWhenInactive = true;
+            this.btnSair2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnSair2.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSair2.Image = global::LojaGames.Properties.Resources.X;
+            this.btnSair2.ImageActive = null;
+            this.btnSair2.ImageLocation = null;
+            this.btnSair2.ImageMargin = 0;
+            this.btnSair2.ImageSize = new System.Drawing.Size(31, 29);
+            this.btnSair2.ImageZoomSize = new System.Drawing.Size(31, 29);
+            this.btnSair2.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair2.InitialImage")));
+            this.btnSair2.Location = new System.Drawing.Point(443, 0);
+            this.btnSair2.Name = "btnSair2";
+            this.btnSair2.Rotation = 0;
+            this.btnSair2.ShowActiveImage = true;
+            this.btnSair2.ShowCursorChanges = true;
+            this.btnSair2.ShowImageBorders = true;
+            this.btnSair2.ShowSizeMarkers = false;
+            this.btnSair2.Size = new System.Drawing.Size(31, 29);
+            this.btnSair2.TabIndex = 21;
+            this.btnSair2.ToolTipText = "";
+            this.btnSair2.WaitOnLoad = false;
+            this.btnSair2.Zoom = 0;
+            this.btnSair2.ZoomSpeed = 10;
+            this.btnSair2.Click += new System.EventHandler(this.btnSair2_Click);
+            // 
             // btnCliente
             // 
             this.btnCliente.ActiveImage = null;
@@ -2146,7 +2168,7 @@
             this.btnCliente.BackColor = System.Drawing.Color.Transparent;
             this.btnCliente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCliente.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCliente.ErrorImage")));
-            this.btnCliente.FadeWhenInactive = false;
+            this.btnCliente.FadeWhenInactive = true;
             this.btnCliente.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Horizontal;
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageActive = null;
@@ -2155,7 +2177,7 @@
             this.btnCliente.ImageSize = new System.Drawing.Size(31, 21);
             this.btnCliente.ImageZoomSize = new System.Drawing.Size(71, 61);
             this.btnCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnCliente.InitialImage")));
-            this.btnCliente.Location = new System.Drawing.Point(-12, 18);
+            this.btnCliente.Location = new System.Drawing.Point(-12, 22);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Rotation = 0;
             this.btnCliente.ShowActiveImage = true;
@@ -2268,7 +2290,7 @@
             this.txtSenhaFunc.IconRight = null;
             this.txtSenhaFunc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSenhaFunc.Lines = new string[0];
-            this.txtSenhaFunc.Location = new System.Drawing.Point(88, 184);
+            this.txtSenhaFunc.Location = new System.Drawing.Point(88, 188);
             this.txtSenhaFunc.MaxLength = 32767;
             this.txtSenhaFunc.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSenhaFunc.Modified = false;
@@ -2320,7 +2342,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(-4, 350);
+            this.panel3.Location = new System.Drawing.Point(-4, 354);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(496, 82);
             this.panel3.TabIndex = 0;
@@ -2383,7 +2405,7 @@
             this.btnEntrarFunc.IdleIconLeftImage = null;
             this.btnEntrarFunc.IdleIconRightImage = null;
             this.btnEntrarFunc.IndicateFocus = false;
-            this.btnEntrarFunc.Location = new System.Drawing.Point(89, 254);
+            this.btnEntrarFunc.Location = new System.Drawing.Point(89, 258);
             this.btnEntrarFunc.Name = "btnEntrarFunc";
             this.btnEntrarFunc.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(93)))), ((int)(((byte)(195)))));
             this.btnEntrarFunc.OnDisabledState.BorderRadius = 15;
@@ -2434,7 +2456,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(143, 18);
+            this.bunifuLabel2.Location = new System.Drawing.Point(143, 22);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(195, 45);
@@ -2471,7 +2493,7 @@
             this.txtUsuarioFunc.IconRight = null;
             this.txtUsuarioFunc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuarioFunc.Lines = new string[0];
-            this.txtUsuarioFunc.Location = new System.Drawing.Point(89, 102);
+            this.txtUsuarioFunc.Location = new System.Drawing.Point(89, 106);
             this.txtUsuarioFunc.MaxLength = 32767;
             this.txtUsuarioFunc.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuarioFunc.Modified = false;
@@ -2525,7 +2547,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(449, 418);
+            this.tabPage6.Size = new System.Drawing.Size(449, 425);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "tabPage6";
             // 
@@ -2639,15 +2661,15 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Já tem uma conta?";
             // 
-            // pictureBox2
+            // pictureBox4
             // 
-            this.pictureBox2.Image = global::LojaGames.Properties.Resources.OIG;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(252, 228);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(-12, -11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(741, 436);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // bunifuElipse3
             // 
@@ -2657,6 +2679,11 @@
             // dadosTableAdapter
             // 
             this.dadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 5;
+            this.bunifuElipse4.TargetControl = this.bunifuPages3;
             // 
             // login
             // 
@@ -2685,12 +2712,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPages2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuPages3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -2699,7 +2727,7 @@
             this.tabPage6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2713,12 +2741,10 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnVoltar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuPages bunifuPages2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -2776,5 +2802,10 @@
         private exodusDbDataSet exodusDbDataSet;
         private System.Windows.Forms.BindingSource dadosBindingSource;
         private exodusDbDataSetTableAdapters.dadosTableAdapter dadosTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
     }
 }
