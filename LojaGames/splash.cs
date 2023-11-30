@@ -27,7 +27,7 @@ namespace LojaGames
             if (bunifuProgressBar1.Value >= 98)
             {
                 timer1.Enabled = false;
-                new login().Show();
+                new explore().Show();
                 Visible = false;
             }
         }
