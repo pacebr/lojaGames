@@ -138,10 +138,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuPages3 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnMinimizar2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.tglbtnMostrarSenhaFunc = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.btnSair2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -1882,10 +1882,10 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage4;
-            this.bunifuPages2.PageIndex = 1;
-            this.bunifuPages2.PageName = "tabPage4";
-            this.bunifuPages2.PageTitle = "tabPage4";
+            this.bunifuPages2.Page = this.tabPage3;
+            this.bunifuPages2.PageIndex = 0;
+            this.bunifuPages2.PageName = "tabPage3";
+            this.bunifuPages2.PageTitle = "tabPage3";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(726, 426);
             this.bunifuPages2.TabIndex = 20;
@@ -1955,6 +1955,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.pictureBox2);
             this.tabPage4.Controls.Add(this.bunifuPages3);
             this.tabPage4.Controls.Add(this.pictureBox4);
@@ -1964,6 +1965,17 @@
             this.tabPage4.Size = new System.Drawing.Size(718, 400);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "tabPage4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
+            this.label6.Location = new System.Drawing.Point(63, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 26);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Funcionarios";
             // 
             // pictureBox2
             // 
@@ -2013,7 +2025,6 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
-            this.tabPage5.Controls.Add(this.label6);
             this.tabPage5.Controls.Add(this.btnMinimizar2);
             this.tabPage5.Controls.Add(this.tglbtnMostrarSenhaFunc);
             this.tabPage5.Controls.Add(this.btnSair2);
@@ -2030,17 +2041,6 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(449, 417);
             this.tabPage5.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
-            this.label6.Location = new System.Drawing.Point(30, 315);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 26);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Funcionarios";
             // 
             // btnMinimizar2
             // 
@@ -2547,7 +2547,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(449, 425);
+            this.tabPage6.Size = new System.Drawing.Size(449, 417);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "tabPage6";
             // 
@@ -2718,6 +2718,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuPages3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);

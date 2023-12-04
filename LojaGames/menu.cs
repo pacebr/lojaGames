@@ -203,23 +203,49 @@ namespace LojaGames
 
         private void tabPage2_Enter(object sender, EventArgs e)
         {
-            ListarJogos();
+            criarPcb();
         }
 
-        private void ListarJogos()
+        private void criarPcb()
         {
-            pbJogo1.Image = DadosJogo.PegarImagemGrande(1);
-            pbJogo2.Image = DadosJogo.PegarImagemGrande(2);
-            pbJogo3.Image = DadosJogo.PegarImagemGrande(3);
-            pbJogo4.Image = DadosJogo.PegarImagemGrande(4);
-            pbJogo5.Image = DadosJogo.PegarImagemGrande(5);
-            pbJogo6.Image = DadosJogo.PegarImagemGrande(6);
-            pbJogo7.Image = DadosJogo.PegarImagemGrande(7);
-            pbJogo8.Image = DadosJogo.PegarImagemGrande(8);
-            pbJogo9.Image = DadosJogo.PegarImagemGrande(9);
-            pbJogo10.Image = DadosJogo.PegarImagemGrande(10);
-            pbJogo11.Image = DadosJogo.PegarImagemGrande(11);
-            pbJogo12.Image = DadosJogo.PegarImagemGrande(12);
+            int posX = 5;
+            int posY = 6;
+            int numeroImagens = DadosJogo.ObterNumeroImagens();
+
+            for (int i = 1; i <= numeroImagens; i++)
+            {
+                PictureBox pictureBox = new PictureBox()
+                {
+                    Image = DadosJogo.PegarImagemGrande(i),
+                    Size = new Size(290, 290),
+                    Location = new Point(posX, posY),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Tag = i
+                };
+                pictureBox.MouseClick += pictureBox_Click;
+                panel1.Controls.Add(pictureBox);
+
+                posX += 298;
+                if (i % 4 == 0)
+                {
+                    posX = 5;
+                    posY += 300;
+                }
+            }
+        }
+        void pictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            if (clickedPictureBox != null && int.TryParse(clickedPictureBox.Tag.ToString(), out int i))
+            {
+                if (i <= 0)
+                {
+
+                    return;
+                }
+                MessageBox.Show("ID: " + i);
+            }
         }
 
         private void btnIcone_Click(object sender, EventArgs e)
@@ -280,6 +306,7 @@ namespace LojaGames
         private void pbJogo1_Click(object sender, EventArgs e)
         {
             pgMenu.SetPage(6);
-        }
-    }
+        }  
+       
+    }  
 }

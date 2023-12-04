@@ -143,5 +143,22 @@ namespace LojaGames
                 return null;
             }
         }
+        public static int ObterNumeroImagens()
+        {
+            try
+            {
+                Conexao.Conectar();
+                string sql = "select count(*) from jogos.dados";
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+
+                int numeroImagens = (int)cmd.ExecuteScalar();
+
+                return numeroImagens;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
-}
+}   

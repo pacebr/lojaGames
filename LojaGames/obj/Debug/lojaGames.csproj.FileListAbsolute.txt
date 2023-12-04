@@ -391,3 +391,4 @@ C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.
 C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.splash.resources
 C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.splash.resources
 C:\Users\vgdsn\source\repos\pacebr\lojaGames\LojaGames\obj\Debug\LojaGames.explore.resources
+C:\Users\victor.gsnogueira\source\repos\pacebr\lojaGames\LojaGames\obj\Debug\LojaGames.explore.resources

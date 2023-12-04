@@ -29,6 +29,7 @@ namespace LojaGames
             pictureBox3.Parent = pictureBox1;
             label3.Parent = pictureBox1;
             pictureBox2.Parent = pictureBox4;
+            label6.Parent = pictureBox4;
         }
 
         private void btnEntrarCliente_Click(object sender, EventArgs e)

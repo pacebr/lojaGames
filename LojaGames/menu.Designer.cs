@@ -122,18 +122,6 @@
             this.btnJogo1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbJogo12 = new System.Windows.Forms.PictureBox();
-            this.pbJogo11 = new System.Windows.Forms.PictureBox();
-            this.pbJogo10 = new System.Windows.Forms.PictureBox();
-            this.pbJogo9 = new System.Windows.Forms.PictureBox();
-            this.pbJogo8 = new System.Windows.Forms.PictureBox();
-            this.pbJogo7 = new System.Windows.Forms.PictureBox();
-            this.pbJogo6 = new System.Windows.Forms.PictureBox();
-            this.pbJogo5 = new System.Windows.Forms.PictureBox();
-            this.pbJogo4 = new System.Windows.Forms.PictureBox();
-            this.pbJogo3 = new System.Windows.Forms.PictureBox();
-            this.pbJogo2 = new System.Windows.Forms.PictureBox();
-            this.pbJogo1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pgAdd = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -193,19 +181,6 @@
             this.panelJogo5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.pgAdd.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -241,10 +216,10 @@
             this.pgMenu.Location = new System.Drawing.Point(88, 70);
             this.pgMenu.Multiline = true;
             this.pgMenu.Name = "pgMenu";
-            this.pgMenu.Page = this.Jogos;
-            this.pgMenu.PageIndex = 6;
-            this.pgMenu.PageName = "Jogos";
-            this.pgMenu.PageTitle = "Jogos";
+            this.pgMenu.Page = this.tabPage2;
+            this.pgMenu.PageIndex = 2;
+            this.pgMenu.PageName = "tabPage2";
+            this.pgMenu.PageTitle = "tabPage2";
             this.pgMenu.SelectedIndex = 0;
             this.pgMenu.Size = new System.Drawing.Size(1220, 631);
             this.pgMenu.TabIndex = 0;
@@ -1985,131 +1960,10 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.pbJogo12);
-            this.panel1.Controls.Add(this.pbJogo11);
-            this.panel1.Controls.Add(this.pbJogo10);
-            this.panel1.Controls.Add(this.pbJogo9);
-            this.panel1.Controls.Add(this.pbJogo8);
-            this.panel1.Controls.Add(this.pbJogo7);
-            this.panel1.Controls.Add(this.pbJogo6);
-            this.panel1.Controls.Add(this.pbJogo5);
-            this.panel1.Controls.Add(this.pbJogo4);
-            this.panel1.Controls.Add(this.pbJogo3);
-            this.panel1.Controls.Add(this.pbJogo2);
-            this.panel1.Controls.Add(this.pbJogo1);
             this.panel1.Location = new System.Drawing.Point(0, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1212, 596);
             this.panel1.TabIndex = 0;
-            // 
-            // pbJogo12
-            // 
-            this.pbJogo12.Location = new System.Drawing.Point(899, 602);
-            this.pbJogo12.Name = "pbJogo12";
-            this.pbJogo12.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo12.TabIndex = 19;
-            this.pbJogo12.TabStop = false;
-            // 
-            // pbJogo11
-            // 
-            this.pbJogo11.Location = new System.Drawing.Point(601, 602);
-            this.pbJogo11.Name = "pbJogo11";
-            this.pbJogo11.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo11.TabIndex = 18;
-            this.pbJogo11.TabStop = false;
-            // 
-            // pbJogo10
-            // 
-            this.pbJogo10.Location = new System.Drawing.Point(303, 602);
-            this.pbJogo10.Name = "pbJogo10";
-            this.pbJogo10.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo10.TabIndex = 17;
-            this.pbJogo10.TabStop = false;
-            // 
-            // pbJogo9
-            // 
-            this.pbJogo9.Location = new System.Drawing.Point(5, 602);
-            this.pbJogo9.Name = "pbJogo9";
-            this.pbJogo9.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo9.TabIndex = 16;
-            this.pbJogo9.TabStop = false;
-            // 
-            // pbJogo8
-            // 
-            this.pbJogo8.Location = new System.Drawing.Point(899, 306);
-            this.pbJogo8.Name = "pbJogo8";
-            this.pbJogo8.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo8.TabIndex = 15;
-            this.pbJogo8.TabStop = false;
-            // 
-            // pbJogo7
-            // 
-            this.pbJogo7.Location = new System.Drawing.Point(601, 306);
-            this.pbJogo7.Name = "pbJogo7";
-            this.pbJogo7.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo7.TabIndex = 14;
-            this.pbJogo7.TabStop = false;
-            // 
-            // pbJogo6
-            // 
-            this.pbJogo6.Location = new System.Drawing.Point(303, 306);
-            this.pbJogo6.Name = "pbJogo6";
-            this.pbJogo6.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo6.TabIndex = 13;
-            this.pbJogo6.TabStop = false;
-            // 
-            // pbJogo5
-            // 
-            this.pbJogo5.Location = new System.Drawing.Point(5, 306);
-            this.pbJogo5.Name = "pbJogo5";
-            this.pbJogo5.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo5.TabIndex = 12;
-            this.pbJogo5.TabStop = false;
-            // 
-            // pbJogo4
-            // 
-            this.pbJogo4.Location = new System.Drawing.Point(899, 6);
-            this.pbJogo4.Name = "pbJogo4";
-            this.pbJogo4.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo4.TabIndex = 11;
-            this.pbJogo4.TabStop = false;
-            // 
-            // pbJogo3
-            // 
-            this.pbJogo3.Location = new System.Drawing.Point(601, 6);
-            this.pbJogo3.Name = "pbJogo3";
-            this.pbJogo3.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo3.TabIndex = 10;
-            this.pbJogo3.TabStop = false;
-            // 
-            // pbJogo2
-            // 
-            this.pbJogo2.Location = new System.Drawing.Point(303, 6);
-            this.pbJogo2.Name = "pbJogo2";
-            this.pbJogo2.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo2.TabIndex = 9;
-            this.pbJogo2.TabStop = false;
-            // 
-            // pbJogo1
-            // 
-            this.pbJogo1.Location = new System.Drawing.Point(5, 6);
-            this.pbJogo1.Name = "pbJogo1";
-            this.pbJogo1.Size = new System.Drawing.Size(290, 290);
-            this.pbJogo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJogo1.TabIndex = 8;
-            this.pbJogo1.TabStop = false;
-            this.pbJogo1.Click += new System.EventHandler(this.pbJogo1_Click);
             // 
             // tabPage3
             // 
@@ -3681,19 +3535,6 @@
             this.panelJogo5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.pgAdd.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -3763,18 +3604,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuTextBox txtNomeJogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbJogo12;
-        private System.Windows.Forms.PictureBox pbJogo11;
-        private System.Windows.Forms.PictureBox pbJogo10;
-        private System.Windows.Forms.PictureBox pbJogo9;
-        private System.Windows.Forms.PictureBox pbJogo8;
-        private System.Windows.Forms.PictureBox pbJogo7;
-        private System.Windows.Forms.PictureBox pbJogo6;
-        private System.Windows.Forms.PictureBox pbJogo5;
-        private System.Windows.Forms.PictureBox pbJogo4;
-        private System.Windows.Forms.PictureBox pbJogo3;
-        private System.Windows.Forms.PictureBox pbJogo2;
-        private System.Windows.Forms.PictureBox pbJogo1;
         private Bunifu.UI.WinForms.BunifuTextBox txtDescricao;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEnviarCarrousel;
         private Bunifu.UI.WinForms.BunifuTextBox txtCarousel;
