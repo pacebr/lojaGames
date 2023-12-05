@@ -203,10 +203,10 @@
             this.pgMenu.Location = new System.Drawing.Point(88, 70);
             this.pgMenu.Multiline = true;
             this.pgMenu.Name = "pgMenu";
-            this.pgMenu.Page = this.tabPage3;
-            this.pgMenu.PageIndex = 3;
-            this.pgMenu.PageName = "tabPage3";
-            this.pgMenu.PageTitle = "tabPage3";
+            this.pgMenu.Page = this.tabPage2;
+            this.pgMenu.PageIndex = 2;
+            this.pgMenu.PageName = "tabPage2";
+            this.pgMenu.PageTitle = "tabPage2";
             this.pgMenu.SelectedIndex = 0;
             this.pgMenu.Size = new System.Drawing.Size(1220, 631);
             this.pgMenu.TabIndex = 0;

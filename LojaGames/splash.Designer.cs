@@ -30,28 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splash));
-            this.bunifuColorTransition1 = new Bunifu.UI.WinForms.BunifuColorTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuProgressBar1 = new Bunifu.UI.WinForms.BunifuProgressBar();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuColorTransition1
-            // 
-            this.bunifuColorTransition1.AutoTransition = true;
-            this.bunifuColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.bunifuColorTransition1.EndColor = System.Drawing.Color.White;
-            this.bunifuColorTransition1.Interval = 10;
-            this.bunifuColorTransition1.ProgessValue = 0;
-            this.bunifuColorTransition1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(18)))), ((int)(((byte)(90)))));
-            this.bunifuColorTransition1.TransitionControl = this;
             // 
             // timer1
             // 
@@ -79,16 +66,6 @@
             this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "100";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LojaGames.Properties.Resources.Logo_sem_fundo1;
-            this.pictureBox1.Location = new System.Drawing.Point(212, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 249);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // bunifuProgressBar1
             // 
@@ -127,17 +104,28 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(689, 379);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(122)))), ((int)(((byte)(163)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(689, 379);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuProgressBar1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -150,13 +138,12 @@
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition1;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.UI.WinForms.BunifuProgressBar bunifuProgressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

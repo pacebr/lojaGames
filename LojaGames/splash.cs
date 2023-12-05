@@ -17,14 +17,16 @@ namespace LojaGames
         public splash()
         {
             InitializeComponent();
+            label1.Parent = pictureBox1;
+            label2.Parent = pictureBox1;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Value = bunifuProgressBar1.Value + 7;
+            bunifuProgressBar1.Value = bunifuProgressBar1.Value + 4;
             label2.Text = bunifuProgressBar1.Value.ToString() + "%";
 
-            if (bunifuProgressBar1.Value >= 98)
+            if (bunifuProgressBar1.Value >= 100)
             {
                 timer1.Enabled = false;
                 new explore().Show();
