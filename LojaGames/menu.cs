@@ -120,7 +120,6 @@ namespace LojaGames
                 imagem = File.ReadAllBytes(caminhoArquivo);
 
                 pcbImagemJogo.Image = Image.FromFile(caminhoArquivo);
-                pcbMostrarJogo.Visible = true;
             }
         }
 
@@ -262,7 +261,6 @@ namespace LojaGames
                     icone = File.ReadAllBytes(caminhoArquivo);
 
                     pcbIcone.Image = Image.FromFile(caminhoArquivo);
-                    pcbMostrarIcone.Visible = true;
                 }
             }
         }
@@ -279,7 +277,6 @@ namespace LojaGames
                     carousel = File.ReadAllBytes(caminhoArquivo);
 
                     pcbCarousel.Image = Image.FromFile(caminhoArquivo);
-                    pcbMostrarCarousel.Visible = true;
                 }
             }
         }
@@ -306,45 +303,60 @@ namespace LojaGames
         {
             CycleButtons();
         }
-
-        private void AdicionarOuRemoverControle(PictureBox pictureBox,PictureBox pictureBoxMostrar, string texto, Point localizacao, Image imagemAdicionar, Image imagemRemover)
+        private void RemoverControlesDoPanel(Panel panel)
         {
-            PictureBox controleExistente = panel2.Controls.OfType<PictureBox>().FirstOrDefault();
-
-            if (controleExistente != null)
+            foreach (Control controle in panel.Controls)
             {
-                pictureBoxMostrar.Image = imagemAdicionar;
-                lblMostrar.Text = "";
-                panel2.Controls.Remove(controleExistente);
-                controleExistente.Dispose();
+                controle.Dispose();
             }
-            if(controleExistente == null)
-            {
-                pictureBoxMostrar.Image = imagemRemover;
-                lblMostrar.Text = texto;
-                lblMostrar.Location = localizacao;
 
-                PictureBox novaPictureBox = new PictureBox()
-                {
-                    Image = pictureBox.Image,
-                    Size = new Size(290, 290),
-                    Location = new Point(0, 0),
-                    SizeMode = PictureBoxSizeMode.StretchImage,
-                };
-                novaPictureBox.Image = pictureBox.Image;
-                panel2.Controls.Add(novaPictureBox);
-            }
+            panel.Controls.Clear();
         }
 
         private void pcbMostrarJogo_Click(object sender, EventArgs e)
         {
-            AdicionarOuRemoverControle(pcbImagemJogo,pcbMostrarJogo, "Imagem Jogo", new Point(607, 309),Resources.fechar_o_olho__1_, Resources.olho);
+            PictureBox pcbMostrar = panel2.Controls.OfType<PictureBox>().FirstOrDefault();
+
+            if (pcbMostrarIcone.Image != Resources.fechar_o_olho__1_ || pcbMostrarCarousel.Image != Resources.fechar_o_olho__1_)
+            {
+                RemoverControlesDoPanel(panel2);
+                pcbMostrarIcone.Image = Resources.fechar_o_olho__1_;
+                pcbMostrarCarousel.Image = Resources.fechar_o_olho__1_;
+            }
+            if (pcbMostrar != null)
+            {
+                pcbMostrarJogo.Image = Resources.fechar_o_olho__1_;
+                lblMostrar.Text = "";
+                panel2.Controls.Remove(pcbMostrar);
+                pcbMostrar.Dispose();
+            }
+            if(pcbMostrar == null)
+            {
+                pcbMostrarJogo.Image = Resources.olho;
+                lblMostrar.Text = "Imagem Jogo";
+                lblMostrar.Location = new Point(607, 309);
+
+                PictureBox PictureBox = new PictureBox()
+                {
+                    Image = pcbImagemJogo.Image,
+                    Size = new Size(290, 290),
+                    Location = new Point(0, 0),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                };
+                panel2.Controls.Add(PictureBox);
+            }
         }
 
         private void pcbMostrarIcone_Click(object sender, EventArgs e)
         {
             Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMostrar = panel2.Controls.OfType<Bunifu.UI.WinForms.BunifuButton.BunifuButton>().FirstOrDefault();
 
+            if (pcbMostrarJogo.Image != Resources.fechar_o_olho__1_ || pcbMostrarCarousel.Image != Resources.fechar_o_olho__1_)
+            {
+                RemoverControlesDoPanel(panel2);
+                pcbMostrarJogo.Image = Resources.fechar_o_olho__1_;
+                pcbMostrarCarousel.Image = Resources.fechar_o_olho__1_;
+            }
             if (btnMostrar != null)
             {
                 pcbMostrarIcone.Image = Resources.fechar_o_olho__1_;
@@ -375,7 +387,36 @@ namespace LojaGames
 
         private void pcbMostrarCarousel_Click(object sender, EventArgs e)
         {
-            AdicionarOuRemoverControle(pcbCarousel,pcbMostrarCarousel, "Imagem Carrossel", new Point(591, 309),Resources.fechar_o_olho__1_, Resources.olho);
+            PictureBox pcbMostrar = panel2.Controls.OfType<PictureBox>().FirstOrDefault();
+
+            if (pcbMostrarJogo.Image != Resources.fechar_o_olho__1_ || pcbMostrarIcone.Image != Resources.fechar_o_olho__1_)
+            {
+                RemoverControlesDoPanel(panel2);
+                pcbMostrarJogo.Image = Resources.fechar_o_olho__1_;
+                pcbMostrarIcone.Image = Resources.fechar_o_olho__1_;
+            }
+            if (pcbMostrar != null)
+            {
+                pcbMostrarCarousel.Image = Resources.fechar_o_olho__1_;
+                lblMostrar.Text = "";
+                panel2.Controls.Remove(pcbMostrar);
+                pcbMostrar.Dispose();
+            }
+            if (pcbMostrar == null)
+            {
+                pcbMostrarCarousel.Image = Resources.olho;
+                lblMostrar.Text = "Imagem Carrousel";
+                lblMostrar.Location = new Point(591, 309);
+
+                PictureBox PictureBox = new PictureBox()
+                {
+                    Image = pcbImagemJogo.Image,
+                    Size = new Size(290, 290),
+                    Location = new Point(0, 0),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                };
+                panel2.Controls.Add(PictureBox);
+            }
         }
     }  
 }

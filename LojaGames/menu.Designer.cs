@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -52,6 +46,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -70,71 +65,45 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pgMenu = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage0 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pgJogos = new Bunifu.UI.WinForms.BunifuPages();
             this.jogo1 = new System.Windows.Forms.TabPage();
-            this.jogo2 = new System.Windows.Forms.TabPage();
-            this.jogo3 = new System.Windows.Forms.TabPage();
-            this.jogo4 = new System.Windows.Forms.TabPage();
-            this.jogo5 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pgAdd = new Bunifu.UI.WinForms.BunifuPages();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Jogos = new System.Windows.Forms.TabPage();
-            this.lblNomeJogo = new System.Windows.Forms.Label();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.notify = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.lblMostrar = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnCasa = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnDinheiro = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnConfiguracao = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnAdicionar = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnSair = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelJogo1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnListaDesejos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblValorJogo1 = new System.Windows.Forms.Label();
             this.lblbcompra1 = new System.Windows.Forms.Label();
             this.pcbJogoCarousel1 = new System.Windows.Forms.PictureBox();
+            this.jogo2 = new System.Windows.Forms.TabPage();
             this.panelJogo2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblValorJogo2 = new System.Windows.Forms.Label();
             this.lblbcompra2 = new System.Windows.Forms.Label();
             this.pcbJogoCarousel2 = new System.Windows.Forms.PictureBox();
+            this.jogo3 = new System.Windows.Forms.TabPage();
             this.panelJogo3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblValorJogo3 = new System.Windows.Forms.Label();
             this.lblbcompra3 = new System.Windows.Forms.Label();
             this.pcbJogoCarousel3 = new System.Windows.Forms.PictureBox();
+            this.jogo4 = new System.Windows.Forms.TabPage();
             this.panelJogo4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblValorJogo4 = new System.Windows.Forms.Label();
             this.lblbcompra4 = new System.Windows.Forms.Label();
             this.pcbJogoCarousel4 = new System.Windows.Forms.PictureBox();
+            this.jogo5 = new System.Windows.Forms.TabPage();
             this.panelJogo5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -146,12 +115,21 @@
             this.btnJogo3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnJogo2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnJogo1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pgAdd = new Bunifu.UI.WinForms.BunifuPages();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pcbMostrarCarousel = new System.Windows.Forms.PictureBox();
             this.pcbMostrarIcone = new System.Windows.Forms.PictureBox();
             this.pcbMostrarJogo = new System.Windows.Forms.PictureBox();
+            this.lblMostrar = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtTrailer = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnCarousel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pcbCarousel = new System.Windows.Forms.PictureBox();
@@ -162,35 +140,51 @@
             this.btnEnviarJogo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtNomeJogo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnJogo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Jogos = new System.Windows.Forms.TabPage();
+            this.lblNomeJogo = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnSair = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.notify = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnCasa = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnDinheiro = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnConfiguracao = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnAdicionar = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pgMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pgJogos.SuspendLayout();
             this.jogo1.SuspendLayout();
+            this.panelJogo1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel1)).BeginInit();
             this.jogo2.SuspendLayout();
+            this.panelJogo2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel2)).BeginInit();
             this.jogo3.SuspendLayout();
+            this.panelJogo3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel3)).BeginInit();
             this.jogo4.SuspendLayout();
+            this.panelJogo4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel4)).BeginInit();
             this.jogo5.SuspendLayout();
+            this.panelJogo5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.pgAdd.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.Jogos.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.bunifuPanel2.SuspendLayout();
-            this.panelJogo1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel1)).BeginInit();
-            this.panelJogo2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel2)).BeginInit();
-            this.panelJogo3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel3)).BeginInit();
-            this.panelJogo4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel4)).BeginInit();
-            this.panelJogo5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrarCarousel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrarIcone)).BeginInit();
@@ -198,6 +192,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarousel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemJogo)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.Jogos.SuspendLayout();
+            this.bunifuPanel2.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -320,738 +320,6 @@
             this.jogo1.Text = "jogo1";
             this.jogo1.UseVisualStyleBackColor = true;
             this.jogo1.Enter += new System.EventHandler(this.jogo1_Enter);
-            // 
-            // jogo2
-            // 
-            this.jogo2.Controls.Add(this.panelJogo2);
-            this.jogo2.Controls.Add(this.pcbJogoCarousel2);
-            this.jogo2.Location = new System.Drawing.Point(4, 4);
-            this.jogo2.Name = "jogo2";
-            this.jogo2.Padding = new System.Windows.Forms.Padding(3);
-            this.jogo2.Size = new System.Drawing.Size(828, 504);
-            this.jogo2.TabIndex = 1;
-            this.jogo2.Text = "jogo2";
-            this.jogo2.UseVisualStyleBackColor = true;
-            // 
-            // jogo3
-            // 
-            this.jogo3.Controls.Add(this.panelJogo3);
-            this.jogo3.Controls.Add(this.pcbJogoCarousel3);
-            this.jogo3.Location = new System.Drawing.Point(4, 4);
-            this.jogo3.Name = "jogo3";
-            this.jogo3.Size = new System.Drawing.Size(828, 504);
-            this.jogo3.TabIndex = 2;
-            this.jogo3.Text = "jogo3";
-            this.jogo3.UseVisualStyleBackColor = true;
-            // 
-            // jogo4
-            // 
-            this.jogo4.Controls.Add(this.panelJogo4);
-            this.jogo4.Controls.Add(this.pcbJogoCarousel4);
-            this.jogo4.Location = new System.Drawing.Point(4, 4);
-            this.jogo4.Name = "jogo4";
-            this.jogo4.Size = new System.Drawing.Size(828, 504);
-            this.jogo4.TabIndex = 3;
-            this.jogo4.Text = "jogo4";
-            this.jogo4.UseVisualStyleBackColor = true;
-            // 
-            // jogo5
-            // 
-            this.jogo5.Controls.Add(this.panelJogo5);
-            this.jogo5.Controls.Add(this.pcbJogoCarousel5);
-            this.jogo5.Location = new System.Drawing.Point(4, 4);
-            this.jogo5.Name = "jogo5";
-            this.jogo5.Size = new System.Drawing.Size(828, 504);
-            this.jogo5.TabIndex = 4;
-            this.jogo5.Text = "jogo5";
-            this.jogo5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1193, 623);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.panel1.Location = new System.Drawing.Point(0, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 596);
-            this.panel1.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.tabPage3.Controls.Add(this.pgAdd);
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1193, 623);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            // 
-            // pgAdd
-            // 
-            this.pgAdd.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.pgAdd.AllowTransitions = true;
-            this.pgAdd.Controls.Add(this.tabPage6);
-            this.pgAdd.Controls.Add(this.tabPage7);
-            this.pgAdd.Location = new System.Drawing.Point(0, 6);
-            this.pgAdd.Multiline = true;
-            this.pgAdd.Name = "pgAdd";
-            this.pgAdd.Page = this.tabPage7;
-            this.pgAdd.PageIndex = 1;
-            this.pgAdd.PageName = "tabPage7";
-            this.pgAdd.PageTitle = "tabPage7";
-            this.pgAdd.SelectedIndex = 0;
-            this.pgAdd.Size = new System.Drawing.Size(1216, 631);
-            this.pgAdd.TabIndex = 13;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.pgAdd.Transition = animation2;
-            this.pgAdd.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertSlide;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.tabPage6.Controls.Add(this.bunifuButton2);
-            this.tabPage6.Controls.Add(this.bunifuButton1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1208, 602);
-            this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "tabPage6";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
-            this.tabPage7.Controls.Add(this.panel2);
-            this.tabPage7.Controls.Add(this.pictureBox1);
-            this.tabPage7.Controls.Add(this.pcbMostrarCarousel);
-            this.tabPage7.Controls.Add(this.pcbMostrarIcone);
-            this.tabPage7.Controls.Add(this.pcbMostrarJogo);
-            this.tabPage7.Controls.Add(this.lblMostrar);
-            this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Controls.Add(this.txtTrailer);
-            this.tabPage7.Controls.Add(this.btnCarousel);
-            this.tabPage7.Controls.Add(this.pcbCarousel);
-            this.tabPage7.Controls.Add(this.btnIcone);
-            this.tabPage7.Controls.Add(this.pcbIcone);
-            this.tabPage7.Controls.Add(this.txtDescricao);
-            this.tabPage7.Controls.Add(this.pcbImagemJogo);
-            this.tabPage7.Controls.Add(this.btnEnviarJogo);
-            this.tabPage7.Controls.Add(this.txtNomeJogo);
-            this.tabPage7.Controls.Add(this.btnJogo);
-            this.tabPage7.Location = new System.Drawing.Point(4, 4);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1208, 602);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "tabPage7";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1193, 623);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(448, 263);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 58);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Quarto";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.tabPage5.Controls.Add(this.label6);
-            this.tabPage5.Location = new System.Drawing.Point(4, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1193, 623);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(448, 263);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 58);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Quinto";
-            // 
-            // Jogos
-            // 
-            this.Jogos.AutoScroll = true;
-            this.Jogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.Jogos.Controls.Add(this.lblNomeJogo);
-            this.Jogos.Location = new System.Drawing.Point(4, 4);
-            this.Jogos.Name = "Jogos";
-            this.Jogos.Size = new System.Drawing.Size(1193, 623);
-            this.Jogos.TabIndex = 6;
-            this.Jogos.Text = "Jogos";
-            // 
-            // lblNomeJogo
-            // 
-            this.lblNomeJogo.AutoSize = true;
-            this.lblNomeJogo.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeJogo.ForeColor = System.Drawing.Color.White;
-            this.lblNomeJogo.Location = new System.Drawing.Point(26, 80);
-            this.lblNomeJogo.Name = "lblNomeJogo";
-            this.lblNomeJogo.Size = new System.Drawing.Size(445, 59);
-            this.lblNomeJogo.TabIndex = 1;
-            this.lblNomeJogo.Text = "NOME DO JOGO AQUI";
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.bunifuPanel2;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // notify
-            // 
-            this.notify.AllowDragging = false;
-            this.notify.AllowMultipleViews = true;
-            this.notify.ClickToClose = true;
-            this.notify.DoubleClickToClose = true;
-            this.notify.DurationAfterIdle = 3000;
-            this.notify.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.ErrorOptions.ActionBorderRadius = 1;
-            this.notify.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.notify.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.notify.ErrorOptions.BackColor = System.Drawing.Color.White;
-            this.notify.ErrorOptions.BorderColor = System.Drawing.Color.White;
-            this.notify.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
-            this.notify.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.notify.ErrorOptions.ForeColor = System.Drawing.Color.Black;
-            this.notify.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
-            this.notify.ErrorOptions.IconLeftMargin = 12;
-            this.notify.FadeCloseIcon = false;
-            this.notify.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
-            this.notify.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.InformationOptions.ActionBorderRadius = 1;
-            this.notify.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.notify.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.notify.InformationOptions.BackColor = System.Drawing.Color.White;
-            this.notify.InformationOptions.BorderColor = System.Drawing.Color.White;
-            this.notify.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.notify.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.notify.InformationOptions.ForeColor = System.Drawing.Color.Black;
-            this.notify.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
-            this.notify.InformationOptions.IconLeftMargin = 12;
-            this.notify.Margin = 10;
-            this.notify.MaximumSize = new System.Drawing.Size(0, 0);
-            this.notify.MaximumViews = 7;
-            this.notify.MessageRightMargin = 15;
-            this.notify.MinimumSize = new System.Drawing.Size(0, 0);
-            this.notify.ShowBorders = false;
-            this.notify.ShowCloseIcon = false;
-            this.notify.ShowIcon = true;
-            this.notify.ShowShadows = true;
-            this.notify.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.SuccessOptions.ActionBorderRadius = 1;
-            this.notify.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.notify.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.notify.SuccessOptions.BackColor = System.Drawing.Color.White;
-            this.notify.SuccessOptions.BorderColor = System.Drawing.Color.White;
-            this.notify.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
-            this.notify.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.notify.SuccessOptions.ForeColor = System.Drawing.Color.Black;
-            this.notify.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
-            this.notify.SuccessOptions.IconLeftMargin = 12;
-            this.notify.ViewsMargin = 7;
-            this.notify.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.notify.WarningOptions.ActionBorderRadius = 1;
-            this.notify.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.notify.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.notify.WarningOptions.BackColor = System.Drawing.Color.White;
-            this.notify.WarningOptions.BorderColor = System.Drawing.Color.White;
-            this.notify.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
-            this.notify.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.notify.WarningOptions.ForeColor = System.Drawing.Color.Black;
-            this.notify.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
-            this.notify.WarningOptions.IconLeftMargin = 12;
-            this.notify.ZoomCloseIcon = true;
-            // 
-            // lblMostrar
-            // 
-            this.lblMostrar.AutoSize = true;
-            this.lblMostrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblMostrar.Location = new System.Drawing.Point(591, 309);
-            this.lblMostrar.Name = "lblMostrar";
-            this.lblMostrar.Size = new System.Drawing.Size(0, 32);
-            this.lblMostrar.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(925, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 32);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Visualização";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(845, 164);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(290, 290);
-            this.panel2.TabIndex = 29;
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Controls.Add(this.btnCasa);
-            this.bunifuPanel1.Controls.Add(this.btnDinheiro);
-            this.bunifuPanel1.Controls.Add(this.btnConfiguracao);
-            this.bunifuPanel1.Controls.Add(this.btnAdicionar);
-            this.bunifuPanel1.Controls.Add(this.btnDashboard);
-            this.bunifuPanel1.Controls.Add(this.btnJogos);
-            this.bunifuPanel1.Controls.Add(this.pbLogo);
-            this.bunifuPanel1.Location = new System.Drawing.Point(-2, -5);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(91, 707);
-            this.bunifuPanel1.TabIndex = 1;
-            // 
-            // btnCasa
-            // 
-            this.btnCasa.ActiveImage = null;
-            this.btnCasa.AllowAnimations = true;
-            this.btnCasa.AllowBuffering = false;
-            this.btnCasa.AllowToggling = false;
-            this.btnCasa.AllowZooming = false;
-            this.btnCasa.AllowZoomingOnFocus = false;
-            this.btnCasa.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnCasa.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCasa.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCasa.ErrorImage")));
-            this.btnCasa.FadeWhenInactive = false;
-            this.btnCasa.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnCasa.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCasa.Image = global::LojaGames.Properties.Resources.Home_Page;
-            this.btnCasa.ImageActive = null;
-            this.btnCasa.ImageLocation = null;
-            this.btnCasa.ImageMargin = 0;
-            this.btnCasa.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnCasa.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnCasa.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnCasa.InitialImage")));
-            this.btnCasa.Location = new System.Drawing.Point(31, 172);
-            this.btnCasa.Name = "btnCasa";
-            this.btnCasa.Rotation = 0;
-            this.btnCasa.ShowActiveImage = true;
-            this.btnCasa.ShowCursorChanges = true;
-            this.btnCasa.ShowImageBorders = true;
-            this.btnCasa.ShowSizeMarkers = false;
-            this.btnCasa.Size = new System.Drawing.Size(35, 35);
-            this.btnCasa.TabIndex = 15;
-            this.btnCasa.ToolTipText = "";
-            this.btnCasa.WaitOnLoad = false;
-            this.btnCasa.Zoom = 0;
-            this.btnCasa.ZoomSpeed = 10;
-            this.btnCasa.Click += new System.EventHandler(this.btnCasa_Click);
-            // 
-            // btnDinheiro
-            // 
-            this.btnDinheiro.ActiveImage = null;
-            this.btnDinheiro.AllowAnimations = true;
-            this.btnDinheiro.AllowBuffering = false;
-            this.btnDinheiro.AllowToggling = false;
-            this.btnDinheiro.AllowZooming = false;
-            this.btnDinheiro.AllowZoomingOnFocus = false;
-            this.btnDinheiro.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDinheiro.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDinheiro.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnDinheiro.ErrorImage")));
-            this.btnDinheiro.FadeWhenInactive = false;
-            this.btnDinheiro.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnDinheiro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDinheiro.Image = global::LojaGames.Properties.Resources.Cash;
-            this.btnDinheiro.ImageActive = null;
-            this.btnDinheiro.ImageLocation = null;
-            this.btnDinheiro.ImageMargin = 0;
-            this.btnDinheiro.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnDinheiro.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnDinheiro.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnDinheiro.InitialImage")));
-            this.btnDinheiro.Location = new System.Drawing.Point(31, 496);
-            this.btnDinheiro.Name = "btnDinheiro";
-            this.btnDinheiro.Rotation = 0;
-            this.btnDinheiro.ShowActiveImage = true;
-            this.btnDinheiro.ShowCursorChanges = true;
-            this.btnDinheiro.ShowImageBorders = true;
-            this.btnDinheiro.ShowSizeMarkers = false;
-            this.btnDinheiro.Size = new System.Drawing.Size(35, 35);
-            this.btnDinheiro.TabIndex = 3;
-            this.btnDinheiro.ToolTipText = "";
-            this.btnDinheiro.WaitOnLoad = false;
-            this.btnDinheiro.Zoom = 0;
-            this.btnDinheiro.ZoomSpeed = 10;
-            this.btnDinheiro.Click += new System.EventHandler(this.btnDinheiro_Click);
-            // 
-            // btnConfiguracao
-            // 
-            this.btnConfiguracao.ActiveImage = null;
-            this.btnConfiguracao.AllowAnimations = true;
-            this.btnConfiguracao.AllowBuffering = false;
-            this.btnConfiguracao.AllowToggling = false;
-            this.btnConfiguracao.AllowZooming = false;
-            this.btnConfiguracao.AllowZoomingOnFocus = false;
-            this.btnConfiguracao.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnConfiguracao.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnConfiguracao.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.ErrorImage")));
-            this.btnConfiguracao.FadeWhenInactive = false;
-            this.btnConfiguracao.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnConfiguracao.ForeColor = System.Drawing.Color.Transparent;
-            this.btnConfiguracao.Image = global::LojaGames.Properties.Resources.Wrench;
-            this.btnConfiguracao.ImageActive = null;
-            this.btnConfiguracao.ImageLocation = null;
-            this.btnConfiguracao.ImageMargin = 0;
-            this.btnConfiguracao.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.InitialImage")));
-            this.btnConfiguracao.Location = new System.Drawing.Point(31, 646);
-            this.btnConfiguracao.Name = "btnConfiguracao";
-            this.btnConfiguracao.Rotation = 0;
-            this.btnConfiguracao.ShowActiveImage = true;
-            this.btnConfiguracao.ShowCursorChanges = true;
-            this.btnConfiguracao.ShowImageBorders = true;
-            this.btnConfiguracao.ShowSizeMarkers = false;
-            this.btnConfiguracao.Size = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.TabIndex = 14;
-            this.btnConfiguracao.ToolTipText = "";
-            this.btnConfiguracao.WaitOnLoad = false;
-            this.btnConfiguracao.Zoom = 0;
-            this.btnConfiguracao.ZoomSpeed = 10;
-            this.btnConfiguracao.Click += new System.EventHandler(this.btnConfiguracao_Click);
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.ActiveImage = null;
-            this.btnAdicionar.AllowAnimations = true;
-            this.btnAdicionar.AllowBuffering = false;
-            this.btnAdicionar.AllowToggling = false;
-            this.btnAdicionar.AllowZooming = false;
-            this.btnAdicionar.AllowZoomingOnFocus = false;
-            this.btnAdicionar.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnAdicionar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAdicionar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.ErrorImage")));
-            this.btnAdicionar.FadeWhenInactive = false;
-            this.btnAdicionar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnAdicionar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAdicionar.Image = global::LojaGames.Properties.Resources.Add_New;
-            this.btnAdicionar.ImageActive = null;
-            this.btnAdicionar.ImageLocation = null;
-            this.btnAdicionar.ImageMargin = 0;
-            this.btnAdicionar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnAdicionar.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnAdicionar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.InitialImage")));
-            this.btnAdicionar.Location = new System.Drawing.Point(31, 415);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Rotation = 0;
-            this.btnAdicionar.ShowActiveImage = true;
-            this.btnAdicionar.ShowCursorChanges = true;
-            this.btnAdicionar.ShowImageBorders = true;
-            this.btnAdicionar.ShowSizeMarkers = false;
-            this.btnAdicionar.Size = new System.Drawing.Size(35, 35);
-            this.btnAdicionar.TabIndex = 2;
-            this.btnAdicionar.ToolTipText = "";
-            this.btnAdicionar.WaitOnLoad = false;
-            this.btnAdicionar.Zoom = 0;
-            this.btnAdicionar.ZoomSpeed = 10;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.ActiveImage = null;
-            this.btnDashboard.AllowAnimations = true;
-            this.btnDashboard.AllowBuffering = false;
-            this.btnDashboard.AllowToggling = false;
-            this.btnDashboard.AllowZooming = false;
-            this.btnDashboard.AllowZoomingOnFocus = false;
-            this.btnDashboard.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDashboard.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnDashboard.ErrorImage")));
-            this.btnDashboard.FadeWhenInactive = false;
-            this.btnDashboard.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnDashboard.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Image = global::LojaGames.Properties.Resources.Control_Panel;
-            this.btnDashboard.ImageActive = null;
-            this.btnDashboard.ImageLocation = null;
-            this.btnDashboard.ImageMargin = 0;
-            this.btnDashboard.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnDashboard.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnDashboard.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnDashboard.InitialImage")));
-            this.btnDashboard.Location = new System.Drawing.Point(30, 253);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Rotation = 0;
-            this.btnDashboard.ShowActiveImage = true;
-            this.btnDashboard.ShowCursorChanges = true;
-            this.btnDashboard.ShowImageBorders = true;
-            this.btnDashboard.ShowSizeMarkers = false;
-            this.btnDashboard.Size = new System.Drawing.Size(35, 35);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.ToolTipText = "";
-            this.btnDashboard.WaitOnLoad = false;
-            this.btnDashboard.Zoom = 0;
-            this.btnDashboard.ZoomSpeed = 10;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // btnJogos
-            // 
-            this.btnJogos.ActiveImage = null;
-            this.btnJogos.AllowAnimations = true;
-            this.btnJogos.AllowBuffering = false;
-            this.btnJogos.AllowToggling = false;
-            this.btnJogos.AllowZooming = false;
-            this.btnJogos.AllowZoomingOnFocus = false;
-            this.btnJogos.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnJogos.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnJogos.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnJogos.ErrorImage")));
-            this.btnJogos.FadeWhenInactive = false;
-            this.btnJogos.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnJogos.ForeColor = System.Drawing.Color.Transparent;
-            this.btnJogos.Image = global::LojaGames.Properties.Resources.Game_Controller;
-            this.btnJogos.ImageActive = null;
-            this.btnJogos.ImageLocation = null;
-            this.btnJogos.ImageMargin = 0;
-            this.btnJogos.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnJogos.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnJogos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnJogos.InitialImage")));
-            this.btnJogos.Location = new System.Drawing.Point(30, 334);
-            this.btnJogos.Name = "btnJogos";
-            this.btnJogos.Rotation = 0;
-            this.btnJogos.ShowActiveImage = true;
-            this.btnJogos.ShowCursorChanges = true;
-            this.btnJogos.ShowImageBorders = true;
-            this.btnJogos.ShowSizeMarkers = false;
-            this.btnJogos.Size = new System.Drawing.Size(35, 35);
-            this.btnJogos.TabIndex = 1;
-            this.btnJogos.ToolTipText = "";
-            this.btnJogos.WaitOnLoad = false;
-            this.btnJogos.Zoom = 0;
-            this.btnJogos.ZoomSpeed = 10;
-            this.btnJogos.Click += new System.EventHandler(this.btnJogos_Click);
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(-13, -1);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(124, 99);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 10;
-            this.pbLogo.TabStop = false;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 0;
-            this.bunifuPanel2.Controls.Add(this.btnSair);
-            this.bunifuPanel2.Controls.Add(this.bunifuTextBox1);
-            this.bunifuPanel2.Controls.Add(this.label1);
-            this.bunifuPanel2.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel2.Location = new System.Drawing.Point(88, -6);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(1220, 86);
-            this.bunifuPanel2.TabIndex = 1;
-            // 
-            // btnSair
-            // 
-            this.btnSair.ActiveImage = null;
-            this.btnSair.AllowAnimations = true;
-            this.btnSair.AllowBuffering = false;
-            this.btnSair.AllowToggling = false;
-            this.btnSair.AllowZooming = false;
-            this.btnSair.AllowZoomingOnFocus = false;
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
-            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSair.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair.ErrorImage")));
-            this.btnSair.FadeWhenInactive = false;
-            this.btnSair.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnSair.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSair.Image = global::LojaGames.Properties.Resources.ExitCinza;
-            this.btnSair.ImageActive = null;
-            this.btnSair.ImageLocation = null;
-            this.btnSair.ImageMargin = 0;
-            this.btnSair.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnSair.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnSair.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair.InitialImage")));
-            this.btnSair.Location = new System.Drawing.Point(1150, 33);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Rotation = 0;
-            this.btnSair.ShowActiveImage = true;
-            this.btnSair.ShowCursorChanges = true;
-            this.btnSair.ShowImageBorders = true;
-            this.btnSair.ShowSizeMarkers = false;
-            this.btnSair.Size = new System.Drawing.Size(35, 35);
-            this.btnSair.TabIndex = 16;
-            this.btnSair.ToolTipText = "";
-            this.btnSair.WaitOnLoad = false;
-            this.btnSair.Zoom = 0;
-            this.btnSair.ZoomSpeed = 10;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            this.btnSair.MouseEnter += new System.EventHandler(this.btnSair_MouseEnter);
-            this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
-            // 
-            // bunifuTextBox1
-            // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 10;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(348, 33);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox1.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Vai jogar o que?";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(260, 37);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 0;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 3;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Vai jogar o que?";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Where Reality Turns Into Adventure";
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(21, 33);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(155, 19);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Exodus Games Store";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // panelJogo1
             // 
@@ -1280,6 +548,18 @@
             this.pcbJogoCarousel1.TabIndex = 0;
             this.pcbJogoCarousel1.TabStop = false;
             // 
+            // jogo2
+            // 
+            this.jogo2.Controls.Add(this.panelJogo2);
+            this.jogo2.Controls.Add(this.pcbJogoCarousel2);
+            this.jogo2.Location = new System.Drawing.Point(4, 4);
+            this.jogo2.Name = "jogo2";
+            this.jogo2.Padding = new System.Windows.Forms.Padding(3);
+            this.jogo2.Size = new System.Drawing.Size(828, 504);
+            this.jogo2.TabIndex = 1;
+            this.jogo2.Text = "jogo2";
+            this.jogo2.UseVisualStyleBackColor = true;
+            // 
             // panelJogo2
             // 
             this.panelJogo2.BackgroundColor = System.Drawing.Color.Transparent;
@@ -1506,6 +786,17 @@
             this.pcbJogoCarousel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogoCarousel2.TabIndex = 1;
             this.pcbJogoCarousel2.TabStop = false;
+            // 
+            // jogo3
+            // 
+            this.jogo3.Controls.Add(this.panelJogo3);
+            this.jogo3.Controls.Add(this.pcbJogoCarousel3);
+            this.jogo3.Location = new System.Drawing.Point(4, 4);
+            this.jogo3.Name = "jogo3";
+            this.jogo3.Size = new System.Drawing.Size(828, 504);
+            this.jogo3.TabIndex = 2;
+            this.jogo3.Text = "jogo3";
+            this.jogo3.UseVisualStyleBackColor = true;
             // 
             // panelJogo3
             // 
@@ -1734,6 +1025,17 @@
             this.pcbJogoCarousel3.TabIndex = 2;
             this.pcbJogoCarousel3.TabStop = false;
             // 
+            // jogo4
+            // 
+            this.jogo4.Controls.Add(this.panelJogo4);
+            this.jogo4.Controls.Add(this.pcbJogoCarousel4);
+            this.jogo4.Location = new System.Drawing.Point(4, 4);
+            this.jogo4.Name = "jogo4";
+            this.jogo4.Size = new System.Drawing.Size(828, 504);
+            this.jogo4.TabIndex = 3;
+            this.jogo4.Text = "jogo4";
+            this.jogo4.UseVisualStyleBackColor = true;
+            // 
             // panelJogo4
             // 
             this.panelJogo4.BackgroundColor = System.Drawing.Color.Transparent;
@@ -1960,6 +1262,17 @@
             this.pcbJogoCarousel4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbJogoCarousel4.TabIndex = 2;
             this.pcbJogoCarousel4.TabStop = false;
+            // 
+            // jogo5
+            // 
+            this.jogo5.Controls.Add(this.panelJogo5);
+            this.jogo5.Controls.Add(this.pcbJogoCarousel5);
+            this.jogo5.Location = new System.Drawing.Point(4, 4);
+            this.jogo5.Name = "jogo5";
+            this.jogo5.Size = new System.Drawing.Size(828, 504);
+            this.jogo5.TabIndex = 4;
+            this.jogo5.Text = "jogo5";
+            this.jogo5.UseVisualStyleBackColor = true;
             // 
             // panelJogo5
             // 
@@ -2638,6 +1951,85 @@
             this.btnJogo1.UseDefaultRadiusAndThickness = true;
             this.btnJogo1.Click += new System.EventHandler(this.btnJogo1_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.panel1.Location = new System.Drawing.Point(0, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1212, 596);
+            this.panel1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.tabPage3.Controls.Add(this.pgAdd);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            // 
+            // pgAdd
+            // 
+            this.pgAdd.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.pgAdd.AllowTransitions = true;
+            this.pgAdd.Controls.Add(this.tabPage6);
+            this.pgAdd.Controls.Add(this.tabPage7);
+            this.pgAdd.Location = new System.Drawing.Point(0, 6);
+            this.pgAdd.Multiline = true;
+            this.pgAdd.Name = "pgAdd";
+            this.pgAdd.Page = this.tabPage7;
+            this.pgAdd.PageIndex = 1;
+            this.pgAdd.PageName = "tabPage7";
+            this.pgAdd.PageTitle = "tabPage7";
+            this.pgAdd.SelectedIndex = 0;
+            this.pgAdd.Size = new System.Drawing.Size(1216, 631);
+            this.pgAdd.TabIndex = 13;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.pgAdd.Transition = animation2;
+            this.pgAdd.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertSlide;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.tabPage6.Controls.Add(this.bunifuButton2);
+            this.tabPage6.Controls.Add(this.bunifuButton1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1208, 602);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "tabPage6";
+            // 
             // bunifuButton2
             // 
             this.bunifuButton2.AllowAnimations = true;
@@ -2818,6 +2210,40 @@
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.tabPage7.Controls.Add(this.panel2);
+            this.tabPage7.Controls.Add(this.pictureBox1);
+            this.tabPage7.Controls.Add(this.pcbMostrarCarousel);
+            this.tabPage7.Controls.Add(this.pcbMostrarIcone);
+            this.tabPage7.Controls.Add(this.pcbMostrarJogo);
+            this.tabPage7.Controls.Add(this.lblMostrar);
+            this.tabPage7.Controls.Add(this.label7);
+            this.tabPage7.Controls.Add(this.txtTrailer);
+            this.tabPage7.Controls.Add(this.btnCarousel);
+            this.tabPage7.Controls.Add(this.pcbCarousel);
+            this.tabPage7.Controls.Add(this.btnIcone);
+            this.tabPage7.Controls.Add(this.pcbIcone);
+            this.tabPage7.Controls.Add(this.txtDescricao);
+            this.tabPage7.Controls.Add(this.pcbImagemJogo);
+            this.tabPage7.Controls.Add(this.btnEnviarJogo);
+            this.tabPage7.Controls.Add(this.txtNomeJogo);
+            this.tabPage7.Controls.Add(this.btnJogo);
+            this.tabPage7.Location = new System.Drawing.Point(4, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1208, 602);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "tabPage7";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(845, 164);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(290, 290);
+            this.panel2.TabIndex = 29;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(845, 164);
@@ -2835,7 +2261,6 @@
             this.pcbMostrarCarousel.Size = new System.Drawing.Size(24, 24);
             this.pcbMostrarCarousel.TabIndex = 27;
             this.pcbMostrarCarousel.TabStop = false;
-            this.pcbMostrarCarousel.Visible = false;
             this.pcbMostrarCarousel.Click += new System.EventHandler(this.pcbMostrarCarousel_Click);
             // 
             // pcbMostrarIcone
@@ -2847,7 +2272,6 @@
             this.pcbMostrarIcone.Size = new System.Drawing.Size(24, 24);
             this.pcbMostrarIcone.TabIndex = 26;
             this.pcbMostrarIcone.TabStop = false;
-            this.pcbMostrarIcone.Visible = false;
             this.pcbMostrarIcone.Click += new System.EventHandler(this.pcbMostrarIcone_Click);
             // 
             // pcbMostrarJogo
@@ -2859,8 +2283,28 @@
             this.pcbMostrarJogo.Size = new System.Drawing.Size(24, 24);
             this.pcbMostrarJogo.TabIndex = 25;
             this.pcbMostrarJogo.TabStop = false;
-            this.pcbMostrarJogo.Visible = false;
             this.pcbMostrarJogo.Click += new System.EventHandler(this.pcbMostrarJogo_Click);
+            // 
+            // lblMostrar
+            // 
+            this.lblMostrar.AutoSize = true;
+            this.lblMostrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrar.ForeColor = System.Drawing.Color.White;
+            this.lblMostrar.Location = new System.Drawing.Point(591, 309);
+            this.lblMostrar.Name = "lblMostrar";
+            this.lblMostrar.Size = new System.Drawing.Size(0, 32);
+            this.lblMostrar.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(923, 86);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 32);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Visualização";
             // 
             // txtTrailer
             // 
@@ -3474,6 +2918,558 @@
             this.btnJogo.UseDefaultRadiusAndThickness = true;
             this.btnJogo.Click += new System.EventHandler(this.btnJogo_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(448, 263);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 58);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Quarto";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(448, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 58);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Quinto";
+            // 
+            // Jogos
+            // 
+            this.Jogos.AutoScroll = true;
+            this.Jogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.Jogos.Controls.Add(this.lblNomeJogo);
+            this.Jogos.Location = new System.Drawing.Point(4, 4);
+            this.Jogos.Name = "Jogos";
+            this.Jogos.Size = new System.Drawing.Size(1193, 623);
+            this.Jogos.TabIndex = 6;
+            this.Jogos.Text = "Jogos";
+            // 
+            // lblNomeJogo
+            // 
+            this.lblNomeJogo.AutoSize = true;
+            this.lblNomeJogo.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeJogo.ForeColor = System.Drawing.Color.White;
+            this.lblNomeJogo.Location = new System.Drawing.Point(26, 80);
+            this.lblNomeJogo.Name = "lblNomeJogo";
+            this.lblNomeJogo.Size = new System.Drawing.Size(445, 59);
+            this.lblNomeJogo.TabIndex = 1;
+            this.lblNomeJogo.Text = "NOME DO JOGO AQUI";
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.bunifuPanel2;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 0;
+            this.bunifuPanel2.Controls.Add(this.btnSair);
+            this.bunifuPanel2.Controls.Add(this.bunifuTextBox1);
+            this.bunifuPanel2.Controls.Add(this.label1);
+            this.bunifuPanel2.Controls.Add(this.bunifuLabel1);
+            this.bunifuPanel2.Location = new System.Drawing.Point(88, -6);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(1220, 86);
+            this.bunifuPanel2.TabIndex = 1;
+            // 
+            // btnSair
+            // 
+            this.btnSair.ActiveImage = null;
+            this.btnSair.AllowAnimations = true;
+            this.btnSair.AllowBuffering = false;
+            this.btnSair.AllowToggling = false;
+            this.btnSair.AllowZooming = false;
+            this.btnSair.AllowZoomingOnFocus = false;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(140)))), ((int)(((byte)(197)))));
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSair.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSair.ErrorImage")));
+            this.btnSair.FadeWhenInactive = false;
+            this.btnSair.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnSair.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSair.Image = global::LojaGames.Properties.Resources.ExitCinza;
+            this.btnSair.ImageActive = null;
+            this.btnSair.ImageLocation = null;
+            this.btnSair.ImageMargin = 0;
+            this.btnSair.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnSair.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnSair.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSair.InitialImage")));
+            this.btnSair.Location = new System.Drawing.Point(1150, 33);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Rotation = 0;
+            this.btnSair.ShowActiveImage = true;
+            this.btnSair.ShowCursorChanges = true;
+            this.btnSair.ShowImageBorders = true;
+            this.btnSair.ShowSizeMarkers = false;
+            this.btnSair.Size = new System.Drawing.Size(35, 35);
+            this.btnSair.TabIndex = 16;
+            this.btnSair.ToolTipText = "";
+            this.btnSair.WaitOnLoad = false;
+            this.btnSair.Zoom = 0;
+            this.btnSair.ZoomSpeed = 10;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.MouseEnter += new System.EventHandler(this.btnSair_MouseEnter);
+            this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
+            // 
+            // bunifuTextBox1
+            // 
+            this.bunifuTextBox1.AcceptsReturn = false;
+            this.bunifuTextBox1.AcceptsTab = false;
+            this.bunifuTextBox1.AnimationSpeed = 200;
+            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
+            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBox1.BorderRadius = 10;
+            this.bunifuTextBox1.BorderThickness = 1;
+            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.bunifuTextBox1.DefaultText = "";
+            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBox1.HideSelection = true;
+            this.bunifuTextBox1.IconLeft = null;
+            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.IconPadding = 10;
+            this.bunifuTextBox1.IconRight = null;
+            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.Lines = new string[0];
+            this.bunifuTextBox1.Location = new System.Drawing.Point(348, 33);
+            this.bunifuTextBox1.MaxLength = 32767;
+            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox1.Modified = false;
+            this.bunifuTextBox1.Multiline = false;
+            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox1.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnIdleState = stateProperties4;
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox1.PasswordChar = '\0';
+            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBox1.PlaceholderText = "Vai jogar o que?";
+            this.bunifuTextBox1.ReadOnly = false;
+            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBox1.SelectedText = "";
+            this.bunifuTextBox1.SelectionLength = 0;
+            this.bunifuTextBox1.SelectionStart = 0;
+            this.bunifuTextBox1.ShortcutsEnabled = true;
+            this.bunifuTextBox1.Size = new System.Drawing.Size(260, 37);
+            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox1.TabIndex = 0;
+            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox1.TextMarginBottom = 0;
+            this.bunifuTextBox1.TextMarginLeft = 3;
+            this.bunifuTextBox1.TextMarginTop = 0;
+            this.bunifuTextBox1.TextPlaceholder = "Vai jogar o que?";
+            this.bunifuTextBox1.UseSystemPasswordChar = false;
+            this.bunifuTextBox1.WordWrap = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Where Reality Turns Into Adventure";
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(21, 33);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(155, 19);
+            this.bunifuLabel1.TabIndex = 0;
+            this.bunifuLabel1.Text = "Exodus Games Store";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // notify
+            // 
+            this.notify.AllowDragging = false;
+            this.notify.AllowMultipleViews = true;
+            this.notify.ClickToClose = true;
+            this.notify.DoubleClickToClose = true;
+            this.notify.DurationAfterIdle = 3000;
+            this.notify.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.ErrorOptions.ActionBorderRadius = 1;
+            this.notify.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.notify.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.notify.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.notify.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.notify.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.notify.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.notify.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.notify.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.notify.ErrorOptions.IconLeftMargin = 12;
+            this.notify.FadeCloseIcon = false;
+            this.notify.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.notify.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.InformationOptions.ActionBorderRadius = 1;
+            this.notify.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.notify.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.notify.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.notify.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.notify.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.notify.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.notify.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.notify.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.notify.InformationOptions.IconLeftMargin = 12;
+            this.notify.Margin = 10;
+            this.notify.MaximumSize = new System.Drawing.Size(0, 0);
+            this.notify.MaximumViews = 7;
+            this.notify.MessageRightMargin = 15;
+            this.notify.MinimumSize = new System.Drawing.Size(0, 0);
+            this.notify.ShowBorders = false;
+            this.notify.ShowCloseIcon = false;
+            this.notify.ShowIcon = true;
+            this.notify.ShowShadows = true;
+            this.notify.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.SuccessOptions.ActionBorderRadius = 1;
+            this.notify.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.notify.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.notify.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.notify.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.notify.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.notify.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.notify.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.notify.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.notify.SuccessOptions.IconLeftMargin = 12;
+            this.notify.ViewsMargin = 7;
+            this.notify.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.notify.WarningOptions.ActionBorderRadius = 1;
+            this.notify.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.notify.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.notify.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.notify.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.notify.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.notify.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.notify.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.notify.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.notify.WarningOptions.IconLeftMargin = 12;
+            this.notify.ZoomCloseIcon = true;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 0;
+            this.bunifuPanel1.Controls.Add(this.btnCasa);
+            this.bunifuPanel1.Controls.Add(this.btnDinheiro);
+            this.bunifuPanel1.Controls.Add(this.btnConfiguracao);
+            this.bunifuPanel1.Controls.Add(this.btnAdicionar);
+            this.bunifuPanel1.Controls.Add(this.btnDashboard);
+            this.bunifuPanel1.Controls.Add(this.btnJogos);
+            this.bunifuPanel1.Controls.Add(this.pbLogo);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-2, -5);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(91, 707);
+            this.bunifuPanel1.TabIndex = 1;
+            // 
+            // btnCasa
+            // 
+            this.btnCasa.ActiveImage = null;
+            this.btnCasa.AllowAnimations = true;
+            this.btnCasa.AllowBuffering = false;
+            this.btnCasa.AllowToggling = false;
+            this.btnCasa.AllowZooming = false;
+            this.btnCasa.AllowZoomingOnFocus = false;
+            this.btnCasa.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnCasa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCasa.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCasa.ErrorImage")));
+            this.btnCasa.FadeWhenInactive = false;
+            this.btnCasa.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnCasa.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCasa.Image = global::LojaGames.Properties.Resources.Home_Page;
+            this.btnCasa.ImageActive = null;
+            this.btnCasa.ImageLocation = null;
+            this.btnCasa.ImageMargin = 0;
+            this.btnCasa.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCasa.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnCasa.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnCasa.InitialImage")));
+            this.btnCasa.Location = new System.Drawing.Point(31, 172);
+            this.btnCasa.Name = "btnCasa";
+            this.btnCasa.Rotation = 0;
+            this.btnCasa.ShowActiveImage = true;
+            this.btnCasa.ShowCursorChanges = true;
+            this.btnCasa.ShowImageBorders = true;
+            this.btnCasa.ShowSizeMarkers = false;
+            this.btnCasa.Size = new System.Drawing.Size(35, 35);
+            this.btnCasa.TabIndex = 15;
+            this.btnCasa.ToolTipText = "";
+            this.btnCasa.WaitOnLoad = false;
+            this.btnCasa.Zoom = 0;
+            this.btnCasa.ZoomSpeed = 10;
+            this.btnCasa.Click += new System.EventHandler(this.btnCasa_Click);
+            // 
+            // btnDinheiro
+            // 
+            this.btnDinheiro.ActiveImage = null;
+            this.btnDinheiro.AllowAnimations = true;
+            this.btnDinheiro.AllowBuffering = false;
+            this.btnDinheiro.AllowToggling = false;
+            this.btnDinheiro.AllowZooming = false;
+            this.btnDinheiro.AllowZoomingOnFocus = false;
+            this.btnDinheiro.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnDinheiro.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDinheiro.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnDinheiro.ErrorImage")));
+            this.btnDinheiro.FadeWhenInactive = false;
+            this.btnDinheiro.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnDinheiro.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDinheiro.Image = global::LojaGames.Properties.Resources.Cash;
+            this.btnDinheiro.ImageActive = null;
+            this.btnDinheiro.ImageLocation = null;
+            this.btnDinheiro.ImageMargin = 0;
+            this.btnDinheiro.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDinheiro.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnDinheiro.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnDinheiro.InitialImage")));
+            this.btnDinheiro.Location = new System.Drawing.Point(31, 496);
+            this.btnDinheiro.Name = "btnDinheiro";
+            this.btnDinheiro.Rotation = 0;
+            this.btnDinheiro.ShowActiveImage = true;
+            this.btnDinheiro.ShowCursorChanges = true;
+            this.btnDinheiro.ShowImageBorders = true;
+            this.btnDinheiro.ShowSizeMarkers = false;
+            this.btnDinheiro.Size = new System.Drawing.Size(35, 35);
+            this.btnDinheiro.TabIndex = 3;
+            this.btnDinheiro.ToolTipText = "";
+            this.btnDinheiro.WaitOnLoad = false;
+            this.btnDinheiro.Zoom = 0;
+            this.btnDinheiro.ZoomSpeed = 10;
+            this.btnDinheiro.Click += new System.EventHandler(this.btnDinheiro_Click);
+            // 
+            // btnConfiguracao
+            // 
+            this.btnConfiguracao.ActiveImage = null;
+            this.btnConfiguracao.AllowAnimations = true;
+            this.btnConfiguracao.AllowBuffering = false;
+            this.btnConfiguracao.AllowToggling = false;
+            this.btnConfiguracao.AllowZooming = false;
+            this.btnConfiguracao.AllowZoomingOnFocus = false;
+            this.btnConfiguracao.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnConfiguracao.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnConfiguracao.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.ErrorImage")));
+            this.btnConfiguracao.FadeWhenInactive = false;
+            this.btnConfiguracao.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnConfiguracao.ForeColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracao.Image = global::LojaGames.Properties.Resources.Wrench;
+            this.btnConfiguracao.ImageActive = null;
+            this.btnConfiguracao.ImageLocation = null;
+            this.btnConfiguracao.ImageMargin = 0;
+            this.btnConfiguracao.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnConfiguracao.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnConfiguracao.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.InitialImage")));
+            this.btnConfiguracao.Location = new System.Drawing.Point(31, 646);
+            this.btnConfiguracao.Name = "btnConfiguracao";
+            this.btnConfiguracao.Rotation = 0;
+            this.btnConfiguracao.ShowActiveImage = true;
+            this.btnConfiguracao.ShowCursorChanges = true;
+            this.btnConfiguracao.ShowImageBorders = true;
+            this.btnConfiguracao.ShowSizeMarkers = false;
+            this.btnConfiguracao.Size = new System.Drawing.Size(35, 35);
+            this.btnConfiguracao.TabIndex = 14;
+            this.btnConfiguracao.ToolTipText = "";
+            this.btnConfiguracao.WaitOnLoad = false;
+            this.btnConfiguracao.Zoom = 0;
+            this.btnConfiguracao.ZoomSpeed = 10;
+            this.btnConfiguracao.Click += new System.EventHandler(this.btnConfiguracao_Click);
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.ActiveImage = null;
+            this.btnAdicionar.AllowAnimations = true;
+            this.btnAdicionar.AllowBuffering = false;
+            this.btnAdicionar.AllowToggling = false;
+            this.btnAdicionar.AllowZooming = false;
+            this.btnAdicionar.AllowZoomingOnFocus = false;
+            this.btnAdicionar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAdicionar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAdicionar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.ErrorImage")));
+            this.btnAdicionar.FadeWhenInactive = false;
+            this.btnAdicionar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnAdicionar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAdicionar.Image = global::LojaGames.Properties.Resources.Add_New;
+            this.btnAdicionar.ImageActive = null;
+            this.btnAdicionar.ImageLocation = null;
+            this.btnAdicionar.ImageMargin = 0;
+            this.btnAdicionar.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnAdicionar.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnAdicionar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.InitialImage")));
+            this.btnAdicionar.Location = new System.Drawing.Point(31, 415);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Rotation = 0;
+            this.btnAdicionar.ShowActiveImage = true;
+            this.btnAdicionar.ShowCursorChanges = true;
+            this.btnAdicionar.ShowImageBorders = true;
+            this.btnAdicionar.ShowSizeMarkers = false;
+            this.btnAdicionar.Size = new System.Drawing.Size(35, 35);
+            this.btnAdicionar.TabIndex = 2;
+            this.btnAdicionar.ToolTipText = "";
+            this.btnAdicionar.WaitOnLoad = false;
+            this.btnAdicionar.Zoom = 0;
+            this.btnAdicionar.ZoomSpeed = 10;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.ActiveImage = null;
+            this.btnDashboard.AllowAnimations = true;
+            this.btnDashboard.AllowBuffering = false;
+            this.btnDashboard.AllowToggling = false;
+            this.btnDashboard.AllowZooming = false;
+            this.btnDashboard.AllowZoomingOnFocus = false;
+            this.btnDashboard.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDashboard.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnDashboard.ErrorImage")));
+            this.btnDashboard.FadeWhenInactive = false;
+            this.btnDashboard.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnDashboard.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Image = global::LojaGames.Properties.Resources.Control_Panel;
+            this.btnDashboard.ImageActive = null;
+            this.btnDashboard.ImageLocation = null;
+            this.btnDashboard.ImageMargin = 0;
+            this.btnDashboard.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDashboard.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnDashboard.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnDashboard.InitialImage")));
+            this.btnDashboard.Location = new System.Drawing.Point(30, 253);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Rotation = 0;
+            this.btnDashboard.ShowActiveImage = true;
+            this.btnDashboard.ShowCursorChanges = true;
+            this.btnDashboard.ShowImageBorders = true;
+            this.btnDashboard.ShowSizeMarkers = false;
+            this.btnDashboard.Size = new System.Drawing.Size(35, 35);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.ToolTipText = "";
+            this.btnDashboard.WaitOnLoad = false;
+            this.btnDashboard.Zoom = 0;
+            this.btnDashboard.ZoomSpeed = 10;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // btnJogos
+            // 
+            this.btnJogos.ActiveImage = null;
+            this.btnJogos.AllowAnimations = true;
+            this.btnJogos.AllowBuffering = false;
+            this.btnJogos.AllowToggling = false;
+            this.btnJogos.AllowZooming = false;
+            this.btnJogos.AllowZoomingOnFocus = false;
+            this.btnJogos.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnJogos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnJogos.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnJogos.ErrorImage")));
+            this.btnJogos.FadeWhenInactive = false;
+            this.btnJogos.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.btnJogos.ForeColor = System.Drawing.Color.Transparent;
+            this.btnJogos.Image = global::LojaGames.Properties.Resources.Game_Controller;
+            this.btnJogos.ImageActive = null;
+            this.btnJogos.ImageLocation = null;
+            this.btnJogos.ImageMargin = 0;
+            this.btnJogos.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnJogos.ImageZoomSize = new System.Drawing.Size(35, 35);
+            this.btnJogos.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnJogos.InitialImage")));
+            this.btnJogos.Location = new System.Drawing.Point(30, 334);
+            this.btnJogos.Name = "btnJogos";
+            this.btnJogos.Rotation = 0;
+            this.btnJogos.ShowActiveImage = true;
+            this.btnJogos.ShowCursorChanges = true;
+            this.btnJogos.ShowImageBorders = true;
+            this.btnJogos.ShowSizeMarkers = false;
+            this.btnJogos.Size = new System.Drawing.Size(35, 35);
+            this.btnJogos.TabIndex = 1;
+            this.btnJogos.ToolTipText = "";
+            this.btnJogos.WaitOnLoad = false;
+            this.btnJogos.Zoom = 0;
+            this.btnJogos.ZoomSpeed = 10;
+            this.btnJogos.Click += new System.EventHandler(this.btnJogos_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(-13, -1);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(124, 99);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 10;
+            this.pbLogo.TabStop = false;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -3494,41 +3490,31 @@
             this.tabPage1.ResumeLayout(false);
             this.pgJogos.ResumeLayout(false);
             this.jogo1.ResumeLayout(false);
+            this.panelJogo1.ResumeLayout(false);
+            this.panelJogo1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel1)).EndInit();
             this.jogo2.ResumeLayout(false);
+            this.panelJogo2.ResumeLayout(false);
+            this.panelJogo2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel2)).EndInit();
             this.jogo3.ResumeLayout(false);
+            this.panelJogo3.ResumeLayout(false);
+            this.panelJogo3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel3)).EndInit();
             this.jogo4.ResumeLayout(false);
+            this.panelJogo4.ResumeLayout(false);
+            this.panelJogo4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel4)).EndInit();
             this.jogo5.ResumeLayout(false);
+            this.panelJogo5.ResumeLayout(false);
+            this.panelJogo5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.pgAdd.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.Jogos.ResumeLayout(false);
-            this.Jogos.PerformLayout();
-            this.bunifuPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.bunifuPanel2.ResumeLayout(false);
-            this.bunifuPanel2.PerformLayout();
-            this.panelJogo1.ResumeLayout(false);
-            this.panelJogo1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel1)).EndInit();
-            this.panelJogo2.ResumeLayout(false);
-            this.panelJogo2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel2)).EndInit();
-            this.panelJogo3.ResumeLayout(false);
-            this.panelJogo3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel3)).EndInit();
-            this.panelJogo4.ResumeLayout(false);
-            this.panelJogo4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel4)).EndInit();
-            this.panelJogo5.ResumeLayout(false);
-            this.panelJogo5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbJogoCarousel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrarCarousel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrarIcone)).EndInit();
@@ -3536,6 +3522,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCarousel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemJogo)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.Jogos.ResumeLayout(false);
+            this.Jogos.PerformLayout();
+            this.bunifuPanel2.ResumeLayout(false);
+            this.bunifuPanel2.PerformLayout();
+            this.bunifuPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
