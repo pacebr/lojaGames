@@ -23,10 +23,10 @@ namespace LojaGames
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Value = bunifuProgressBar1.Value + 4;
+            bunifuProgressBar1.Value = bunifuProgressBar1.Value + 3;
             label2.Text = bunifuProgressBar1.Value.ToString() + "%";
 
-            if (bunifuProgressBar1.Value >= 100)
+            if (bunifuProgressBar1.Value >= 99)
             {
                 timer1.Enabled = false;
                 new explore().Show();

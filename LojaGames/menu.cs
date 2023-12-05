@@ -241,6 +241,7 @@ namespace LojaGames
                     return;
                 }
                 pgMenu.SetPage(Jogos);
+                //continuar daqui para popular
             }
         }
 

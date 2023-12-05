@@ -2683,7 +2683,7 @@
             // 
             // bunifuElipse4
             // 
-            this.bunifuElipse4.ElipseRadius = 5;
+            this.bunifuElipse4.ElipseRadius = 10;
             this.bunifuElipse4.TargetControl = this.bunifuPages3;
             // 
             // login

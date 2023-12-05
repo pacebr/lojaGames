@@ -15,9 +15,11 @@ namespace LojaGames
         public explore()
         {
             InitializeComponent();
+            btnEntrar.Parent = pictureBox1;
+            btnExplorar.Parent = pictureBox1;
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
             new login().Show();
             Visible = false;
