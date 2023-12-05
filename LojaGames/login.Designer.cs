@@ -1882,10 +1882,10 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage3;
-            this.bunifuPages2.PageIndex = 0;
-            this.bunifuPages2.PageName = "tabPage3";
-            this.bunifuPages2.PageTitle = "tabPage3";
+            this.bunifuPages2.Page = this.tabPage4;
+            this.bunifuPages2.PageIndex = 1;
+            this.bunifuPages2.PageName = "tabPage4";
+            this.bunifuPages2.PageTitle = "tabPage4";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(726, 426);
             this.bunifuPages2.TabIndex = 20;
@@ -1969,6 +1969,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
             this.label6.Location = new System.Drawing.Point(63, 274);

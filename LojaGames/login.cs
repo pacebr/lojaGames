@@ -324,10 +324,5 @@ namespace LojaGames
                 txtSenhaFunc.PasswordChar = '\0';
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

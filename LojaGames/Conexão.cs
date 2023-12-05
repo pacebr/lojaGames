@@ -16,7 +16,7 @@ namespace LojaGames
         private static SqlConnection conexaoBanco()
         {
             var conexao = new SqlConnection(
-                @"Data Source=exodusgamestore.database.windows.net; User ID=vgdsno; Password=Vgdsn@05031906; initial catalog=exodusDb;"  //Connection Timeout = 1;
+                @"Data Source=exodusgamestore.database.windows.net; User ID=vgdsno; Password=Vgdsn@05031906; initial catalog=exodusDb;"
             );          
             conn = conexao;
 

@@ -16,57 +16,31 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosIcone(byte[] foto, string nome)
+        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel)
         {
             Conexao.Conectar();
-            string sql = "INSERT INTO icone.dados (imagem, nome) " + "VALUES (@imagem, @valor)";
+            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
-            cmd.Parameters.AddWithValue("@imagem", foto);
-            cmd.Parameters.AddWithValue(@"valor", nome);
-
-            cmd.ExecuteNonQuery();
-
-            Conexao.Fechar();
-        }
-        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao)
-        {
-            Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, nome, descricao) " + "VALUES (@imagem, @nome, @descricao)";
-
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-
-            cmd.Parameters.AddWithValue("@imagem", imagem);
-            cmd.Parameters.AddWithValue(@"nome", jogo);
-            cmd.Parameters.AddWithValue(@"descricao", descricao);
-
-            cmd.ExecuteNonQuery();
-
-            Conexao.Fechar();
-        }
-        public static void EnviarDadosCarousel(byte[] icone, byte[] imagem, string jogo, string descricao)
-        {
-            Conexao.Conectar();
-            string sql = "INSERT INTO carousel.dados (icone, imagem, jogo, descricao) " + "VALUES (@icone, @imagem, @jogo, @descricao)";
-
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-
-            cmd.Parameters.AddWithValue("@icone", icone);
             cmd.Parameters.AddWithValue("@imagem", imagem);
             cmd.Parameters.AddWithValue(@"jogo", jogo);
             cmd.Parameters.AddWithValue(@"descricao", descricao);
+            cmd.Parameters.AddWithValue(@"icone", icone);
+            cmd.Parameters.AddWithValue(@"carousel", carousel);
+
 
             cmd.ExecuteNonQuery();
 
             Conexao.Fechar();
         }
-        public static Image PegarImagemPequena(int id)
+
+        public static Image PegarIcone(int id)
         {
             try
             {
                 Conexao.Conectar();
-                string sql = "select icone from carousel.dados where id = " + id;
+                string sql = "select icone from jogos.dados where id = " + id;
                 SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
                 var arrByte = cmd.ExecuteScalar() as byte[];
@@ -86,7 +60,7 @@ namespace LojaGames
         public static string PegarTexto(int id)
         {
             Conexao.Conectar();
-            string sql = "select jogo from carousel.dados where id = " + id;
+            string sql = "select jogo from jogos.dados where id = " + id;
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
             object result = cmd.ExecuteScalar();
 
@@ -106,7 +80,7 @@ namespace LojaGames
             try
             {
                 Conexao.Conectar();
-                string sql = "select imagem from carousel.dados where id = " + id;
+                string sql = "select carousel from jogos.dados where id = " + id;
                 SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
                 var arrByte = cmd.ExecuteScalar() as byte[];

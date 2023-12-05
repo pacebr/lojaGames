@@ -18,6 +18,7 @@ namespace LojaGames
     {
         byte[] imagem;
         byte[] icone;
+        byte[] carousel;
 
         public menu()
         {
@@ -108,7 +109,7 @@ namespace LojaGames
             btnConfiguracao.Image = Resources.Wrench_Active;
         }
 
-        private void EscolherImagem_Click(object sender, EventArgs e)
+        private void btnJogo_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
@@ -125,35 +126,28 @@ namespace LojaGames
         {
             string nome = txtNomeJogo.Text;
             string descricao = txtDescricao.Text;
-            DadosJogo.EnviarDadosJogo(imagem, nome, descricao);
-        }
-
-        private void btnEnviarCarrousel_Click(object sender, EventArgs e)
-        {
-            string nome = txtNomeJogoCarousel.Text;
-            string descricao = txtCarousel.Text;
-            DadosJogo.EnviarDadosCarousel(icone, imagem, nome, descricao);
+            DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel);
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            btnJogo1.LeftIcon.Image = DadosJogo.PegarImagemPequena(1);
+            btnJogo1.LeftIcon.Image = DadosJogo.PegarIcone(1);
             pcbJogoCarousel1.Image = DadosJogo.PegarImagemCarrousel(1);
             btnJogo1.Refresh();
             btnJogo1.Text = DadosJogo.PegarTexto(1);
-            btnJogo2.LeftIcon.Image = DadosJogo.PegarImagemPequena(2);
+            btnJogo2.LeftIcon.Image = DadosJogo.PegarIcone(2);
             pcbJogoCarousel2.Image = DadosJogo.PegarImagemCarrousel(2);
             btnJogo2.Refresh();
             btnJogo2.Text = DadosJogo.PegarTexto(2);
-            btnJogo3.LeftIcon.Image = DadosJogo.PegarImagemPequena(3);
+            btnJogo3.LeftIcon.Image = DadosJogo.PegarIcone(3);
             pcbJogoCarousel3.Image = DadosJogo.PegarImagemCarrousel(3);
             btnJogo3.Refresh();
             btnJogo3.Text = DadosJogo.PegarTexto(3);
-            btnJogo4.LeftIcon.Image = DadosJogo.PegarImagemPequena(4);
+            btnJogo4.LeftIcon.Image = DadosJogo.PegarIcone(4);
             pcbJogoCarousel4.Image = DadosJogo.PegarImagemCarrousel(4);
             btnJogo4.Refresh();
             btnJogo4.Text = DadosJogo.PegarTexto(4);
-            btnJogo5.LeftIcon.Image = DadosJogo.PegarImagemPequena(5);
+            btnJogo5.LeftIcon.Image = DadosJogo.PegarIcone(5);
             pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
             btnJogo5.Text = DadosJogo.PegarTexto(5);
@@ -220,7 +214,9 @@ namespace LojaGames
                     Size = new Size(290, 290),
                     Location = new Point(posX, posY),
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Tag = i
+                    Tag = i,
+                    Cursor = Cursors.Hand
+                    
                 };
                 pictureBox.MouseClick += pictureBox_Click;
                 panel1.Controls.Add(pictureBox);
@@ -241,10 +237,10 @@ namespace LojaGames
             {
                 if (i <= 0)
                 {
-
+                    notify.Show(this,"Jogo Inexistente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     return;
                 }
-                MessageBox.Show("ID: " + i);
+                pgMenu.SetPage(Jogos);
             }
         }
 
@@ -264,7 +260,7 @@ namespace LojaGames
             }
         }
 
-        private void btnCarrousel_Click(object sender, EventArgs e)
+        private void btnCarousel_Click(object sender, EventArgs e)
         {
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -273,7 +269,7 @@ namespace LojaGames
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string caminhoArquivo = openFileDialog.FileName;
-                    imagem = File.ReadAllBytes(caminhoArquivo);
+                    carousel = File.ReadAllBytes(caminhoArquivo);
 
                     pcbCarousel.Image = Image.FromFile(caminhoArquivo);
                 }
@@ -302,11 +298,5 @@ namespace LojaGames
         {
             CycleButtons();
         }
-
-        private void pbJogo1_Click(object sender, EventArgs e)
-        {
-            pgMenu.SetPage(6);
-        }  
-       
     }  
 }

@@ -148,7 +148,6 @@
     <Compile Include="ControleCliente.cs" />
     <Compile Include="Conexão.cs" />
     <Compile Include="ControleFuncionario.cs" />
-    <Compile Include="CriacaoPcb.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="DadosJogo.cs" />
     <Compile Include="exodusDbDataSet.Designer.cs">
