@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
+using Bunifu.UI.WinForms.BunifuButton;
 using LojaGames.Properties;
 
 namespace LojaGames
@@ -119,6 +120,7 @@ namespace LojaGames
                 imagem = File.ReadAllBytes(caminhoArquivo);
 
                 pcbImagemJogo.Image = Image.FromFile(caminhoArquivo);
+                pcbMostrarJogo.Visible = true;
             }
         }
 
@@ -126,7 +128,9 @@ namespace LojaGames
         {
             string nome = txtNomeJogo.Text;
             string descricao = txtDescricao.Text;
-            DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel);
+            string trailer = txtTrailer.Text;
+            //DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel, trailer);
+            Utilidades.limparCampos(this);
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
@@ -134,23 +138,23 @@ namespace LojaGames
             btnJogo1.LeftIcon.Image = DadosJogo.PegarIcone(1);
             pcbJogoCarousel1.Image = DadosJogo.PegarImagemCarrousel(1);
             btnJogo1.Refresh();
-            btnJogo1.Text = DadosJogo.PegarTexto(1);
+            btnJogo1.Text = DadosJogo.PegarJogo(1);
             btnJogo2.LeftIcon.Image = DadosJogo.PegarIcone(2);
             pcbJogoCarousel2.Image = DadosJogo.PegarImagemCarrousel(2);
             btnJogo2.Refresh();
-            btnJogo2.Text = DadosJogo.PegarTexto(2);
+            btnJogo2.Text = DadosJogo.PegarJogo(2);
             btnJogo3.LeftIcon.Image = DadosJogo.PegarIcone(3);
             pcbJogoCarousel3.Image = DadosJogo.PegarImagemCarrousel(3);
             btnJogo3.Refresh();
-            btnJogo3.Text = DadosJogo.PegarTexto(3);
+            btnJogo3.Text = DadosJogo.PegarJogo(3);
             btnJogo4.LeftIcon.Image = DadosJogo.PegarIcone(4);
             pcbJogoCarousel4.Image = DadosJogo.PegarImagemCarrousel(4);
             btnJogo4.Refresh();
-            btnJogo4.Text = DadosJogo.PegarTexto(4);
+            btnJogo4.Text = DadosJogo.PegarJogo(4);
             btnJogo5.LeftIcon.Image = DadosJogo.PegarIcone(5);
             pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
             btnJogo5.Refresh();
-            btnJogo5.Text = DadosJogo.PegarTexto(5);
+            btnJogo5.Text = DadosJogo.PegarJogo(5);
             CycleButtons();
         }
 
@@ -241,7 +245,8 @@ namespace LojaGames
                     return;
                 }
                 pgMenu.SetPage(Jogos);
-                //continuar daqui para popular
+                lblNomeJogo.Text = DadosJogo.PegarJogo(i);
+
             }
         }
 
@@ -257,6 +262,7 @@ namespace LojaGames
                     icone = File.ReadAllBytes(caminhoArquivo);
 
                     pcbIcone.Image = Image.FromFile(caminhoArquivo);
+                    pcbMostrarIcone.Visible = true;
                 }
             }
         }
@@ -273,6 +279,7 @@ namespace LojaGames
                     carousel = File.ReadAllBytes(caminhoArquivo);
 
                     pcbCarousel.Image = Image.FromFile(caminhoArquivo);
+                    pcbMostrarCarousel.Visible = true;
                 }
             }
         }
@@ -298,6 +305,77 @@ namespace LojaGames
         private void timer1_Tick(object sender, EventArgs e)
         {
             CycleButtons();
+        }
+
+        private void AdicionarOuRemoverControle(PictureBox pictureBox,PictureBox pictureBoxMostrar, string texto, Point localizacao, Image imagemAdicionar, Image imagemRemover)
+        {
+            PictureBox controleExistente = panel2.Controls.OfType<PictureBox>().FirstOrDefault();
+
+            if (controleExistente != null)
+            {
+                pictureBoxMostrar.Image = imagemAdicionar;
+                lblMostrar.Text = "";
+                panel2.Controls.Remove(controleExistente);
+                controleExistente.Dispose();
+            }
+            if(controleExistente == null)
+            {
+                pictureBoxMostrar.Image = imagemRemover;
+                lblMostrar.Text = texto;
+                lblMostrar.Location = localizacao;
+
+                PictureBox novaPictureBox = new PictureBox()
+                {
+                    Image = pictureBox.Image,
+                    Size = new Size(290, 290),
+                    Location = new Point(0, 0),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                };
+                novaPictureBox.Image = pictureBox.Image;
+                panel2.Controls.Add(novaPictureBox);
+            }
+        }
+
+        private void pcbMostrarJogo_Click(object sender, EventArgs e)
+        {
+            AdicionarOuRemoverControle(pcbImagemJogo,pcbMostrarJogo, "Imagem Jogo", new Point(607, 309),Resources.fechar_o_olho__1_, Resources.olho);
+        }
+
+        private void pcbMostrarIcone_Click(object sender, EventArgs e)
+        {
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMostrar = panel2.Controls.OfType<Bunifu.UI.WinForms.BunifuButton.BunifuButton>().FirstOrDefault();
+
+            if (btnMostrar != null)
+            {
+                pcbMostrarIcone.Image = Resources.fechar_o_olho__1_;
+                lblMostrar.Text = "";
+                panel2.Controls.Remove(btnMostrar);
+                btnMostrar.Dispose();
+            }
+            if (btnMostrar == null)
+            {
+                pcbMostrarIcone.Image = Resources.olho;
+                lblMostrar.Text = "Botão Carousel";
+                lblMostrar.Location = new Point(600, 309);
+                Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton = new BunifuButton()
+                {
+                    Size = new Size(253, 97),
+                    Text = "Nome do Jogo Aqui",
+                    TextAlign = ContentAlignment.MiddleRight,
+                    Location = new Point(0, 100),
+                    IdleBorderRadius = 15
+                };
+                bunifuButton.IdleFillColor = Color.FromArgb(37,35,57);
+                bunifuButton.IdleBorderColor = Color.Transparent;
+                bunifuButton.LeftIcon.Image = pcbIcone.Image;
+                bunifuButton.Refresh();
+                panel2.Controls.Add(bunifuButton);
+            }
+        }
+
+        private void pcbMostrarCarousel_Click(object sender, EventArgs e)
+        {
+            AdicionarOuRemoverControle(pcbCarousel,pcbMostrarCarousel, "Imagem Carrossel", new Point(591, 309),Resources.fechar_o_olho__1_, Resources.olho);
         }
     }  
 }

@@ -24,6 +24,10 @@ namespace LojaGames
                 {
                     ((Bunifu.UI.WinForms.BunifuToggleSwitch)c).Checked = false;
                 }
+                else if (c is PictureBox)
+                {
+                    ((PictureBox)c).Image = null;
+                }
                 if (c.HasChildren)
                 {
                     limparCampos(c);

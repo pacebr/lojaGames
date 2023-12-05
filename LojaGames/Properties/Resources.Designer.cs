@@ -253,6 +253,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fechar_o_olho__1_ {
+            get {
+                object obj = ResourceManager.GetObject("fechar-o-olho (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Game_Controller {
             get {
                 object obj = ResourceManager.GetObject("Game Controller", resourceCulture);
@@ -479,6 +489,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap OIG {
             get {
                 object obj = ResourceManager.GetObject("OIG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olho {
+            get {
+                object obj = ResourceManager.GetObject("olho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

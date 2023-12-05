@@ -16,10 +16,10 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel)
+        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel, string trailer)
         {
             Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel)";
+            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel, trailer) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel, @trailer)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
@@ -28,6 +28,7 @@ namespace LojaGames
             cmd.Parameters.AddWithValue(@"descricao", descricao);
             cmd.Parameters.AddWithValue(@"icone", icone);
             cmd.Parameters.AddWithValue(@"carousel", carousel);
+            cmd.Parameters.AddWithValue(@"trailer", trailer);
 
 
             cmd.ExecuteNonQuery();
@@ -57,7 +58,7 @@ namespace LojaGames
             }
         }
 
-        public static string PegarTexto(int id)
+        public static string PegarJogo(int id)
         {
             Conexao.Conectar();
             string sql = "select jogo from jogos.dados where id = " + id;
@@ -89,7 +90,7 @@ namespace LojaGames
                 {
                     return Image.FromStream(ms);
                 }
-            }
+            } 
             catch
             {
                 Image imagemErro = Resources.Error;
@@ -132,6 +133,23 @@ namespace LojaGames
             catch
             {
                 return 0;
+            }
+        }
+        public static string DadosDescricao(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select descricao from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+            else
+            {
+                return "Jogo não cadastrado";
             }
         }
     }
