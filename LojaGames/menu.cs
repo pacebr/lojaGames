@@ -374,7 +374,7 @@ namespace LojaGames
                     Size = new Size(253, 97),
                     Text = "Nome do Jogo Aqui",
                     TextAlign = ContentAlignment.MiddleRight,
-                    Location = new Point(0, 100),
+                    Location = new Point(70,126),
                     IdleBorderRadius = 15
                 };
                 bunifuButton.IdleFillColor = Color.FromArgb(37,35,57);
@@ -410,7 +410,7 @@ namespace LojaGames
 
                 PictureBox PictureBox = new PictureBox()
                 {
-                    Image = pcbImagemJogo.Image,
+                    Image = pcbCarousel.Image,
                     Size = new Size(290, 290),
                     Location = new Point(0, 0),
                     SizeMode = PictureBoxSizeMode.StretchImage,
