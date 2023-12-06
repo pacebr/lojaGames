@@ -233,6 +233,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exdus {
+            get {
+                object obj = ResourceManager.GetObject("exdus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
@@ -419,6 +429,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Logo_sem_fundo1 {
             get {
                 object obj = ResourceManager.GetObject("Logo sem fundo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Upscale_sem_fundo {
+            get {
+                object obj = ResourceManager.GetObject("Logo Upscale sem fundo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -374,7 +374,7 @@ namespace LojaGames
                     Size = new Size(253, 97),
                     Text = "Nome do Jogo Aqui",
                     TextAlign = ContentAlignment.MiddleRight,
-                    Location = new Point(70,126),
+                    Location = new Point(0,-20),
                     IdleBorderRadius = 15
                 };
                 bunifuButton.IdleFillColor = Color.FromArgb(37,35,57);
