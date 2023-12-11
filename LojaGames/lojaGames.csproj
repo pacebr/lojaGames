@@ -279,8 +279,6 @@
     <None Include="Resources\Control Panel Active.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo Upscale sem fundo.png" />
-    <None Include="Resources\olho.png" />
     <None Include="Resources\icons8-homtem-turista-96 %281%29.png" />
     <None Include="Resources\icons8-homtem-turista-96.png" />
     <None Include="Resources\Logo sem fundo1.png" />
@@ -304,8 +302,6 @@
     <None Include="Resources\Add Imagem Cinza.png" />
     <None Include="Resources\Add Image.png" />
     <None Include="Resources\Add User Male.png" />
-    <None Include="Resources\fechar-o-olho %281%29.png" />
-    <None Include="Resources\exdus.gif" />
     <Content Include="Resources\Game Controller Active.png" />
     <None Include="Resources\Home Page Active.png" />
     <None Include="Resources\Home Page.png" />
