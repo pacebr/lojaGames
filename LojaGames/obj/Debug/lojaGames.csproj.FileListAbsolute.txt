@@ -392,3 +392,8 @@ C:\Users\victor.gsnogueira\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.
 C:\Users\vgdsn\Source\Repos\lojaGames\LojaGames\obj\Debug\LojaGames.splash.resources
 C:\Users\vgdsn\source\repos\pacebr\lojaGames\LojaGames\obj\Debug\LojaGames.explore.resources
 C:\Users\victor.gsnogueira\source\repos\pacebr\lojaGames\LojaGames\obj\Debug\LojaGames.explore.resources
+C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\bin\Debug\Interop.WMPLib.dll
+C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\Interop.WMPLib.dll
+C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\lojaGames.csproj.ResolveComReference.cache

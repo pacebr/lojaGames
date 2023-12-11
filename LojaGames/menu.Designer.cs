@@ -162,6 +162,7 @@
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.pgMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pgJogos.SuspendLayout();
@@ -198,6 +199,7 @@
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -219,10 +221,10 @@
             this.pgMenu.Location = new System.Drawing.Point(88, 70);
             this.pgMenu.Multiline = true;
             this.pgMenu.Name = "pgMenu";
-            this.pgMenu.Page = this.tabPage3;
-            this.pgMenu.PageIndex = 3;
-            this.pgMenu.PageName = "tabPage3";
-            this.pgMenu.PageTitle = "tabPage3";
+            this.pgMenu.Page = this.Jogos;
+            this.pgMenu.PageIndex = 6;
+            this.pgMenu.PageName = "Jogos";
+            this.pgMenu.PageTitle = "Jogos";
             this.pgMenu.SelectedIndex = 0;
             this.pgMenu.Size = new System.Drawing.Size(1220, 631);
             this.pgMenu.TabIndex = 0;
@@ -2964,6 +2966,7 @@
             // 
             this.Jogos.AutoScroll = true;
             this.Jogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.Jogos.Controls.Add(this.mediaPlayer);
             this.Jogos.Controls.Add(this.lblNomeJogo);
             this.Jogos.Location = new System.Drawing.Point(4, 4);
             this.Jogos.Name = "Jogos";
@@ -2974,11 +2977,11 @@
             // lblNomeJogo
             // 
             this.lblNomeJogo.AutoSize = true;
-            this.lblNomeJogo.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeJogo.ForeColor = System.Drawing.Color.White;
             this.lblNomeJogo.Location = new System.Drawing.Point(26, 80);
             this.lblNomeJogo.Name = "lblNomeJogo";
-            this.lblNomeJogo.Size = new System.Drawing.Size(445, 59);
+            this.lblNomeJogo.Size = new System.Drawing.Size(265, 29);
             this.lblNomeJogo.TabIndex = 1;
             this.lblNomeJogo.Text = "NOME DO JOGO AQUI";
             // 
@@ -3470,6 +3473,15 @@
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
             // 
+            // mediaPlayer
+            // 
+            this.mediaPlayer.Enabled = true;
+            this.mediaPlayer.Location = new System.Drawing.Point(31, 151);
+            this.mediaPlayer.Name = "mediaPlayer";
+            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
+            this.mediaPlayer.Size = new System.Drawing.Size(650, 400);
+            this.mediaPlayer.TabIndex = 2;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -3532,6 +3544,7 @@
             this.bunifuPanel2.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3630,5 +3643,6 @@
         private System.Windows.Forms.PictureBox pcbMostrarJogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
     }
 }

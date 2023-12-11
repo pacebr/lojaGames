@@ -29,6 +29,7 @@ namespace LojaGames
             pcbJogoCarousel3.Controls.Add(panelJogo3);
             pcbJogoCarousel4.Controls.Add(panelJogo4);
             pcbJogoCarousel5.Controls.Add(panelJogo5);
+            mediaPlayer.uiMode = "none";
         }
 
         private void CycleButtons()
