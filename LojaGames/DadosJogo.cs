@@ -57,7 +57,7 @@ namespace LojaGames
             }
         }
 
-        public static string PegarTexto(int id)
+        public static string PegarJogo(int id)
         {
             Conexao.Conectar();
             string sql = "select jogo from jogos.dados where id = " + id;
