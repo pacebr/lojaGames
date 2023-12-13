@@ -146,7 +146,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Jogos = new System.Windows.Forms.TabPage();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.lblNomeJogo = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -197,7 +196,6 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.Jogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -2968,7 +2966,6 @@
             this.Jogos.AutoScroll = true;
             this.Jogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
             this.Jogos.Controls.Add(this.lblDescricao);
-            this.Jogos.Controls.Add(this.mediaPlayer);
             this.Jogos.Controls.Add(this.lblNomeJogo);
             this.Jogos.Location = new System.Drawing.Point(4, 4);
             this.Jogos.Name = "Jogos";
@@ -2984,15 +2981,6 @@
             this.lblDescricao.Size = new System.Drawing.Size(103, 16);
             this.lblDescricao.TabIndex = 3;
             this.lblDescricao.Text = "DESCRICAO AQUI";
-            // 
-            // mediaPlayer
-            // 
-            this.mediaPlayer.Enabled = true;
-            this.mediaPlayer.Location = new System.Drawing.Point(31, 151);
-            this.mediaPlayer.Name = "mediaPlayer";
-            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
-            this.mediaPlayer.Size = new System.Drawing.Size(650, 400);
-            this.mediaPlayer.TabIndex = 2;
             // 
             // lblNomeJogo
             // 
@@ -3551,7 +3539,6 @@
             this.tabPage5.PerformLayout();
             this.Jogos.ResumeLayout(false);
             this.Jogos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
@@ -3654,7 +3641,6 @@
         private System.Windows.Forms.PictureBox pcbMostrarJogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
         private System.Windows.Forms.Label lblDescricao;
     }
 }

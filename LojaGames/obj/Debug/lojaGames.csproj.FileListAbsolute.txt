@@ -397,3 +397,8 @@ C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\bin\Debug\AxI
 C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\Interop.WMPLib.dll
 C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\victor.gsnogueira\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\lojaGames.csproj.ResolveComReference.cache
+C:\Users\vgdsn\Source\Repos\pacebr\lojaGames\LojaGames\bin\Debug\Interop.WMPLib.dll
+C:\Users\vgdsn\Source\Repos\pacebr\lojaGames\LojaGames\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\vgdsn\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\Interop.WMPLib.dll
+C:\Users\vgdsn\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\vgdsn\Source\Repos\pacebr\lojaGames\LojaGames\obj\Debug\lojaGames.csproj.ResolveComReference.cache
