@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,10 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel)
+        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel, string trailer)
         {
             Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel)";
+            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel, trailer) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel, @trailer)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
@@ -28,7 +29,7 @@ namespace LojaGames
             cmd.Parameters.AddWithValue(@"descricao", descricao);
             cmd.Parameters.AddWithValue(@"icone", icone);
             cmd.Parameters.AddWithValue(@"carousel", carousel);
-
+            cmd.Parameters.AddWithValue(@"trailer", trailer);
 
             cmd.ExecuteNonQuery();
 
@@ -134,5 +135,55 @@ namespace LojaGames
                 return 0;
             }
         }
+        public static string PegarTrailer(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select trailer from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+
+            return null;
+        }
+        public static string ObterLinkIncorporado(string url)
+        {
+            if (url.Contains("youtube.com"))
+            {
+                var videoId = ExtrairVideoId(url);
+
+                if (!string.IsNullOrEmpty(videoId))
+                {
+                    return $"https://www.youtube.com/embed/{videoId}?controls=0";
+                }
+            }
+
+            return null;
+        }
+        private static string ExtrairVideoId(string url)
+        {
+            return HttpUtility.ParseQueryString(new Uri(url).Query)["v"];
+        }
+        public static string PegarDescricao(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select descricao from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+            else
+            {
+                return "Jogo não cadastrado";
+            }
+        }
     }
-}   
+}

@@ -219,7 +219,7 @@ namespace LojaGames
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Tag = i,
                     Cursor = Cursors.Hand
-                    
+
                 };
                 pictureBox.MouseClick += pictureBox_Click;
                 panel1.Controls.Add(pictureBox);
@@ -232,7 +232,7 @@ namespace LojaGames
                 }
             }
         }
-        void pictureBox_Click(object sender, EventArgs e)
+        private void pictureBox_Click(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
 
@@ -240,13 +240,85 @@ namespace LojaGames
             {
                 if (i <= 0)
                 {
-                    notify.Show(this,"Jogo Inexistente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    notify.Show(this, "Jogo Inexistente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     return;
                 }
+
                 pgMenu.SetPage(Jogos);
                 lblNomeJogo.Text = DadosJogo.PegarJogo(i);
+                string textoBase = DadosJogo.PegarDescricao(i);
+                string textoPronto = QuebraLinha(textoBase);
+                lblDescricao.Text = textoPronto;
 
+                int idDoJogo = i;
+
+                string linkDoVideo = DadosJogo.PegarTrailer(idDoJogo);
+
+                // Converta o link do YouTube para o formato de incorporação
+                string linkIncorporado = DadosJogo.ObterLinkIncorporado(linkDoVideo);
+
+                if (!string.IsNullOrEmpty(linkIncorporado))
+                {
+                    // Remova o controle WebBrowser anterior, se houver
+                    if (pnTrailer.Controls.Count > 0 && pnTrailer.Controls[0] is WebBrowser)
+                    {
+                        pnTrailer.Controls[0].Dispose();
+                    }
+
+                    WebBrowser webBrowser = new WebBrowser();
+                    webBrowser.Dock = DockStyle.Fill;
+                    webBrowser.ScriptErrorsSuppressed = true;
+                    webBrowser.ScrollBarsEnabled = false;
+
+                    string html = $@"
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"" />
+                    <style>
+                        body, html, iframe {{ margin: 0; padding: 0; width: 100%; height: 100%; border: 0; overflow: hidden; }}
+                        iframe {{ border: none; }}
+                    </style>
+                </head>
+                <body>
+                    <iframe src=""{linkIncorporado}"" frameborder=""0"" allowfullscreen></iframe>
+                </body>
+                </html>";
+
+                    // Navegue para o conteúdo HTML
+                    webBrowser.DocumentText = html;
+
+                    // Adicione o controle ao painel
+                    pnTrailer.Controls.Add(webBrowser);
+                }
+                else
+                {
+                    notify.Show(this, "O link do vídeo não é válido.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                }
             }
+        }
+
+        private static string QuebraLinha(string textoOriginal)
+        {
+            string[] palavras = textoOriginal.Split(' ');
+
+            int contadorPalavras = 0;
+
+            string textoComQuebrasDeLinha = "";
+
+            foreach (string palavra in palavras)
+            {
+                textoComQuebrasDeLinha += palavra + " ";
+
+                contadorPalavras++;
+
+                if (contadorPalavras % 10 == 0)
+                {
+                    textoComQuebrasDeLinha += "\n";
+                }
+            }
+
+            return textoComQuebrasDeLinha;
         }
 
         private void btnIcone_Click(object sender, EventArgs e)
@@ -330,7 +402,7 @@ namespace LojaGames
                 panel2.Controls.Remove(pcbMostrar);
                 pcbMostrar.Dispose();
             }
-            if(pcbMostrar == null)
+            if (pcbMostrar == null)
             {
                 pcbMostrarJogo.Image = Resources.olho;
                 lblMostrar.Text = "Imagem Jogo";
@@ -374,10 +446,10 @@ namespace LojaGames
                     Size = new Size(253, 97),
                     Text = "Nome do Jogo Aqui",
                     TextAlign = ContentAlignment.MiddleRight,
-                    Location = new Point(0,-20),
+                    Location = new Point(0, -20),
                     IdleBorderRadius = 15
                 };
-                bunifuButton.IdleFillColor = Color.FromArgb(37,35,57);
+                bunifuButton.IdleFillColor = Color.FromArgb(37, 35, 57);
                 bunifuButton.IdleBorderColor = Color.Transparent;
                 bunifuButton.LeftIcon.Image = pcbIcone.Image;
                 bunifuButton.Refresh();
@@ -418,5 +490,5 @@ namespace LojaGames
                 panel2.Controls.Add(PictureBox);
             }
         }
-    }  
+    }
 }

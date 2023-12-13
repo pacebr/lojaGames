@@ -163,6 +163,7 @@
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pnTrailer = new System.Windows.Forms.Panel();
             this.pgMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pgJogos.SuspendLayout();
@@ -2965,6 +2966,7 @@
             // 
             this.Jogos.AutoScroll = true;
             this.Jogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.Jogos.Controls.Add(this.pnTrailer);
             this.Jogos.Controls.Add(this.lblDescricao);
             this.Jogos.Controls.Add(this.lblNomeJogo);
             this.Jogos.Location = new System.Drawing.Point(4, 4);
@@ -2976,20 +2978,22 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(713, 151);
+            this.lblDescricao.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.White;
+            this.lblDescricao.Location = new System.Drawing.Point(657, 151);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(103, 16);
+            this.lblDescricao.Size = new System.Drawing.Size(138, 22);
             this.lblDescricao.TabIndex = 3;
             this.lblDescricao.Text = "DESCRICAO AQUI";
             // 
             // lblNomeJogo
             // 
             this.lblNomeJogo.AutoSize = true;
-            this.lblNomeJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeJogo.Font = new System.Drawing.Font("Clear Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeJogo.ForeColor = System.Drawing.Color.White;
             this.lblNomeJogo.Location = new System.Drawing.Point(26, 80);
             this.lblNomeJogo.Name = "lblNomeJogo";
-            this.lblNomeJogo.Size = new System.Drawing.Size(265, 29);
+            this.lblNomeJogo.Size = new System.Drawing.Size(243, 34);
             this.lblNomeJogo.TabIndex = 1;
             this.lblNomeJogo.Text = "NOME DO JOGO AQUI";
             // 
@@ -3481,6 +3485,13 @@
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
             // 
+            // pnTrailer
+            // 
+            this.pnTrailer.Location = new System.Drawing.Point(31, 151);
+            this.pnTrailer.Name = "pnTrailer";
+            this.pnTrailer.Size = new System.Drawing.Size(620, 350);
+            this.pnTrailer.TabIndex = 4;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -3642,5 +3653,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.Panel pnTrailer;
     }
 }
