@@ -145,6 +145,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.Jogos = new System.Windows.Forms.TabPage();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.lblNomeJogo = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -163,7 +164,6 @@
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
             this.pgMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pgJogos.SuspendLayout();
@@ -2976,6 +2976,15 @@
             this.Jogos.TabIndex = 6;
             this.Jogos.Text = "Jogos";
             // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(713, 151);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(103, 16);
+            this.lblDescricao.TabIndex = 3;
+            this.lblDescricao.Text = "DESCRICAO AQUI";
+            // 
             // mediaPlayer
             // 
             this.mediaPlayer.Enabled = true;
@@ -3483,15 +3492,6 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(1000, 174);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(40, 16);
-            this.lblDescricao.TabIndex = 3;
-            this.lblDescricao.Text = "label2";
             // 
             // menu
             // 
