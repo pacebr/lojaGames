@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -130,8 +131,9 @@ namespace LojaGames
             string nome = txtNomeJogo.Text;
             string descricao = txtDescricao.Text;
             string trailer = txtTrailer.Text;
-            //DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel, trailer);
-            Utilidades.limparCampos(this);
+            string preco = txtPreco.Text;
+
+            DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel, trailer, preco, this, notify);
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
@@ -256,12 +258,10 @@ namespace LojaGames
 
                 string linkDoVideo = DadosJogo.PegarTrailer(idDoJogo);
 
-                // Converta o link do YouTube para o formato de incorporação
                 string linkIncorporado = DadosJogo.ObterLinkIncorporado(linkDoVideo);
 
                 if (!string.IsNullOrEmpty(linkIncorporado))
                 {
-                    // Remova o controle WebBrowser anterior, se houver
                     if (pnTrailer.Controls.Count > 0 && pnTrailer.Controls[0] is WebBrowser)
                     {
                         pnTrailer.Controls[0].Dispose();
@@ -502,7 +502,7 @@ namespace LojaGames
         {
             if(char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
             {
-                TextBox t = (TextBox)sender;
+                TextBox t = (TextBox) sender;
                 string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
                 if (w == string.Empty) w = "00";
 
@@ -511,10 +511,20 @@ namespace LojaGames
                 else 
                     w += e.KeyChar;
 
-                t.Text = string.Format("{0:#,##0.00})", Double.Parse(w) / 100);
+                t.Text = string.Format("{0:#,##0.00}", Double.Parse(w) / 100);
                 t.Select(t.Text.Length, 0);
             }
             e.Handled = true;
+        }
+
+        private void tabPage8_Enter(object sender, EventArgs e)
+        {
+            RecarregarDGV();
+        }
+
+        private void RecarregarDGV()
+        {
+            DadosJogo.DataGridView(jogosDGV);
         }
     }
 }

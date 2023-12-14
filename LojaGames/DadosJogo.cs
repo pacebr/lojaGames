@@ -12,29 +12,101 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using LojaGames.Properties;
+using Bunifu.UI.WinForms;
 
 namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel, string trailer)
+        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, menu menu, BunifuSnackbar notificacao)
         {
             Conexao.Conectar();
-            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel, trailer) " + "VALUES (@imagem, @jogo, @descricao, @icone, @carousel, @trailer)";
+
+            if (JogoDescricaoJaExistem(jogo, descricao, notificacao, menu))
+            {
+                notificacao.Show(menu, "Jogo ou descrição já existem na tabela.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(jogo) || string.IsNullOrWhiteSpace(descricao) || string.IsNullOrWhiteSpace(preco))
+            {
+                notificacao.Show(menu, "Preencha todos os campos obrigatórios.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
+
+            if (!decimal.TryParse(preco, out decimal precoDecimal))
+            {
+                notificacao.Show(menu, "O preço inserido não é válido.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
+
+            if (imagem == null || icone == null || carousel == null)
+            {
+                notificacao.Show(menu, "Selecione imagens para o jogo.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(trailer) && !Uri.IsWellFormedUriString(trailer, UriKind.Absolute))
+            {
+                notificacao.Show(menu, "A URL do trailer não é válida.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
+
+            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel, trailer, preco) " +
+                          "VALUES (@imagem, @jogo, @descricao, @icone, @carousel, @trailer, @preco)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
             cmd.Parameters.AddWithValue("@imagem", imagem);
-            cmd.Parameters.AddWithValue(@"jogo", jogo);
-            cmd.Parameters.AddWithValue(@"descricao", descricao);
-            cmd.Parameters.AddWithValue(@"icone", icone);
-            cmd.Parameters.AddWithValue(@"carousel", carousel);
-            cmd.Parameters.AddWithValue(@"trailer", trailer);
+            cmd.Parameters.AddWithValue("@jogo", jogo);
+            cmd.Parameters.AddWithValue("@descricao", descricao);
+            cmd.Parameters.AddWithValue("@icone", icone);
+            cmd.Parameters.AddWithValue("@carousel", carousel);
+            cmd.Parameters.AddWithValue("@trailer", trailer);
+            cmd.Parameters.AddWithValue("@preco", precoDecimal);
 
-            cmd.ExecuteNonQuery();
-
-            Conexao.Fechar();
+            try
+            {
+                cmd.ExecuteNonQuery();
+                Utilidades.limparCampos(menu);
+                notificacao.Show(menu, "Jogo cadastrado com sucesso.", BunifuSnackbar.MessageTypes.Success);
+            }
+            catch (Exception ex)
+            {
+                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
         }
+
+        private static bool JogoDescricaoJaExistem(string jogo, string descricao, BunifuSnackbar notificacao, Form formulario)
+        {
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM jogos.dados WHERE jogo = @jogo OR descricao = @descricao";
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+
+                cmd.Parameters.AddWithValue("@jogo", jogo);
+                cmd.Parameters.AddWithValue("@descricao", descricao);
+
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                notificacao.Show(formulario, $"Erro ao verificar a existência do jogo/descrição: {ex.Message}", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                return false;
+            }
+        }
+
 
         public static Image PegarIcone(int id)
         {
@@ -184,6 +256,20 @@ namespace LojaGames
             {
                 return "Jogo não cadastrado";
             }
+        }
+        public static object DataGridView(DataGridView jogosDGV)
+        {
+            Conexao.Conectar();
+
+            string sql = "SELECT * FROM jogos.dados";
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            SqlDataAdapter sda = new SqlDataAdapter(sql, Conexao.conn);
+            var ds = new DataSet();
+            sda.Fill(ds);
+
+            jogosDGV.DataSource = ds.Tables[0];
+            Conexao.Fechar();
+            return jogosDGV;
         }
     }
 }
