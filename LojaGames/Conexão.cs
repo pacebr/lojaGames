@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Bunifu.UI.WinForms;
 
 namespace LojaGames
 {
@@ -25,7 +26,17 @@ namespace LojaGames
 
         public static void Conectar()
         {
-             conexaoBanco().Open();
+            try
+            {
+                conexaoBanco().Open();
+            }
+            catch ( Exception ex )
+            {
+                login login = new login();
+                BunifuSnackbar notificacao = new BunifuSnackbar();
+                notificacao.Show(login, "Erro na conexão: " + ex.Message, BunifuSnackbar.MessageTypes.Error);
+                return;
+            }
         }
 
         public static void Fechar()

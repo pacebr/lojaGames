@@ -13,20 +13,26 @@ namespace LojaGames
     {
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
-            Conexao.Conectar();
-            string sql = "SELECT usuario, senha FROM clientes.dados WHERE usuario = @usuario AND senha = @senha";
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-            cmd.Parameters.AddWithValue("usuario", usuario);
-            cmd.Parameters.AddWithValue("senha", Criptografia.ToSHA256(senha));
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT usuario, senha FROM clientes.dados WHERE usuario = @usuario AND senha = @senha";
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("senha", Criptografia.ToSHA256(senha));
 
-            SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.HasRows)
+                if (dr.HasRows)
+                {
+                    Conexao.Fechar();
+                    return true;
+                }
+            }
+            catch
             {
                 Conexao.Fechar();
-                return true;
-            }
-            Conexao.Fechar();
+            }          
             return false;
         }
         public static void AddCliente(string nome, string sobrenome, string usuario, string senha, string idade,string genero, string cpf, string telefone, string endereco, byte[] foto)

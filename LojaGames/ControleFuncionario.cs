@@ -15,21 +15,27 @@ namespace LojaGames
 
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
-            Conexao.Conectar();
-            string sql = "SELECT usuario, senha FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT usuario, senha FROM funcionarios.dados WHERE usuario = @usuario AND senha = @senha";
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
-            cmd.Parameters.AddWithValue("usuario", usuario);
-            cmd.Parameters.AddWithValue("senha", Criptografia.ToSHA256(senha));
+                cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("senha", Criptografia.ToSHA256(senha));
 
-            SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.HasRows)
+                if (dr.HasRows)
+                {
+                    Conexao.Fechar();
+                    return true;
+                }
+            }
+            catch(Exception ex)
             {
                 Conexao.Fechar();
-                return true;
             }
-            Conexao.Fechar();
             return false;
         }
         public static bool VerificarGerencia(string usuario) // verificar cargo

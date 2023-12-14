@@ -39358,6 +39358,21 @@
         5JieHNOTY3pyTE+O6ckxPTmmJ8f05IxtrvMtwBdtc503wUrlmO/DyAIAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="txtPreco.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIcAAAAlCAYAAABoM/rvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVHhe7dyxSsNQFMbxO3Z0dHT0EfoIvoTgIjg66uYD
+        OIiDu7Ozq22TJi0d6lBaCqEFKaXUqBFijCWUeE56OpR6Cq653w/ulFuX/Lm5gVwNwL/UarUKjRPXde88
+        z3uu1+s5RrkG39dms3lP9/mMxp7c+t1oYpV++DIYDOLJZJJHUZRD+fB9nU6n+XA4TOh+v9J9P5IE/kYr
+        xWWn04mSJJE/ATZYLBZ5t9uNfN+/kRQ28YrBYch8sFCv1/twHOdYklihMCr0/JmlaSrTwEZZlvFe5I16
+        2Jc0ijjOgyD4kTlgMd5n8ouIpGEMrRoPs9lMLoPNeKPKbzKSRhHHOI5juQw240dLo9H4ljSM4fdegDXu
+        QdJAHLAJcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYAKcYBqIw7X
+        dUMcSwC2XC75G9JM0jDG87ynMAzlMtiMPzTnD84ljeLcysVoNMrkOliMz8/yAWtJo4jjwPf9iJcUsBsf
+        iaUeqpLGiuM4p/1+/1PmgIXo6RHTqnEtSWzivUcQBF9YQewzHo/TVqvl06pRkRy20ZvLVbvdfufjkTgF
+        V278rzbm83nxKKGF4XZnGGs06ZDPz/Kuld95Mco5aCGYUhSPW3sMgN2M+QW2eNB9uh9V7wAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="pcbMostrarCarousel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
@@ -39526,6 +39541,20 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD8L
+</value>
+  </data>
+  <data name="btnComprar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM0AAAAoCAYAAABdNX5YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVHhe7d09TsMwGIDhjIyMjIwcgSNwh9qEpUnFxAgb
+        B2BADN2ZmVmJYiPW3qASA0Lir0j8Sh3K5yQtLTVC30peS09RZacTr1wvdfJzpGmxkptyJ7e+n1s3kL8T
+        oF3cILPuNLNlT3pYbdKIj17Hb+bb7joz/kUejHwY0Bby/2/8m7jLjNtqElkcXVMeZNaPiAVYMpKd57hJ
+        pR5hh6mDiT4AwLqnrnW2CqY+w/jb+EIAM8Y/7KbFWiKHnT158xldBGBOdXTpSzT+bHkSQJwbJPIylJ0m
+        MglgmXuXaGITAH5DNIAS0QBKRAMoEQ2gRDSAEtEASkQDKBENoEQ0gBLRAEpEAygRDaBENIAS0QBKRAMo
+        EQ2gRDSAEtEASkQDKBENoEQ0gBLRAEpEAyglufH3sQkAEcaPQzQX0UkAi6pfonXD8APo+7m5HEcXAZjj
+        JuGGtCRPi/W8w900wF/CHU7hLqfqjhopqCtbz3NsIQAJJlypadxRFcx0hLNN1vGvsQeANsuM+5BgrsIF
+        aE0u36Nry0PZdR6rxVy/gVYL55fmK5nxJ9FgpiNLi436oic3jH8Y8P/J17GbnnHnszPMbCTJF0g9Ybva
+        oRE3AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="animation3.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">

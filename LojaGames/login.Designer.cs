@@ -246,7 +246,7 @@
             this.tglbtnMostrarSenhaCli.Checked = false;
             this.tglbtnMostrarSenhaCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tglbtnMostrarSenhaCli.InnerCirclePadding = 3;
-            this.tglbtnMostrarSenhaCli.Location = new System.Drawing.Point(359, 194);
+            this.tglbtnMostrarSenhaCli.Location = new System.Drawing.Point(355, 194);
             this.tglbtnMostrarSenhaCli.Name = "tglbtnMostrarSenhaCli";
             this.tglbtnMostrarSenhaCli.Size = new System.Drawing.Size(32, 18);
             this.tglbtnMostrarSenhaCli.TabIndex = 20;
@@ -1882,10 +1882,10 @@
             this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage4;
-            this.bunifuPages2.PageIndex = 1;
-            this.bunifuPages2.PageName = "tabPage4";
-            this.bunifuPages2.PageTitle = "tabPage4";
+            this.bunifuPages2.Page = this.tabPage3;
+            this.bunifuPages2.PageIndex = 0;
+            this.bunifuPages2.PageName = "tabPage3";
+            this.bunifuPages2.PageTitle = "tabPage3";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(726, 426);
             this.bunifuPages2.TabIndex = 20;
@@ -2087,7 +2087,7 @@
             this.tglbtnMostrarSenhaFunc.Checked = false;
             this.tglbtnMostrarSenhaFunc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tglbtnMostrarSenhaFunc.InnerCirclePadding = 3;
-            this.tglbtnMostrarSenhaFunc.Location = new System.Drawing.Point(359, 198);
+            this.tglbtnMostrarSenhaFunc.Location = new System.Drawing.Point(355, 198);
             this.tglbtnMostrarSenhaFunc.Name = "tglbtnMostrarSenhaFunc";
             this.tglbtnMostrarSenhaFunc.Size = new System.Drawing.Size(32, 18);
             this.tglbtnMostrarSenhaFunc.TabIndex = 19;
