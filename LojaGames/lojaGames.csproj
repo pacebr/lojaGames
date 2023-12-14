@@ -151,11 +151,6 @@
     <Compile Include="ControleFuncionario.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="DadosJogo.cs" />
-    <Compile Include="exodusDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>exodusDbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="explore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,17 +201,6 @@
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="exodusDbDataSet.xsc">
-      <DependentUpon>exodusDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="exodusDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>exodusDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="exodusDbDataSet.xss">
-      <DependentUpon>exodusDbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -71,7 +71,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -163,16 +162,8 @@
             this.txtNomeJogo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnJogo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.sbJogosDGV = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.jogosDGV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuTextBox4 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -249,7 +240,7 @@
             // 
             // pgMenu
             // 
-            this.pgMenu.Alignment = System.Windows.Forms.TabAlignment.Right;
+            this.pgMenu.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.pgMenu.AllowTransitions = true;
             this.pgMenu.Controls.Add(this.tabPage0);
             this.pgMenu.Controls.Add(this.tabPage1);
@@ -291,7 +282,7 @@
             this.tabPage0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
             this.tabPage0.Location = new System.Drawing.Point(4, 4);
             this.tabPage0.Name = "tabPage0";
-            this.tabPage0.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage0.Size = new System.Drawing.Size(1212, 602);
             this.tabPage0.TabIndex = 5;
             this.tabPage0.Text = "tabPage0";
             // 
@@ -307,7 +298,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage1.Size = new System.Drawing.Size(1212, 602);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
@@ -2001,7 +1992,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage2.Size = new System.Drawing.Size(1212, 602);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
@@ -2022,13 +2013,13 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage3.Size = new System.Drawing.Size(1212, 602);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
             // pgAdd
             // 
-            this.pgAdd.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.pgAdd.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.pgAdd.AllowTransitions = true;
             this.pgAdd.Controls.Add(this.tabPage6);
             this.pgAdd.Controls.Add(this.tabPage7);
@@ -2066,10 +2057,10 @@
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
             this.tabPage6.Controls.Add(this.bunifuButton2);
             this.tabPage6.Controls.Add(this.bunifuButton1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 4);
+            this.tabPage6.Location = new System.Drawing.Point(23, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1208, 602);
+            this.tabPage6.Size = new System.Drawing.Size(1189, 623);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "tabPage6";
             // 
@@ -2274,10 +2265,10 @@
             this.tabPage7.Controls.Add(this.btnEnviarJogo);
             this.tabPage7.Controls.Add(this.txtNomeJogo);
             this.tabPage7.Controls.Add(this.btnJogo);
-            this.tabPage7.Location = new System.Drawing.Point(4, 4);
+            this.tabPage7.Location = new System.Drawing.Point(23, 4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1208, 602);
+            this.tabPage7.Size = new System.Drawing.Size(1189, 623);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "tabPage7";
             // 
@@ -3040,16 +3031,59 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.tabPage8.Controls.Add(this.sbJogosDGV);
             this.tabPage8.Controls.Add(this.jogosDGV);
             this.tabPage8.Controls.Add(this.bunifuTextBox4);
             this.tabPage8.Controls.Add(this.bunifuTextBox3);
             this.tabPage8.Controls.Add(this.bunifuTextBox2);
-            this.tabPage8.Location = new System.Drawing.Point(4, 4);
+            this.tabPage8.Location = new System.Drawing.Point(23, 4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1208, 602);
+            this.tabPage8.Size = new System.Drawing.Size(1189, 623);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.Enter += new System.EventHandler(this.tabPage8_Enter);
+            // 
+            // sbJogosDGV
+            // 
+            this.sbJogosDGV.AllowCursorChanges = true;
+            this.sbJogosDGV.AllowHomeEndKeysDetection = false;
+            this.sbJogosDGV.AllowIncrementalClickMoves = true;
+            this.sbJogosDGV.AllowMouseDownEffects = true;
+            this.sbJogosDGV.AllowMouseHoverEffects = true;
+            this.sbJogosDGV.AllowScrollingAnimations = true;
+            this.sbJogosDGV.AllowScrollKeysDetection = true;
+            this.sbJogosDGV.AllowScrollOptionsMenu = true;
+            this.sbJogosDGV.AllowShrinkingOnFocusLost = false;
+            this.sbJogosDGV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sbJogosDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.sbJogosDGV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sbJogosDGV.BackgroundImage")));
+            this.sbJogosDGV.BindingContainer = null;
+            this.sbJogosDGV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(83)))), ((int)(((byte)(155)))));
+            this.sbJogosDGV.BorderRadius = 14;
+            this.sbJogosDGV.BorderThickness = 1;
+            this.sbJogosDGV.DurationBeforeShrink = 2000;
+            this.sbJogosDGV.LargeChange = 10;
+            this.sbJogosDGV.Location = new System.Drawing.Point(1172, 280);
+            this.sbJogosDGV.Margin = new System.Windows.Forms.Padding(4);
+            this.sbJogosDGV.Maximum = 100;
+            this.sbJogosDGV.Minimum = 0;
+            this.sbJogosDGV.MinimumThumbLength = 18;
+            this.sbJogosDGV.Name = "sbJogosDGV";
+            this.sbJogosDGV.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.sbJogosDGV.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.sbJogosDGV.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.sbJogosDGV.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(83)))), ((int)(((byte)(155)))));
+            this.sbJogosDGV.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(25)))), ((int)(((byte)(47)))));
+            this.sbJogosDGV.ShrinkSizeLimit = 3;
+            this.sbJogosDGV.Size = new System.Drawing.Size(21, 317);
+            this.sbJogosDGV.SmallChange = 1;
+            this.sbJogosDGV.TabIndex = 33;
+            this.sbJogosDGV.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(83)))), ((int)(((byte)(155)))));
+            this.sbJogosDGV.ThumbLength = 31;
+            this.sbJogosDGV.ThumbMargin = 1;
+            this.sbJogosDGV.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.sbJogosDGV.Value = 0;
+            this.sbJogosDGV.Scroll += new System.EventHandler<Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs>(this.sbJogosDGV_Scroll);
             // 
             // jogosDGV
             // 
@@ -3068,7 +3102,7 @@
             this.jogosDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Clear Sans Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -3076,24 +3110,14 @@
             this.jogosDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.jogosDGV.ColumnHeadersHeight = 30;
             this.jogosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.jogosDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(70)))), ((int)(((byte)(142)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Clear Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(70)))), ((int)(((byte)(142)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.jogosDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(70)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(70)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.jogosDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.jogosDGV.EnableHeadersVisualStyles = false;
             this.jogosDGV.Location = new System.Drawing.Point(2, 245);
             this.jogosDGV.Name = "jogosDGV";
@@ -3102,69 +3126,11 @@
             this.jogosDGV.RowTemplate.Height = 50;
             this.jogosDGV.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.jogosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.jogosDGV.Size = new System.Drawing.Size(1175, 350);
+            this.jogosDGV.Size = new System.Drawing.Size(1156, 371);
             this.jogosDGV.TabIndex = 32;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Jogo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Imagem";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descricao";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Icone";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Carousel";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Trailer";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column8.HeaderText = "Preço";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Genero";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.jogosDGV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.jogosDGV_DataBindingComplete);
+            this.jogosDGV.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.jogosDGV_RowsAdded);
+            this.jogosDGV.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.jogosDGV_RowsRemoved);
             // 
             // bunifuTextBox4
             // 
@@ -3395,7 +3361,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage4.Size = new System.Drawing.Size(1212, 602);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -3416,7 +3382,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1193, 623);
+            this.tabPage5.Size = new System.Drawing.Size(1212, 602);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             // 
@@ -3441,7 +3407,7 @@
             this.Jogos.Controls.Add(this.lblNomeJogo);
             this.Jogos.Location = new System.Drawing.Point(4, 4);
             this.Jogos.Name = "Jogos";
-            this.Jogos.Size = new System.Drawing.Size(1193, 623);
+            this.Jogos.Size = new System.Drawing.Size(1212, 602);
             this.Jogos.TabIndex = 6;
             this.Jogos.Text = "Jogos";
             // 
@@ -4235,14 +4201,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
         private System.Windows.Forms.DataGridView jogosDGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewImageColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewImageColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn Column6;
-        private System.Windows.Forms.DataGridViewImageColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private Bunifu.UI.WinForms.BunifuVScrollBar sbJogosDGV;
     }
 }

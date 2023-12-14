@@ -16,9 +16,8 @@ namespace LojaGames
 
         private static SqlConnection conexaoBanco()
         {
-            var conexao = new SqlConnection(
-                @"Data Source=exodusgamestore.database.windows.net; User ID=vgdsno; Password=Vgdsn@05031906; initial catalog=exodusDb;"
-            );          
+            var conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb");
+            //var conexao = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");          
             conn = conexao;
 
             return conn;
@@ -34,14 +33,24 @@ namespace LojaGames
             {
                 login login = new login();
                 BunifuSnackbar notificacao = new BunifuSnackbar();
-                notificacao.Show(login, "Erro na conexão: " + ex.Message, BunifuSnackbar.MessageTypes.Error);
+                notificacao.Show(login, "Erro ao abrir conexão: " + ex.Message, BunifuSnackbar.MessageTypes.Error);
                 return;
             }
         }
 
         public static void Fechar()
         {
-            conexaoBanco().Close();
+            try
+            {
+                conexaoBanco().Close();
+            }
+            catch (Exception ex)
+            {
+                login login = new login();
+                BunifuSnackbar notificacao = new BunifuSnackbar();
+                notificacao.Show(login, "Erro ao fechar conexão: " + ex.Message, BunifuSnackbar.MessageTypes.Error);
+                return;
+            }
         }
     }
 }

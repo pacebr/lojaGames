@@ -114,8 +114,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.rdbtnOutro = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.dropGenero = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.dadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.exodusDbDataSet = new LojaGames.exodusDbDataSet();
             this.rdbtnFeminino = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rdbtnMasculino = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -160,15 +158,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dadosTableAdapter = new LojaGames.exodusDbDataSetTableAdapters.dadosTableAdapter();
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPages1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exodusDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).BeginInit();
             this.panel2.SuspendLayout();
             this.bunifuPages2.SuspendLayout();
@@ -194,10 +189,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage1;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage1";
-            this.bunifuPages1.PageTitle = "tabPage1";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "tabPage2";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(461, 426);
             this.bunifuPages1.TabIndex = 0;
@@ -1382,14 +1377,12 @@
             this.dropGenero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
             this.dropGenero.BorderRadius = 13;
             this.dropGenero.Color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
-            this.dropGenero.DataSource = this.dadosBindingSource;
             this.dropGenero.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.dropGenero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dropGenero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dropGenero.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dropGenero.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.dropGenero.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.dropGenero.DisplayMember = "genero";
             this.dropGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.dropGenero.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
             this.dropGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1410,6 +1403,11 @@
             this.dropGenero.ItemHeight = 26;
             this.dropGenero.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(7)))), ((int)(((byte)(63)))));
             this.dropGenero.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dropGenero.Items.AddRange(new object[] {
+            "Intergênero",
+            "Não-binário",
+            "Gênero Fluído",
+            "Agênero"});
             this.dropGenero.ItemTopMargin = 3;
             this.dropGenero.Location = new System.Drawing.Point(272, 215);
             this.dropGenero.Name = "dropGenero";
@@ -1418,19 +1416,8 @@
             this.dropGenero.Text = "Selecione";
             this.dropGenero.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.dropGenero.TextLeftMargin = 5;
-            this.dropGenero.ValueMember = "genero";
             this.dropGenero.Visible = false;
             this.dropGenero.SelectedIndexChanged += new System.EventHandler(this.dropGenero_SelectedIndexChanged);
-            // 
-            // dadosBindingSource
-            // 
-            this.dadosBindingSource.DataMember = "dados";
-            this.dadosBindingSource.DataSource = this.exodusDbDataSet;
-            // 
-            // exodusDbDataSet
-            // 
-            this.exodusDbDataSet.DataSetName = "exodusDbDataSet";
-            this.exodusDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rdbtnFeminino
             // 
@@ -2677,10 +2664,6 @@
             this.bunifuElipse3.ElipseRadius = 5;
             this.bunifuElipse3.TargetControl = this.bunifuPages2;
             // 
-            // dadosTableAdapter
-            // 
-            this.dadosTableAdapter.ClearBeforeFill = true;
-            // 
             // bunifuElipse4
             // 
             this.bunifuElipse4.ElipseRadius = 10;
@@ -2708,8 +2691,6 @@
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exodusDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagemCadastro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -2801,9 +2782,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnRegistro;
         private Bunifu.UI.WinForms.BunifuToggleSwitch tglbtnMostrarSenhaFunc;
         private Bunifu.UI.WinForms.BunifuToggleSwitch tglbtnMostrarSenhaCli;
-        private exodusDbDataSet exodusDbDataSet;
-        private System.Windows.Forms.BindingSource dadosBindingSource;
-        private exodusDbDataSetTableAdapters.dadosTableAdapter dadosTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;

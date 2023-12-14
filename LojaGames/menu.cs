@@ -519,15 +519,45 @@ namespace LojaGames
 
         private void tabPage8_Enter(object sender, EventArgs e)
         {
-            carregarDGV();
+            PopularDataGridView();
         }
 
-        private void carregarDGV()
+        private void PopularDataGridView()
         {
-            DadosJogo.DataGridView(jogosDGV);
+            DataTable dataTable = DadosJogo.PopularDGV();
+
+            if (dataTable != null)
+            {
+                jogosDGV.DataSource = dataTable;
+            }
+            else
+            {
+                notify.Show(this, "Erro ao carregar dados", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
+        }
+        private void jogosDGV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewColumn column in jogosDGV.Columns)
+            {
+                if (column.Name.Contains("preco"))
+                {
+                    column.DefaultCellStyle.Format = "C2";
+                }
+            }
         }
 
-        private void jogosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void jogosDGV_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+        }
+
+        private void jogosDGV_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+
+        }
+
+        private void sbJogosDGV_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
         {
 
         }

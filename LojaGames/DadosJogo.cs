@@ -257,20 +257,6 @@ namespace LojaGames
                 return "Jogo não cadastrado";
             }
         }
-        public static object DataGridView(DataGridView jogosDGV)
-        {
-            Conexao.Conectar();
-
-            string sql = "SELECT * FROM jogos.dados";
-            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-            SqlDataAdapter sda = new SqlDataAdapter(sql, Conexao.conn);
-            var ds = new DataSet();
-            sda.Fill(ds);
-
-            jogosDGV.DataSource = ds.Tables[0];
-            Conexao.Fechar();
-            return jogosDGV;
-        }
 
         public static bool DeletarJogo(int id, BunifuSnackbar notificacao, menu menu)
         {
@@ -317,6 +303,31 @@ namespace LojaGames
             }
             Conexao.Fechar();
             return false;
+        }
+        public static DataTable PopularDGV()
+        {
+            Conexao.Conectar();
+
+            string sql = "SELECT * FROM jogos.dados";
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                sda.Fill(dataTable);
+
+                return dataTable;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
         }
     }
 }

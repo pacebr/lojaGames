@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 using LojaGames.Properties;
 using Utilities.BunifuTextBox.Transitions;
 
@@ -101,7 +102,6 @@ namespace LojaGames
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(1);
-            this.dadosTableAdapter.Fill(this.exodusDbDataSet.dados);
             Utilidades.limparCampos(this);
             voltarTextoDrop();
         }
@@ -202,7 +202,7 @@ namespace LojaGames
             string telefone = txtTelefone.Text;
             string endereco = txtEndereco.Text;
 
-            //ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
+            ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
             Utilidades.limparCampos(this);
             voltarTextoDrop();
         }
