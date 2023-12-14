@@ -133,7 +133,7 @@ namespace LojaGames
             string trailer = txtTrailer.Text;
             string preco = txtPreco.Text;
 
-            DadosJogo.EnviarDadosJogo(imagem, nome, descricao, icone, carousel, trailer, preco, this, notify);
+            DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, this, notify);
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
@@ -519,12 +519,17 @@ namespace LojaGames
 
         private void tabPage8_Enter(object sender, EventArgs e)
         {
-            RecarregarDGV();
+            carregarDGV();
         }
 
-        private void RecarregarDGV()
+        private void carregarDGV()
         {
             DadosJogo.DataGridView(jogosDGV);
+        }
+
+        private void jogosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

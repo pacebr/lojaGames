@@ -18,7 +18,7 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(byte[] imagem, string jogo, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, menu menu, BunifuSnackbar notificacao)
+        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, menu menu, BunifuSnackbar notificacao)
         {
             Conexao.Conectar();
 
@@ -57,13 +57,13 @@ namespace LojaGames
                 return;
             }
 
-            string sql = "INSERT INTO jogos.dados (imagem, jogo, descricao, icone, carousel, trailer, preco) " +
-                          "VALUES (@imagem, @jogo, @descricao, @icone, @carousel, @trailer, @preco)";
+            string sql = "INSERT INTO jogos.dados (jogo, imagem, descricao, icone, carousel, trailer, preco) " +
+                          "VALUES (@jogo, @imagem, @descricao, @icone, @carousel, @trailer, @preco)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
-            cmd.Parameters.AddWithValue("@imagem", imagem);
             cmd.Parameters.AddWithValue("@jogo", jogo);
+            cmd.Parameters.AddWithValue("@imagem", imagem);
             cmd.Parameters.AddWithValue("@descricao", descricao);
             cmd.Parameters.AddWithValue("@icone", icone);
             cmd.Parameters.AddWithValue("@carousel", carousel);
@@ -270,6 +270,53 @@ namespace LojaGames
             jogosDGV.DataSource = ds.Tables[0];
             Conexao.Fechar();
             return jogosDGV;
+        }
+
+        public static bool DeletarJogo(int id, BunifuSnackbar notificacao, menu menu)
+        {
+            Conexao.Conectar();
+
+            string sql = "DELETE FROM jogos.dados WHERE id = " + id + ";";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+                cmd.ExecuteNonQuery();
+
+                Conexao.Fechar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);
+            }
+            Conexao.Fechar();
+            return false;
+        }
+
+        public static bool EditarJogo(int id, string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel,
+           string trailer, string preco, string genero, BunifuSnackbar notificacao, menu menu )
+        {
+            Conexao.Conectar();
+
+            string sql = "UPDATE jogos.dados SET jogo = '" + jogo + "', imagem = '" + imagem +
+                "', descricao = '" + descricao + "', icone = '" + icone + "', carousel = '" + carousel +
+                "', trailer = '" + trailer + "', preco = '" + preco + "', genero = '" + genero + "'where id = '" + id + "'";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+                cmd.ExecuteNonQuery();
+
+                Conexao.Fechar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);               
+            }
+            Conexao.Fechar();
+            return false;
         }
     }
 }
