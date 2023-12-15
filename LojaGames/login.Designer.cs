@@ -104,6 +104,7 @@
             this.txtUsuarioCliente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pcbImagemCadastro = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnRegistro = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtEndereco = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTelefone = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -118,7 +119,6 @@
             this.rdbtnMasculino = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pcbImagemCadastro = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.txtSenha = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -763,9 +763,11 @@
             this.tabPage2.Size = new System.Drawing.Size(453, 400);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.pcbImagemCadastro);
             this.panel5.Controls.Add(this.btnRegistro);
             this.panel5.Controls.Add(this.txtEndereco);
             this.panel5.Controls.Add(this.txtTelefone);
@@ -780,13 +782,31 @@
             this.panel5.Controls.Add(this.rdbtnMasculino);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.pcbImagemCadastro);
             this.panel5.Controls.Add(this.txtSenha);
             this.panel5.Controls.Add(this.txtUsuario);
             this.panel5.Location = new System.Drawing.Point(6, 6);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(441, 338);
             this.panel5.TabIndex = 13;
+            // 
+            // pcbImagemCadastro
+            // 
+            this.pcbImagemCadastro.AllowFocused = false;
+            this.pcbImagemCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcbImagemCadastro.AutoSizeHeight = true;
+            this.pcbImagemCadastro.BorderRadius = 47;
+            this.pcbImagemCadastro.Image = global::LojaGames.Properties.Resources.Add_Imagem;
+            this.pcbImagemCadastro.IsCircle = true;
+            this.pcbImagemCadastro.Location = new System.Drawing.Point(338, 3);
+            this.pcbImagemCadastro.Name = "pcbImagemCadastro";
+            this.pcbImagemCadastro.Size = new System.Drawing.Size(94, 94);
+            this.pcbImagemCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImagemCadastro.TabIndex = 22;
+            this.pcbImagemCadastro.TabStop = false;
+            this.pcbImagemCadastro.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.pcbImagemCadastro.Click += new System.EventHandler(this.pcbImagemCadastro_Click);
+            this.pcbImagemCadastro.MouseEnter += new System.EventHandler(this.pcbImagemCadastro_MouseEnter);
+            this.pcbImagemCadastro.MouseLeave += new System.EventHandler(this.pcbImagemCadastro_MouseLeave);
             // 
             // btnRegistro
             // 
@@ -1476,26 +1496,6 @@
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Masculino";
-            // 
-            // pcbImagemCadastro
-            // 
-            this.pcbImagemCadastro.AllowFocused = false;
-            this.pcbImagemCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbImagemCadastro.AutoSizeHeight = true;
-            this.pcbImagemCadastro.BorderRadius = 45;
-            this.pcbImagemCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbImagemCadastro.Image = global::LojaGames.Properties.Resources.Add_Imagem;
-            this.pcbImagemCadastro.IsCircle = true;
-            this.pcbImagemCadastro.Location = new System.Drawing.Point(330, 3);
-            this.pcbImagemCadastro.Name = "pcbImagemCadastro";
-            this.pcbImagemCadastro.Size = new System.Drawing.Size(91, 91);
-            this.pcbImagemCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbImagemCadastro.TabIndex = 4;
-            this.pcbImagemCadastro.TabStop = false;
-            this.pcbImagemCadastro.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.pcbImagemCadastro.Click += new System.EventHandler(this.pcbImagemCadastro_Click);
-            this.pcbImagemCadastro.MouseEnter += new System.EventHandler(this.pcbImagemCadastro_MouseEnter);
-            this.pcbImagemCadastro.MouseLeave += new System.EventHandler(this.pcbImagemCadastro_MouseLeave);
             // 
             // txtSenha
             // 
@@ -2761,7 +2761,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtUsuarioCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.UI.WinForms.BunifuPictureBox pcbImagemCadastro;
         public Bunifu.UI.WinForms.BunifuTextBox txtSenha;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsuario;
         private Bunifu.UI.WinForms.BunifuRadioButton rdbtnFeminino;
@@ -2787,5 +2786,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.UI.WinForms.BunifuPictureBox pcbImagemCadastro;
     }
 }

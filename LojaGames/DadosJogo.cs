@@ -30,6 +30,12 @@ namespace LojaGames
                 Conexao.Fechar();
                 return;
             }
+            if (genero.Trim() == "Genero")
+            {
+                notificacao.Show(menu, "Selecione um gênero válido.", BunifuSnackbar.MessageTypes.Warning);
+                Conexao.Fechar();
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(jogo) || string.IsNullOrWhiteSpace(descricao) || string.IsNullOrWhiteSpace(preco) || string.IsNullOrWhiteSpace(genero))
             {

@@ -20,6 +20,7 @@ namespace LojaGames
     {
         byte[] imagem;
         bool fotoAdd;
+        bool fotoAdded;
         string lgenero = "masculino";
         bool limiteUsuario = true;
 
@@ -81,6 +82,12 @@ namespace LojaGames
                 );
             }
             Utilidades.limparCampos(this);
+            voltarImagemCadastro();
+        }
+
+        void voltarImagemCadastro()
+        {
+            pcbImagemCadastro.Image = Resources.Add_Imagem;
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
@@ -103,6 +110,7 @@ namespace LojaGames
         {
             bunifuPages1.SetPage(1);
             Utilidades.limparCampos(this);
+            voltarImagemCadastro();
             voltarTextoDrop();
         }
 
@@ -114,6 +122,7 @@ namespace LojaGames
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            fotoAdded = false;
             bunifuPages1.SetPage(0);
             Utilidades.limparCampos(this);
         }
@@ -167,22 +176,37 @@ namespace LojaGames
 
                 pcbImagemCadastro.Image = Image.FromFile(caminhoArquivo);
 
-                fotoAdd = true;
+                fotoAdded = true;
+            }
+        }
+        private void AtualizarImagemCadastro()
+        {
+            if (fotoAdded == true)
+            {
+                return;
+            }
+
+            if(fotoAdd == true)
+            {
+                pcbImagemCadastro.Image = Resources.Add_Imagem;
+            }
+
+            if(fotoAdd == false)
+            {
+                pcbImagemCadastro.Image = Resources.Add_Imagem_Cinza;
             }
         }
 
         private void pcbImagemCadastro_MouseEnter(object sender, EventArgs e)
         {
-            if (fotoAdd)
-                return;
-            pcbImagemCadastro.Image = Resources.Add_Imagem_Cinza;
+            fotoAdd = false;
+            AtualizarImagemCadastro();
         }
 
         private void pcbImagemCadastro_MouseLeave(object sender, EventArgs e)
         {
-            if (fotoAdd)
-                return;
-            pcbImagemCadastro.Image = Resources.Add_Imagem;
+            fotoAdd = true;
+            AtualizarImagemCadastro();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -323,6 +347,11 @@ namespace LojaGames
             {
                 txtSenhaFunc.PasswordChar = '\0';
             }
+        }
+
+        private void tabPage2_Enter(object sender, EventArgs e)
+        {
+            AtualizarImagemCadastro();
         }
     }
 }
