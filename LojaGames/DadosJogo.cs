@@ -264,10 +264,15 @@ namespace LojaGames
             }
         }
 
-        public static bool DeletarJogo(int id)
+        public static bool DeletarJogo(int id, Bunifu.UI.WinForms.BunifuTextBox txtAlterarID)
         {
             menu menu = new menu();
             BunifuSnackbar notificacao = new BunifuSnackbar();
+
+            if (id <= 0 || string.IsNullOrWhiteSpace(txtAlterarID.Text))
+            {
+                notificacao.Show(menu, "Selecione um jogo primeiro.", BunifuSnackbar.MessageTypes.Warning);
+            }
 
             Conexao.Conectar();
 
@@ -283,7 +288,7 @@ namespace LojaGames
             }
             catch (Exception ex)
             {
-                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);
+                notificacao.Show(menu, $"Erro ao Deletar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);
             }
             Conexao.Fechar();
             return false;

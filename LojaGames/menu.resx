@@ -39515,6 +39515,19 @@
         gg==
 </value>
   </data>
+  <data name="txtAlterarID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAYAAADBa/A+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF6SURBVFhH7Zi9SgQxEIBTWlraxcskpy+gO7Gx9SUEG8HS
+        UjsfwEIsrre2trW09Q0ECxH8O+H8gyt0ZncsjhsOArcbhQx8bDNJPiazRcb8u7B2cyG4aidAHHgXr+n7
+        PW94X+LMO9yj8xbl6Nnh/TqGHt56iCNt0xZ4D4APALglCnpADw+Di0Nlgw5AOhdPRGUy6oplE2vwgC99
+        iNui1AT3GF3jvbaga8jjydq1JVGjqjncDw6/tORMDETNmAAb50pCNvhPFrW6cjdaUkY+RI0rpyZkRdSK
+        XDKiVuSSEbUil4yoFblkRK3IJSNqRS4ZUStyyYhakUtG1IpcMqJGbwiIj1pCPnAsavUD51JPygM/uESN
+        5eJBgGqsJeaABzyiZsyKrZZ9PavQkzvFxSGPRkStCarcLvXeq7qgO0Z0pceiNBlN7+Gbsqh9HH7S+Vc8
+        txGd6YBePKI7f1Y3aAu+SledzhT7jb6Nqzw/4b9G3WxOUJ/fERdTPfb3w5gfC4NGq2modS8AAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <data name="btnLimpar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAAAnCAYAAADtl7EyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

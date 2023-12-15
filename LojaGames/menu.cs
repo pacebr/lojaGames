@@ -24,7 +24,6 @@ namespace LojaGames
         byte[] imagem;
         byte[] icone;
         byte[] carousel;
-        int idJogosDGV;
 
         public menu()
         {
@@ -595,7 +594,7 @@ namespace LojaGames
 
         private void jogosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idJogosDGV = int.Parse(jogosDGV.SelectedRows[0].Cells[0].Value.ToString());
+            txtAlterarID.Text = jogosDGV.SelectedRows[0].Cells[0].Value.ToString();
             txtAlterarNomeJogo.Text = jogosDGV.SelectedRows[0].Cells[1].Value.ToString();
             pcbAlterarImagemJogo.Image = (Image)new ImageConverter().ConvertFrom(jogosDGV.SelectedRows[0].Cells[2].Value);
             txtAlterarDescricao.Text = jogosDGV.SelectedRows[0].Cells[3].Value.ToString();
@@ -604,7 +603,7 @@ namespace LojaGames
             txtAlterarURL.Text = jogosDGV.SelectedRows[0].Cells[6].Value.ToString();
             txtAlterarPreco.Text = jogosDGV.SelectedRows[0].Cells[7].Value.ToString();
             txtAlterarPreco.Text = ((decimal)jogosDGV.SelectedRows[0].Cells[7].Value).ToString("C2", CultureInfo.CurrentCulture);
-            dropGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
+            dropAlterarGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
         }
 
         private void BtnAlterar_Click(object sender, EventArgs e)
@@ -631,6 +630,25 @@ namespace LojaGames
                 t.Select(t.Text.Length, 0);
             }
             e.Handled = true;
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Utilidades.limparCampos(this);
+            resetarDropDown();
+        }
+        void resetarDropDown()
+        {
+            dropAlterarGenero.SelectedIndex = -1;
+            dropAlterarGenero.Text = "Genero";
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int id = string.IsNullOrEmpty(txtAlterarID.Text) ? 0 : int.Parse(txtAlterarID.Text);
+
+            DadosJogo.DeletarJogo(id, txtAlterarID);
+            btnLimpar_Click(sender, e);
         }
     }
 }
