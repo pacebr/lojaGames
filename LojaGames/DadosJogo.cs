@@ -82,7 +82,6 @@ namespace LojaGames
             try
             {
                 cmd.ExecuteNonQuery();
-                Utilidades.limparCampos(menu);
                 notificacao.Show(menu, "Jogo cadastrado com sucesso.", BunifuSnackbar.MessageTypes.Success);
             }
             catch (Exception ex)
@@ -322,7 +321,7 @@ namespace LojaGames
             }
             catch (Exception ex)
             {
-                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);               
+                notificacao.Show(menu, $"Erro ao cadastrar o jogo: {ex.Message}", BunifuSnackbar.MessageTypes.Error);
             }
             Conexao.Fechar();
             return false;

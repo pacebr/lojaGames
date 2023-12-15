@@ -136,8 +136,15 @@ namespace LojaGames
             string genero = dropGenero.Text;
 
             DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, genero, this);
+            Utilidades.limparCampos(this, pcbImagemJogo, pcbIcone, pcbCarousel);
             dropGenero.ForeColor = Color.Gray;
+
         }
+        private void tabPage3_Leave(object sender, EventArgs e)
+        {
+            Utilidades.limparCampos(this, pcbImagemJogo, pcbIcone, pcbCarousel);
+        }
+
         private void dropGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
             dropGenero.ForeColor = Color.White;
@@ -216,12 +223,19 @@ namespace LojaGames
 
         private void criarPcb()
         {
+            panel1.Controls.Clear();
+
             int posX = 5;
             int posY = 6;
             int numeroImagens = DadosJogo.ObterNumeroImagens();
 
             for (int i = 1; i <= numeroImagens; i++)
             {
+                while (DadosJogo.PegarImagemGrande(i) == null)
+                {
+                    i++;
+                    numeroImagens++;
+                }
                 PictureBox pictureBox = new PictureBox()
                 {
                     Image = DadosJogo.PegarImagemGrande(i),
@@ -624,7 +638,6 @@ namespace LojaGames
                 else
                     w += e.KeyChar;
 
-                // Converta o valor para double e, em seguida, formate-o como uma moeda sem o símbolo
                 double preco = Double.Parse(w) / 100;
                 t.Text = preco.ToString("N2", CultureInfo.CurrentCulture);
                 t.Select(t.Text.Length, 0);
@@ -634,7 +647,7 @@ namespace LojaGames
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            Utilidades.limparCampos(this);
+            Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
             resetarDropDown();
         }
         void resetarDropDown()
@@ -648,7 +661,14 @@ namespace LojaGames
             int id = string.IsNullOrEmpty(txtAlterarID.Text) ? 0 : int.Parse(txtAlterarID.Text);
 
             DadosJogo.DeletarJogo(id, txtAlterarID);
+            PopularDataGridView();
             btnLimpar_Click(sender, e);
+        }
+
+        private void tabPage8_Leave(object sender, EventArgs e)
+        {
+            Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
+            resetarDropDown();
         }
     }
 }

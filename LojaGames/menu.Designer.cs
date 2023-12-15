@@ -69,6 +69,10 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -97,10 +101,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pgMenu = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage0 = new System.Windows.Forms.TabPage();
@@ -174,6 +174,7 @@
             this.txtNomeJogo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnJogo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.txtAlterarID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dropAlterarGenero = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnLimpar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDeletar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -212,7 +213,6 @@
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.txtAlterarID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pgMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pgJogos.SuspendLayout();
@@ -2039,6 +2039,7 @@
             this.tabPage3.Size = new System.Drawing.Size(1212, 602);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Leave += new System.EventHandler(this.tabPage3_Leave);
             // 
             // pgAdd
             // 
@@ -3138,6 +3139,82 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.Enter += new System.EventHandler(this.tabPage8_Enter);
+            this.tabPage8.Leave += new System.EventHandler(this.tabPage8_Leave);
+            // 
+            // txtAlterarID
+            // 
+            this.txtAlterarID.AcceptsReturn = false;
+            this.txtAlterarID.AcceptsTab = false;
+            this.txtAlterarID.AnimationSpeed = 200;
+            this.txtAlterarID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtAlterarID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtAlterarID.BackColor = System.Drawing.Color.Transparent;
+            this.txtAlterarID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtAlterarID.BackgroundImage")));
+            this.txtAlterarID.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtAlterarID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtAlterarID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtAlterarID.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.txtAlterarID.BorderRadius = 15;
+            this.txtAlterarID.BorderThickness = 1;
+            this.txtAlterarID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtAlterarID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlterarID.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtAlterarID.DefaultText = "";
+            this.txtAlterarID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            this.txtAlterarID.ForeColor = System.Drawing.Color.White;
+            this.txtAlterarID.HideSelection = true;
+            this.txtAlterarID.IconLeft = null;
+            this.txtAlterarID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlterarID.IconPadding = 10;
+            this.txtAlterarID.IconRight = null;
+            this.txtAlterarID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlterarID.Lines = new string[0];
+            this.txtAlterarID.Location = new System.Drawing.Point(559, 237);
+            this.txtAlterarID.MaxLength = 32767;
+            this.txtAlterarID.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtAlterarID.Modified = false;
+            this.txtAlterarID.Multiline = false;
+            this.txtAlterarID.Name = "txtAlterarID";
+            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAlterarID.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtAlterarID.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAlterarID.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            stateProperties24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
+            stateProperties24.ForeColor = System.Drawing.Color.White;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAlterarID.OnIdleState = stateProperties24;
+            this.txtAlterarID.Padding = new System.Windows.Forms.Padding(3);
+            this.txtAlterarID.PasswordChar = '\0';
+            this.txtAlterarID.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtAlterarID.PlaceholderText = "ID";
+            this.txtAlterarID.ReadOnly = true;
+            this.txtAlterarID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAlterarID.SelectedText = "";
+            this.txtAlterarID.SelectionLength = 0;
+            this.txtAlterarID.SelectionStart = 0;
+            this.txtAlterarID.ShortcutsEnabled = true;
+            this.txtAlterarID.Size = new System.Drawing.Size(39, 37);
+            this.txtAlterarID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtAlterarID.TabIndex = 42;
+            this.txtAlterarID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAlterarID.TextMarginBottom = 0;
+            this.txtAlterarID.TextMarginLeft = 3;
+            this.txtAlterarID.TextMarginTop = 0;
+            this.txtAlterarID.TextPlaceholder = "ID";
+            this.txtAlterarID.UseSystemPasswordChar = false;
+            this.txtAlterarID.WordWrap = true;
             // 
             // dropAlterarGenero
             // 
@@ -4523,81 +4600,6 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
-            // 
-            // txtAlterarID
-            // 
-            this.txtAlterarID.AcceptsReturn = false;
-            this.txtAlterarID.AcceptsTab = false;
-            this.txtAlterarID.AnimationSpeed = 200;
-            this.txtAlterarID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtAlterarID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtAlterarID.BackColor = System.Drawing.Color.Transparent;
-            this.txtAlterarID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtAlterarID.BackgroundImage")));
-            this.txtAlterarID.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtAlterarID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtAlterarID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtAlterarID.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.txtAlterarID.BorderRadius = 15;
-            this.txtAlterarID.BorderThickness = 1;
-            this.txtAlterarID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtAlterarID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAlterarID.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtAlterarID.DefaultText = "";
-            this.txtAlterarID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            this.txtAlterarID.ForeColor = System.Drawing.Color.White;
-            this.txtAlterarID.HideSelection = true;
-            this.txtAlterarID.IconLeft = null;
-            this.txtAlterarID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAlterarID.IconPadding = 10;
-            this.txtAlterarID.IconRight = null;
-            this.txtAlterarID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAlterarID.Lines = new string[0];
-            this.txtAlterarID.Location = new System.Drawing.Point(559, 237);
-            this.txtAlterarID.MaxLength = 32767;
-            this.txtAlterarID.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtAlterarID.Modified = false;
-            this.txtAlterarID.Multiline = false;
-            this.txtAlterarID.Name = "txtAlterarID";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAlterarID.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtAlterarID.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAlterarID.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            stateProperties24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(57)))));
-            stateProperties24.ForeColor = System.Drawing.Color.White;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAlterarID.OnIdleState = stateProperties24;
-            this.txtAlterarID.Padding = new System.Windows.Forms.Padding(3);
-            this.txtAlterarID.PasswordChar = '\0';
-            this.txtAlterarID.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtAlterarID.PlaceholderText = "ID";
-            this.txtAlterarID.ReadOnly = true;
-            this.txtAlterarID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAlterarID.SelectedText = "";
-            this.txtAlterarID.SelectionLength = 0;
-            this.txtAlterarID.SelectionStart = 0;
-            this.txtAlterarID.ShortcutsEnabled = true;
-            this.txtAlterarID.Size = new System.Drawing.Size(39, 37);
-            this.txtAlterarID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAlterarID.TabIndex = 42;
-            this.txtAlterarID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtAlterarID.TextMarginBottom = 0;
-            this.txtAlterarID.TextMarginLeft = 3;
-            this.txtAlterarID.TextMarginTop = 0;
-            this.txtAlterarID.TextPlaceholder = "ID";
-            this.txtAlterarID.UseSystemPasswordChar = false;
-            this.txtAlterarID.WordWrap = true;
             // 
             // menu
             // 

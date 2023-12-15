@@ -8,7 +8,7 @@ namespace LojaGames
 {
     public class Utilidades
     {
-        public static void limparCampos(Control ctrl)
+        public static void limparCampos(Control ctrl, params PictureBox[] pictureBox)
         {
             foreach (Control c in ctrl.Controls)
             {
@@ -18,19 +18,19 @@ namespace LojaGames
                 }
                 else if (c is Bunifu.UI.WinForms.BunifuDropdown)
                 {
-                    ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex= -1;
+                    ((Bunifu.UI.WinForms.BunifuDropdown)c).SelectedIndex = -1;
                 }
                 else if (c is Bunifu.UI.WinForms.BunifuToggleSwitch)
                 {
                     ((Bunifu.UI.WinForms.BunifuToggleSwitch)c).Checked = false;
                 }
-                else if (c is PictureBox)
+                else if (c is PictureBox && pictureBox.Contains((PictureBox)c))
                 {
                     ((PictureBox)c).Image = null;
                 }
                 if (c.HasChildren)
                 {
-                    limparCampos(c);
+                    limparCampos(c, pictureBox);
                 }
             }
         }
