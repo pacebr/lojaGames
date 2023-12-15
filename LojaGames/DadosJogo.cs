@@ -18,18 +18,20 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, menu menu, BunifuSnackbar notificacao)
+        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, string genero, menu menu)
         {
+            BunifuSnackbar notificacao = new BunifuSnackbar();
+
             Conexao.Conectar();
 
-            if (JogoDescricaoJaExistem(jogo, descricao, notificacao, menu))
+            if (JogoDescricaoJaExistem(jogo, descricao))
             {
                 notificacao.Show(menu, "Jogo ou descrição já existem na tabela.", BunifuSnackbar.MessageTypes.Warning);
                 Conexao.Fechar();
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(jogo) || string.IsNullOrWhiteSpace(descricao) || string.IsNullOrWhiteSpace(preco))
+            if (string.IsNullOrWhiteSpace(jogo) || string.IsNullOrWhiteSpace(descricao) || string.IsNullOrWhiteSpace(preco) || string.IsNullOrWhiteSpace(genero))
             {
                 notificacao.Show(menu, "Preencha todos os campos obrigatórios.", BunifuSnackbar.MessageTypes.Warning);
                 Conexao.Fechar();
@@ -57,8 +59,8 @@ namespace LojaGames
                 return;
             }
 
-            string sql = "INSERT INTO jogos.dados (jogo, imagem, descricao, icone, carousel, trailer, preco) " +
-                          "VALUES (@jogo, @imagem, @descricao, @icone, @carousel, @trailer, @preco)";
+            string sql = "INSERT INTO jogos.dados (jogo, imagem, descricao, icone, carousel, trailer, preco, genero) " +
+                          "VALUES (@jogo, @imagem, @descricao, @icone, @carousel, @trailer, @preco, @genero)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
@@ -69,6 +71,7 @@ namespace LojaGames
             cmd.Parameters.AddWithValue("@carousel", carousel);
             cmd.Parameters.AddWithValue("@trailer", trailer);
             cmd.Parameters.AddWithValue("@preco", precoDecimal);
+            cmd.Parameters.AddWithValue("@genero", genero);
 
             try
             {
@@ -86,8 +89,11 @@ namespace LojaGames
             }
         }
 
-        private static bool JogoDescricaoJaExistem(string jogo, string descricao, BunifuSnackbar notificacao, Form formulario)
+        private static bool JogoDescricaoJaExistem(string jogo, string descricao)
         {
+            Form formulario = new Form();
+            BunifuSnackbar notificacao = new BunifuSnackbar();
+
             try
             {
                 string sql = "SELECT COUNT(*) FROM jogos.dados WHERE jogo = @jogo OR descricao = @descricao";
@@ -258,8 +264,11 @@ namespace LojaGames
             }
         }
 
-        public static bool DeletarJogo(int id, BunifuSnackbar notificacao, menu menu)
+        public static bool DeletarJogo(int id)
         {
+            menu menu = new menu();
+            BunifuSnackbar notificacao = new BunifuSnackbar();
+
             Conexao.Conectar();
 
             string sql = "DELETE FROM jogos.dados WHERE id = " + id + ";";
@@ -281,8 +290,11 @@ namespace LojaGames
         }
 
         public static bool EditarJogo(int id, string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel,
-           string trailer, string preco, string genero, BunifuSnackbar notificacao, menu menu )
+           string trailer, string preco, string genero)
         {
+            menu menu = new menu();
+            BunifuSnackbar notificacao = new BunifuSnackbar();
+
             Conexao.Conectar();
 
             string sql = "UPDATE jogos.dados SET jogo = '" + jogo + "', imagem = '" + imagem +

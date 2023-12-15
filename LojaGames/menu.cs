@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using Bunifu.UI.WinForms.BunifuButton;
 using LojaGames.Properties;
+using TheArtOfDev.HtmlRenderer.Adapters.Entities;
 
 namespace LojaGames
 {
@@ -23,6 +24,7 @@ namespace LojaGames
         byte[] imagem;
         byte[] icone;
         byte[] carousel;
+        int idJogosDGV;
 
         public menu()
         {
@@ -132,8 +134,14 @@ namespace LojaGames
             string descricao = txtDescricao.Text;
             string trailer = txtTrailer.Text;
             string preco = txtPreco.Text;
+            string genero = dropGenero.Text;
 
-            DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, this, notify);
+            DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, genero, this);
+            dropGenero.ForeColor = Color.Gray;
+        }
+        private void dropGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dropGenero.ForeColor = Color.White;
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
@@ -287,9 +295,7 @@ namespace LojaGames
                 </body>
                 </html>";
 
-
                     webBrowser.DocumentText = html;
-
 
                     pnTrailer.Controls.Add(webBrowser);
                 }
@@ -500,18 +506,20 @@ namespace LojaGames
 
         private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
+            if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
             {
-                TextBox t = (TextBox) sender;
+                TextBox t = (TextBox)sender;
                 string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
                 if (w == string.Empty) w = "00";
 
                 if (e.KeyChar.Equals((char)Keys.Back))
                     w = w.Substring(0, w.Length - 1);
-                else 
+                else
                     w += e.KeyChar;
 
-                t.Text = string.Format("{0:#,##0.00}", Double.Parse(w) / 100);
+                // Converta o valor para double e, em seguida, formate-o como uma moeda sem o símbolo
+                double preco = Double.Parse(w) / 100;
+                t.Text = preco.ToString("N2", CultureInfo.CurrentCulture);
                 t.Select(t.Text.Length, 0);
             }
             e.Handled = true;
@@ -546,20 +554,83 @@ namespace LojaGames
             }
         }
 
-
-        private void jogosDGV_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void pcbAlterarImagemJogo_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoArquivo = openFileDialog.FileName;
+                imagem = File.ReadAllBytes(caminhoArquivo);
 
+                pcbAlterarImagemJogo.Image = Image.FromFile(caminhoArquivo);
+            }
         }
 
-        private void jogosDGV_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        private void pcbAlterarIconeJogo_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoArquivo = openFileDialog.FileName;
+                imagem = File.ReadAllBytes(caminhoArquivo);
 
+                pcbAlterarIconeJogo.Image = Image.FromFile(caminhoArquivo);
+            }
         }
 
-        private void sbJogosDGV_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        private void pcbAlterarCarouselJogo_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagens (*.jpg;*.png;*.jpeg;*.ico|*.jpg;*.png;*.jpeg;*.ico";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoArquivo = openFileDialog.FileName;
+                imagem = File.ReadAllBytes(caminhoArquivo);
 
+                pcbAlterarCarouselJogo.Image = Image.FromFile(caminhoArquivo);
+            }
+        }
+
+        private void jogosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idJogosDGV = int.Parse(jogosDGV.SelectedRows[0].Cells[0].Value.ToString());
+            txtAlterarNomeJogo.Text = jogosDGV.SelectedRows[0].Cells[1].Value.ToString();
+            pcbAlterarImagemJogo.Image = (Image)new ImageConverter().ConvertFrom(jogosDGV.SelectedRows[0].Cells[2].Value);
+            txtAlterarDescricao.Text = jogosDGV.SelectedRows[0].Cells[3].Value.ToString();
+            pcbAlterarIconeJogo.Image = (Image)new ImageConverter().ConvertFrom(jogosDGV.SelectedRows[0].Cells[4].Value);
+            pcbAlterarCarouselJogo.Image = (Image)new ImageConverter().ConvertFrom(jogosDGV.SelectedRows[0].Cells[5].Value);
+            txtAlterarURL.Text = jogosDGV.SelectedRows[0].Cells[6].Value.ToString();
+            txtAlterarPreco.Text = jogosDGV.SelectedRows[0].Cells[7].Value.ToString();
+            txtAlterarPreco.Text = ((decimal)jogosDGV.SelectedRows[0].Cells[7].Value).ToString("C2", CultureInfo.CurrentCulture);
+            dropGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
+        }
+
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            //DadosJogo.EditarJogo(idJogosDGV,)
+        }
+
+        private void txtAlterarPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
+            {
+                TextBox t = (TextBox)sender;
+                string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
+                if (w == string.Empty) w = "00";
+
+                if (e.KeyChar.Equals((char)Keys.Back))
+                    w = w.Substring(0, w.Length - 1);
+                else
+                    w += e.KeyChar;
+
+                // Converta o valor para double e, em seguida, formate-o como uma moeda sem o símbolo
+                double preco = Double.Parse(w) / 100;
+                t.Text = preco.ToString("N2", CultureInfo.CurrentCulture);
+                t.Select(t.Text.Length, 0);
+            }
+            e.Handled = true;
         }
     }
 }
