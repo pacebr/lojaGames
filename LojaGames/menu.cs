@@ -24,6 +24,10 @@ namespace LojaGames
         byte[] imagem;
         byte[] icone;
         byte[] carousel;
+        byte[] alterarImagem;
+        byte[] alterarIcone;
+        byte[] alterarCarousel;
+        int pcbCriadas = 0;
 
         public menu()
         {
@@ -33,13 +37,18 @@ namespace LojaGames
             pcbJogoCarousel3.Controls.Add(panelJogo3);
             pcbJogoCarousel4.Controls.Add(panelJogo4);
             pcbJogoCarousel5.Controls.Add(panelJogo5);
+
         }
+
+        private Timer timer = new Timer();
+
+        private int currentButtonIndex = 0;
 
         private void CycleButtons()
         {
-            int currentButtonIndex = pgJogos.SelectedIndex;
             int nextButtonIndex = (currentButtonIndex + 1) % 5;
             pgJogos.SetPage(nextButtonIndex);
+            currentButtonIndex = nextButtonIndex;
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -152,26 +161,39 @@ namespace LojaGames
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            btnJogo1.LeftIcon.Image = DadosJogo.PegarIcone(1);
-            pcbJogoCarousel1.Image = DadosJogo.PegarImagemCarrousel(1);
-            btnJogo1.Refresh();
-            btnJogo1.Text = DadosJogo.PegarJogo(1);
-            btnJogo2.LeftIcon.Image = DadosJogo.PegarIcone(2);
-            pcbJogoCarousel2.Image = DadosJogo.PegarImagemCarrousel(2);
-            btnJogo2.Refresh();
-            btnJogo2.Text = DadosJogo.PegarJogo(2);
-            btnJogo3.LeftIcon.Image = DadosJogo.PegarIcone(3);
-            pcbJogoCarousel3.Image = DadosJogo.PegarImagemCarrousel(3);
-            btnJogo3.Refresh();
-            btnJogo3.Text = DadosJogo.PegarJogo(3);
-            btnJogo4.LeftIcon.Image = DadosJogo.PegarIcone(4);
-            pcbJogoCarousel4.Image = DadosJogo.PegarImagemCarrousel(4);
-            btnJogo4.Refresh();
-            btnJogo4.Text = DadosJogo.PegarJogo(4);
-            btnJogo5.LeftIcon.Image = DadosJogo.PegarIcone(5);
-            pcbJogoCarousel5.Image = DadosJogo.PegarImagemCarrousel(5);
-            btnJogo5.Refresh();
-            btnJogo5.Text = DadosJogo.PegarJogo(5);
+            timer.Interval = 5000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+            DataTable dataTable = DadosJogo.PopularDGV();
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                for (int i = 0; i < 5 && i < dataTable.Rows.Count; i++)
+                {
+                    BunifuButton btnJogo = Controls.Find($"btnJogo{i + 1}", true).FirstOrDefault() as BunifuButton;
+                    PictureBox pcbJogoCarousel = Controls.Find($"pcbJogoCarousel{i + 1}", true).FirstOrDefault() as PictureBox;
+
+                    if (btnJogo != null && pcbJogoCarousel != null)
+                    {
+                        DataRow row = dataTable.Rows[i];
+                        btnJogo.LeftIcon.Image = DadosJogo.PegarIcone(Convert.ToInt32(row["id"]));
+                        pcbJogoCarousel.Image = DadosJogo.PegarImagemCarrousel(Convert.ToInt32(row["id"]));
+                        string lalala = row["jogo"].ToString();
+                        btnJogo.Text = QuebraLinha(lalala, 3);
+                        
+                    }
+                }
+            }
+        }
+
+        private void tabPage1_Leave(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
             CycleButtons();
         }
 
@@ -228,6 +250,7 @@ namespace LojaGames
             int posX = 5;
             int posY = 6;
             int numeroImagens = DadosJogo.ObterNumeroImagens();
+            pcbCriadas = 0;
 
             for (int i = 1; i <= numeroImagens; i++)
             {
@@ -246,15 +269,17 @@ namespace LojaGames
                     Cursor = Cursors.Hand
 
                 };
+                pcbCriadas++;
                 pictureBox.MouseClick += pictureBox_Click;
                 panel1.Controls.Add(pictureBox);
 
                 posX += 298;
-                if (i % 4 == 0)
+                if (pcbCriadas % 4 == 0)
                 {
                     posX = 5;
                     posY += 300;
                 }
+                
             }
         }
         private void pictureBox_Click(object sender, EventArgs e)
@@ -272,7 +297,7 @@ namespace LojaGames
                 pgMenu.SetPage(Jogos);
                 lblNomeJogo.Text = DadosJogo.PegarJogo(i);
                 string textoBase = DadosJogo.PegarDescricao(i);
-                string textoPronto = QuebraLinha(textoBase);
+                string textoPronto = QuebraLinha(textoBase, 10);
                 lblDescricao.Text = textoPronto;
 
                 int idDoJogo = i;
@@ -319,7 +344,7 @@ namespace LojaGames
             }
         }
 
-        private static string QuebraLinha(string textoOriginal)
+        private static string QuebraLinha(string textoOriginal, int i)
         {
             string[] palavras = textoOriginal.Split(' ');
 
@@ -333,7 +358,7 @@ namespace LojaGames
 
                 contadorPalavras++;
 
-                if (contadorPalavras % 10 == 0)
+                if (contadorPalavras % i == 0)
                 {
                     textoComQuebrasDeLinha += "\n";
                 }
@@ -530,7 +555,6 @@ namespace LojaGames
                 else
                     w += e.KeyChar;
 
-                // Converta o valor para double e, em seguida, formate-o como uma moeda sem o símbolo
                 double preco = Double.Parse(w) / 100;
                 t.Text = preco.ToString("N2", CultureInfo.CurrentCulture);
                 t.Select(t.Text.Length, 0);
@@ -574,7 +598,7 @@ namespace LojaGames
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string caminhoArquivo = openFileDialog.FileName;
-                imagem = File.ReadAllBytes(caminhoArquivo);
+                alterarImagem = File.ReadAllBytes(caminhoArquivo);
 
                 pcbAlterarImagemJogo.Image = Image.FromFile(caminhoArquivo);
             }
@@ -587,7 +611,7 @@ namespace LojaGames
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string caminhoArquivo = openFileDialog.FileName;
-                imagem = File.ReadAllBytes(caminhoArquivo);
+                alterarIcone = File.ReadAllBytes(caminhoArquivo);
 
                 pcbAlterarIconeJogo.Image = Image.FromFile(caminhoArquivo);
             }
@@ -600,7 +624,7 @@ namespace LojaGames
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string caminhoArquivo = openFileDialog.FileName;
-                imagem = File.ReadAllBytes(caminhoArquivo);
+                alterarCarousel = File.ReadAllBytes(caminhoArquivo);
 
                 pcbAlterarCarouselJogo.Image = Image.FromFile(caminhoArquivo);
             }
@@ -616,33 +640,73 @@ namespace LojaGames
             pcbAlterarCarouselJogo.Image = (Image)new ImageConverter().ConvertFrom(jogosDGV.SelectedRows[0].Cells[5].Value);
             txtAlterarURL.Text = jogosDGV.SelectedRows[0].Cells[6].Value.ToString();
             txtAlterarPreco.Text = jogosDGV.SelectedRows[0].Cells[7].Value.ToString();
-            txtAlterarPreco.Text = ((decimal)jogosDGV.SelectedRows[0].Cells[7].Value).ToString("C2", CultureInfo.CurrentCulture);
+            txtAlterarPreco.Text = float.Parse(jogosDGV.SelectedRows[0].Cells[7].Value.ToString()).ToString("N2", CultureInfo.CurrentCulture);
             dropAlterarGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
+
+        }
+
+        void carregarImagens()
+        {          
+            using (MemoryStream stream = new MemoryStream())
+            {
+                pcbAlterarImagemJogo.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                alterarImagem = stream.ToArray();
+            }
+            using (MemoryStream stream = new MemoryStream())
+            {
+                pcbAlterarIconeJogo.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                alterarIcone = stream.ToArray();
+            }
+            using (MemoryStream stream = new MemoryStream())
+            {
+               pcbAlterarCarouselJogo.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                alterarCarousel = stream.ToArray();
+            }
         }
 
         private void BtnAlterar_Click(object sender, EventArgs e)
         {
-            //DadosJogo.EditarJogo(idJogosDGV,)
+            if(txtAlterarID.Text.Length == 0)
+            {
+                notify.Show(this, "Selecione um jogo antes", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
+                return;
+            }
+            carregarImagens();
+
+            int ID = int.Parse(txtAlterarID.Text);
+            string jogo = txtAlterarNomeJogo.Text;
+            byte[] imagem = alterarImagem;
+            string descricao = txtAlterarDescricao.Text;
+            byte[] icone = alterarIcone;
+            byte[] carousel = alterarCarousel;
+            string trailer = txtAlterarURL.Text;
+            float preco = float.Parse(txtAlterarPreco.Text);
+            string genero = dropAlterarGenero.Text;
+
+            DadosJogo.EditarJogo(ID, jogo, imagem, descricao, icone, carousel, trailer, preco, genero);
+            PopularDataGridView();
+            Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
         }
 
         private void txtAlterarPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
             {
-                TextBox t = (TextBox)sender;
-                string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
-                if (w == string.Empty) w = "00";
+                    TextBox t = (TextBox)sender;
+                    string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
+                    if (w == string.Empty) w = "00";
 
-                if (e.KeyChar.Equals((char)Keys.Back))
-                    w = w.Substring(0, w.Length - 1);
-                else
-                    w += e.KeyChar;
+                    if (e.KeyChar.Equals((char)Keys.Back))
+                        w = w.Substring(0, w.Length - 1);
+                    else
+                        w += e.KeyChar;
 
-                double preco = Double.Parse(w) / 100;
-                t.Text = preco.ToString("N2", CultureInfo.CurrentCulture);
+
+                t.Text = string.Format("{0:#,##0.00}", Double.Parse(w) / 100);
                 t.Select(t.Text.Length, 0);
             }
-            e.Handled = true;
+                e.Handled = true;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

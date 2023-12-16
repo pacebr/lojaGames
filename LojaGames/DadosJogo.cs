@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using LojaGames.Properties;
 using Bunifu.UI.WinForms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace LojaGames
 {
@@ -153,12 +154,8 @@ namespace LojaGames
                 string buttonText = cmd.ExecuteScalar().ToString();
                 return buttonText;
             }
-            else
-            {
-                return "Jogo não cadastrado";
-            }
+            return "Jogo não cadastrado";
         }
-
         public static Image PegarImagemCarrousel(int id)
         {
             try
@@ -300,24 +297,31 @@ namespace LojaGames
         }
 
         public static bool EditarJogo(int id, string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel,
-           string trailer, string preco, string genero)
+           string trailer, float preco, string genero)
         {
             menu menu = new menu();
             BunifuSnackbar notificacao = new BunifuSnackbar();
 
             Conexao.Conectar();
 
-            string sql = "UPDATE jogos.dados SET jogo = '" + jogo + "', imagem = '" + imagem +
-                "', descricao = '" + descricao + "', icone = '" + icone + "', carousel = '" + carousel +
-                "', trailer = '" + trailer + "', preco = '" + preco + "', genero = '" + genero + "'where id = '" + id + "'";
-
+            string sql = "UPDATE jogos.dados SET jogo = @jogo, imagem = @imagem, descricao = @descricao, " +
+              "icone = @icone, carousel = @carousel, trailer = @trailer, preco = @preco, genero = @genero WHERE id = @id";
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
             try
             {
-                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-                cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@jogo", jogo);
+                cmd.Parameters.AddWithValue("@imagem", imagem);
+                cmd.Parameters.AddWithValue("@descricao", descricao);
+                cmd.Parameters.AddWithValue("@icone", icone);
+                cmd.Parameters.AddWithValue("@carousel", carousel);
+                cmd.Parameters.AddWithValue("@trailer", trailer);
+                cmd.Parameters.AddWithValue("@preco", preco);
+                cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@id", id);
 
+                cmd.ExecuteNonQuery();
                 Conexao.Fechar();
-                return true;
+                notificacao.Show(menu,"Jogo alterado com sucesso.", BunifuSnackbar.MessageTypes.Success);
             }
             catch (Exception ex)
             {
