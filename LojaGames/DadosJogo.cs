@@ -19,7 +19,7 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, string genero, menu menu)
+        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, string genero, float? desconto , menu menu)
         {
             BunifuSnackbar notificacao = new BunifuSnackbar();
 
@@ -66,8 +66,8 @@ namespace LojaGames
                 return;
             }
 
-            string sql = "INSERT INTO jogos.dados (jogo, imagem, descricao, icone, carousel, trailer, preco, genero) " +
-                          "VALUES (@jogo, @imagem, @descricao, @icone, @carousel, @trailer, @preco, @genero)";
+            string sql = "INSERT INTO jogos.dados (jogo, imagem, descricao, icone, carousel, trailer, preco, genero, desconto) " +
+                          "VALUES (@jogo, @imagem, @descricao, @icone, @carousel, @trailer, @preco, @genero, ISNULL(@desconto, NULL))";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
@@ -79,6 +79,7 @@ namespace LojaGames
             cmd.Parameters.AddWithValue("@trailer", trailer);
             cmd.Parameters.AddWithValue("@preco", precoDecimal);
             cmd.Parameters.AddWithValue("@genero", genero);
+            cmd.Parameters.AddWithValue("@desconto", (object)desconto ?? DBNull.Value);
 
             try
             {
@@ -245,6 +246,37 @@ namespace LojaGames
 
             return null;
         }
+        public static string PegarDesconto(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select desconto from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+
+            return null;
+        }
+
+        public static string PegarGenero(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select genero from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+
+            return null;
+        }
         public static string ObterLinkIncorporado(string url)
         {
             if (url.Contains("youtube.com"))
@@ -312,7 +344,7 @@ namespace LojaGames
         }
 
         public static bool EditarJogo(int id, string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel,
-           string trailer, float preco, string genero)
+           string trailer, float preco, string genero, float? desconto)
         {
             menu menu = new menu();
             BunifuSnackbar notificacao = new BunifuSnackbar();
@@ -320,7 +352,7 @@ namespace LojaGames
             Conexao.Conectar();
 
             string sql = "UPDATE jogos.dados SET jogo = @jogo, imagem = @imagem, descricao = @descricao, " +
-              "icone = @icone, carousel = @carousel, trailer = @trailer, preco = @preco, genero = @genero WHERE id = @id";
+              "icone = @icone, carousel = @carousel, trailer = @trailer, preco = @preco, genero = @genero, desconto = @desconto WHERE id = @id";
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
             try
             {
@@ -332,6 +364,7 @@ namespace LojaGames
                 cmd.Parameters.AddWithValue("@trailer", trailer);
                 cmd.Parameters.AddWithValue("@preco", preco);
                 cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@desconto", desconto);
                 cmd.Parameters.AddWithValue("@id", id);
 
                 cmd.ExecuteNonQuery();

@@ -143,8 +143,9 @@ namespace LojaGames
             string trailer = txtTrailer.Text;
             string preco = txtPreco.Text;
             string genero = dropGenero.Text;
+            float? desconto = float.TryParse(txtDesconto.Text, out float result) ? result : (float?)null;
 
-            DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, genero, this);
+            DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, genero, desconto, this);
             Utilidades.limparCampos(this, pcbImagemJogo, pcbIcone, pcbCarousel);
             dropGenero.ForeColor = Color.Gray;
 
@@ -301,11 +302,18 @@ namespace LojaGames
         private void AbrirDetalhesDoJogo(int idDoJogo)
         {
             pgMenu.SetPage(Jogos);
-            lblNomeJogo.Text = DadosJogo.PegarJogo(idDoJogo);
+
             string textoBase = DadosJogo.PegarDescricao(idDoJogo);
             string textoPronto = QuebraLinha(textoBase, 10);
+            float desconto = float.Parse(DadosJogo.PegarDesconto(idDoJogo));
+
+            lblNomeJogo.Text = DadosJogo.PegarJogo(idDoJogo);
             lblDescricao.Text = textoPronto;
-            lblPreco.Text = "R$" + DadosJogo.PegarPreco(idDoJogo);
+            lblPreco.Text = Convert.ToDecimal(DadosJogo.PegarPreco(idDoJogo)).ToString("C2");
+            lblGenero.Text = DadosJogo.PegarGenero(idDoJogo);
+            lblPromocao.Text = (Convert.ToDecimal(DadosJogo.PegarPreco(idDoJogo)) * (1 - (decimal)desconto / 100)).ToString("C2");
+            lblDesconto.Text = $"{desconto:F0}%";
+
 
             string linkDoVideo = DadosJogo.PegarTrailer(idDoJogo);
             string linkIncorporado = DadosJogo.ObterLinkIncorporado(linkDoVideo);
@@ -583,14 +591,16 @@ namespace LojaGames
                 notify.Show(this, "Erro ao carregar dados", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
+
         private void jogosDGV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewColumn column in jogosDGV.Columns)
             {
                 if (column.Name.Contains("preco"))
-                {
                     column.DefaultCellStyle.Format = "C2";
-                }
+
+                if (column.Name.Contains("desconto"))
+                    column.DefaultCellStyle.Format = "0\\%";
             }
         }
 
@@ -645,6 +655,7 @@ namespace LojaGames
             txtAlterarPreco.Text = jogosDGV.SelectedRows[0].Cells[7].Value.ToString();
             txtAlterarPreco.Text = float.Parse(jogosDGV.SelectedRows[0].Cells[7].Value.ToString()).ToString("N2", CultureInfo.CurrentCulture);
             dropAlterarGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
+            txtAlterarDesconto.Text = $"{(float.TryParse(jogosDGV.SelectedRows[0].Cells[9].Value?.ToString(), out float desconto) ? desconto : 0):F0}%";
 
         }
 
@@ -669,12 +680,13 @@ namespace LojaGames
 
         private void BtnAlterar_Click(object sender, EventArgs e)
         {
-            if(txtAlterarID.Text.Length == 0)
+            if (txtAlterarID.Text.Length == 0)
             {
                 notify.Show(this, "Selecione um jogo antes", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
                 return;
             }
+
             carregarImagens();
 
             int ID = int.Parse(txtAlterarID.Text);
@@ -686,8 +698,15 @@ namespace LojaGames
             string trailer = txtAlterarURL.Text;
             float preco = float.Parse(txtAlterarPreco.Text);
             string genero = dropAlterarGenero.Text;
+            float? desconto = null;
 
-            DadosJogo.EditarJogo(ID, jogo, imagem, descricao, icone, carousel, trailer, preco, genero);
+            if (!string.IsNullOrEmpty(txtAlterarDesconto.Text))
+            {
+                float.TryParse(txtAlterarDesconto.Text.TrimEnd('%'), out float tempDesconto);
+                desconto = tempDesconto;
+            }
+
+            DadosJogo.EditarJogo(ID, jogo, imagem, descricao, icone, carousel, trailer, preco, genero, desconto);
             PopularDataGridView();
             Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
         }
@@ -762,5 +781,44 @@ namespace LojaGames
         {
             AbrirDetalhesDoJogo(5);
         }
+
+        private void rdbtnDescontoSim_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
+        {
+            if(rdbtnDescontoSim.Checked)
+            {
+                txtDesconto.Visible = true;
+            }
+            if (!rdbtnDescontoSim.Checked)
+            {
+                txtDesconto.Visible=false;
+            }
+        }
+
+        private void txtAlterarDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
+            {
+                TextBox t = (TextBox)sender;
+                string w = Regex.Replace(t.Text, "[^0-9]", string.Empty);
+
+                if (e.KeyChar.Equals((char)Keys.Back) && w.Length > 0)
+                {
+                    w = w.Substring(0, w.Length - 1);
+                }
+
+                if (char.IsDigit(e.KeyChar))
+                {
+                    w += e.KeyChar;
+                }
+
+                t.Text = $"{w}%";
+                t.Select(t.Text.Length - 1, 0);
+            }
+
+            e.Handled = true;
+        }
+
+
+
     }
 }
