@@ -230,6 +230,21 @@ namespace LojaGames
 
             return null;
         }
+        public static string PegarPreco(int id)
+        {
+            Conexao.Conectar();
+            string sql = "select preco from jogos.dados where id = " + id;
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+            object result = cmd.ExecuteScalar();
+
+            if (result != null)
+            {
+                string buttonText = cmd.ExecuteScalar().ToString();
+                return buttonText;
+            }
+
+            return null;
+        }
         public static string ObterLinkIncorporado(string url)
         {
             if (url.Contains("youtube.com"))

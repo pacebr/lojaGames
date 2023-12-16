@@ -294,53 +294,56 @@ namespace LojaGames
                     return;
                 }
 
-                pgMenu.SetPage(Jogos);
-                lblNomeJogo.Text = DadosJogo.PegarJogo(i);
-                string textoBase = DadosJogo.PegarDescricao(i);
-                string textoPronto = QuebraLinha(textoBase, 10);
-                lblDescricao.Text = textoPronto;
+                AbrirDetalhesDoJogo(i);
+            }
+        }
 
-                int idDoJogo = i;
+        private void AbrirDetalhesDoJogo(int idDoJogo)
+        {
+            pgMenu.SetPage(Jogos);
+            lblNomeJogo.Text = DadosJogo.PegarJogo(idDoJogo);
+            string textoBase = DadosJogo.PegarDescricao(idDoJogo);
+            string textoPronto = QuebraLinha(textoBase, 10);
+            lblDescricao.Text = textoPronto;
+            lblPreco.Text = "R$" + DadosJogo.PegarPreco(idDoJogo);
 
-                string linkDoVideo = DadosJogo.PegarTrailer(idDoJogo);
+            string linkDoVideo = DadosJogo.PegarTrailer(idDoJogo);
+            string linkIncorporado = DadosJogo.ObterLinkIncorporado(linkDoVideo);
 
-                string linkIncorporado = DadosJogo.ObterLinkIncorporado(linkDoVideo);
-
-                if (!string.IsNullOrEmpty(linkIncorporado))
+            if (!string.IsNullOrEmpty(linkIncorporado))
+            {
+                if (pnTrailer.Controls.Count > 0 && pnTrailer.Controls[0] is WebBrowser)
                 {
-                    if (pnTrailer.Controls.Count > 0 && pnTrailer.Controls[0] is WebBrowser)
-                    {
-                        pnTrailer.Controls[0].Dispose();
-                    }
-
-                    WebBrowser webBrowser = new WebBrowser();
-                    webBrowser.Dock = DockStyle.Fill;
-                    webBrowser.ScriptErrorsSuppressed = true;
-                    webBrowser.ScrollBarsEnabled = false;
-
-                    string html = $@"
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"" />
-                    <style>
-                        body, html, iframe {{ margin: 0; padding: 0; width: 100%; height: 100%; border: 0; overflow: hidden; }}
-                        iframe {{ border: none; }}
-                    </style>
-                </head>
-                <body>
-                    <iframe src=""{linkIncorporado}"" frameborder=""0"" allowfullscreen></iframe>
-                </body>
-                </html>";
-
-                    webBrowser.DocumentText = html;
-
-                    pnTrailer.Controls.Add(webBrowser);
+                    pnTrailer.Controls[0].Dispose();
                 }
-                else
-                {
-                    notify.Show(this, "O link do vídeo não é válido.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-                }
+
+                WebBrowser webBrowser = new WebBrowser();
+                webBrowser.Dock = DockStyle.Fill;
+                webBrowser.ScriptErrorsSuppressed = true;
+                webBrowser.ScrollBarsEnabled = false;
+
+                string html = $@"
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"" />
+            <style>
+                body, html, iframe {{ margin: 0; padding: 0; width: 100%; height: 100%; border: 0; overflow: hidden; }}
+                iframe {{ border: none; }}
+            </style>
+        </head>
+        <body>
+            <iframe src=""{linkIncorporado}"" frameborder=""0"" allowfullscreen></iframe>
+        </body>
+        </html>";
+
+                webBrowser.DocumentText = html;
+
+                pnTrailer.Controls.Add(webBrowser);
+            }
+            else
+            {
+                notify.Show(this, "O link do vídeo não é válido.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
 
@@ -733,6 +736,31 @@ namespace LojaGames
         {
             Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
             resetarDropDown();
+        }
+
+        private void btnComprarJogo1_Click(object sender, EventArgs e)
+        {
+            AbrirDetalhesDoJogo(1);
+        }
+
+        private void btnComprarJogo2_Click(object sender, EventArgs e)
+        {
+            AbrirDetalhesDoJogo(2);
+        }
+
+        private void btnComprarJogo3_Click(object sender, EventArgs e)
+        {
+            AbrirDetalhesDoJogo(3);
+        }
+
+        private void btnComprarJogo4_Click(object sender, EventArgs e)
+        {
+            AbrirDetalhesDoJogo(4);
+        }
+
+        private void btnComprarJogo5_Click(object sender, EventArgs e)
+        {
+            AbrirDetalhesDoJogo(5);
         }
     }
 }
