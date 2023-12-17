@@ -19,38 +19,6 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
-        public static bool VerificarQuantidade(string isbn, int quantidade)
-        {
-            Conexao.Conectar();
-
-            int? quantidadeTotal = 0;
-
-            string sql = "SELECT quantidade FROM livros.dados WHERE isbn = @isbn";
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
-                cmd.Parameters.AddWithValue("@isbn", isbn);
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        quantidadeTotal = reader["numero_exemplares"] as int?;
-                    }
-                }
-                if (quantidadeTotal >= quantidade)
-                {
-                    Conexao.Fechar();
-                    return true;
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro: " + e);
-            }
-            Conexao.Fechar();
-            return false;
-        }
 
         public static bool VerificarJogo(string jogo) // verificar Jogo
         {
@@ -78,7 +46,8 @@ namespace LojaGames
             return false;
         }
 
-        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco, string genero, float? desconto , menu menu)
+        public static void EnviarDadosJogo(string jogo, byte[] imagem, string descricao, byte[] icone, byte[] carousel, string trailer, string preco,
+            string genero, float? desconto , menu menu)
         {
             BunifuSnackbar notificacao = new BunifuSnackbar();
 

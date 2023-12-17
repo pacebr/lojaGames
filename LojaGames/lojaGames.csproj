@@ -149,6 +149,7 @@
     <Compile Include="ControleCliente.cs" />
     <Compile Include="Conexão.cs" />
     <Compile Include="ControleFuncionario.cs" />
+    <Compile Include="ControleVendas.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="DadosJogo.cs" />
     <Compile Include="explore.cs">

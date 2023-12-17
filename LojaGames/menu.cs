@@ -149,12 +149,13 @@ namespace LojaGames
 
             DadosJogo.EnviarDadosJogo(nome, imagem, descricao, icone, carousel, trailer, preco, genero, desconto, this);
             Utilidades.limparCampos(this, pcbImagemJogo, pcbIcone, pcbCarousel);
-            dropGenero.ForeColor = Color.Gray;
+            resetarDropDown(dropGenero, "Genero", Color.Gray);
 
         }
-        private void tabPage3_Leave(object sender, EventArgs e)
+        private void tabPage7_Leave(object sender, EventArgs e)
         {
             Utilidades.limparCampos(this, pcbImagemJogo, pcbIcone, pcbCarousel);
+            resetarDropDown(dropGenero, "Genero", Color.Gray);
         }
 
         private void dropGenero_SelectedIndexChanged(object sender, EventArgs e)
@@ -657,6 +658,7 @@ namespace LojaGames
             txtAlterarPreco.Text = jogosDGV.SelectedRows[0].Cells[7].Value.ToString();
             txtAlterarPreco.Text = float.Parse(jogosDGV.SelectedRows[0].Cells[7].Value.ToString()).ToString("N2", CultureInfo.CurrentCulture);
             dropAlterarGenero.Text = jogosDGV.SelectedRows[0].Cells[8].Value.ToString();
+            dropAlterarGenero.ForeColor = Color.White;
             txtAlterarDesconto.Text = $"{(float.TryParse(jogosDGV.SelectedRows[0].Cells[9].Value?.ToString(), out float desconto) ? desconto : 0):F0}%";
 
         }
@@ -686,6 +688,7 @@ namespace LojaGames
             {
                 notify.Show(this, "Selecione um jogo antes", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
+                resetarDropDown(dropAlterarGenero, "Genero", Color.Gray);
                 return;
             }
 
@@ -711,6 +714,7 @@ namespace LojaGames
             DadosJogo.EditarJogo(ID, jogo, imagem, descricao, icone, carousel, trailer, preco, genero, desconto);
             PopularDataGridView();
             Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
+            resetarDropDown(dropAlterarGenero, "Genero", Color.Gray);
         }
 
         private void txtAlterarPreco_KeyPress(object sender, KeyPressEventArgs e)
@@ -736,12 +740,13 @@ namespace LojaGames
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
-            resetarDropDown();
+            resetarDropDown(dropAlterarGenero, "Genero", Color.Gray );
         }
-        void resetarDropDown()
+        void resetarDropDown(Bunifu.UI.WinForms.BunifuDropdown dropdown, string texto, Color color)
         {
-            dropAlterarGenero.SelectedIndex = -1;
-            dropAlterarGenero.Text = "Genero";
+            dropdown.SelectedIndex = -1;
+            dropdown.Text = texto;
+            dropdown.ForeColor = color;
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -756,7 +761,7 @@ namespace LojaGames
         private void tabPage8_Leave(object sender, EventArgs e)
         {
             Utilidades.limparCampos(this, pcbAlterarImagemJogo, pcbAlterarIconeJogo, pcbAlterarCarouselJogo);
-            resetarDropDown();
+            resetarDropDown(dropGenero, "Genero", Color.Gray);
         }
 
         private void btnComprarJogo1_Click(object sender, EventArgs e)
@@ -823,7 +828,7 @@ namespace LojaGames
         private void btnVender_Click(object sender, EventArgs e)
         {
             if (txtNomeJogoVenda.Text.Length == 0 || dropQuantidadeVenda.Text.Length == 0 ||
-               txtPrecoJogoVenda.Text.Length == 0 || txtClienteID.Text.Length == 0 || txtFuncionarioID.Text.Length == 0)
+               txtValorJogoVenda.Text.Length == 0 || txtClienteID.Text.Length == 0 || txtFuncionarioID.Text.Length == 0)
             {
                 notify.Show(this, "Complete todos os campos.", BunifuSnackbar.MessageTypes.Warning);
                 return;
@@ -831,7 +836,7 @@ namespace LojaGames
 
             string jogo = txtNomeJogoVenda.Text;
             int quantidade = int.Parse(dropQuantidadeVenda.Text);
-            float preco = float.Parse(txtPrecoJogoVenda.Text);
+            float valor = float.Parse(txtValorJogoVenda.Text);
             int idCliente = int.Parse(txtClienteID.Text);
             int idFuncionario = int.Parse(txtFuncionarioID.Text);
 
@@ -846,11 +851,24 @@ namespace LojaGames
                 notify.Show(this, "Jogo inválido", BunifuSnackbar.MessageTypes.Warning);
                 return;
             }
-            if (!LivroController.VerificarQuantidade(isbn, quantidade))
-            {
-                notify.Show(this, "Quantidade inválida.", BunifuSnackbar.MessageTypes.Warning);
-                return;
-            }
+            bool addVendas = ControleVendas.AddVendas(jogo, quantidade, valor, idCliente, idFuncionario);
+
+            if (addVendas)
+                notify.Show(this, "Venda realizada com sucesso!", BunifuSnackbar.MessageTypes.Success);
+            if (!addVendas)
+                notify.Show(this, "Verifique se as informações estão corretas.", BunifuSnackbar.MessageTypes.Error);
+        }
+
+        private void btnLimparVenda_Click(object sender, EventArgs e)
+        {
+            Utilidades.limparCampos(this, pcbJogoVenda);
+            resetarDropDown(dropQuantidadeVenda, "Quantidade", Color.Gray);
+        }
+
+        private void tabPage4_Leave(object sender, EventArgs e)
+        {
+            Utilidades.limparCampos(this, pcbJogoVenda);
+            resetarDropDown(dropQuantidadeVenda, "Quantidade", Color.Gray);
         }
     }
 }

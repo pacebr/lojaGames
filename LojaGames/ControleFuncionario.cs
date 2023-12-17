@@ -20,7 +20,7 @@ namespace LojaGames
             {
                 SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
 
-                cmd.Parameters.AddWithValue("id", id);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 SqlDataReader dr = cmd.ExecuteReader();
 
