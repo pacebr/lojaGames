@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
+using Bunifu.UI.WinForms;
 using Bunifu.UI.WinForms.BunifuButton;
 using LojaGames.Properties;
 using TheArtOfDev.HtmlRenderer.Adapters.Entities;
@@ -37,6 +38,7 @@ namespace LojaGames
             pcbJogoCarousel3.Controls.Add(panelJogo3);
             pcbJogoCarousel4.Controls.Add(panelJogo4);
             pcbJogoCarousel5.Controls.Add(panelJogo5);
+            pictureBox2.Parent = bunifuPanel2;
 
         }
 
@@ -818,7 +820,37 @@ namespace LojaGames
             e.Handled = true;
         }
 
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (txtNomeJogoVenda.Text.Length == 0 || dropQuantidadeVenda.Text.Length == 0 ||
+               txtPrecoJogoVenda.Text.Length == 0 || txtClienteID.Text.Length == 0 || txtFuncionarioID.Text.Length == 0)
+            {
+                notify.Show(this, "Complete todos os campos.", BunifuSnackbar.MessageTypes.Warning);
+                return;
+            }
 
+            string jogo = txtNomeJogoVenda.Text;
+            int quantidade = int.Parse(dropQuantidadeVenda.Text);
+            float preco = float.Parse(txtPrecoJogoVenda.Text);
+            int idCliente = int.Parse(txtClienteID.Text);
+            int idFuncionario = int.Parse(txtFuncionarioID.Text);
 
+            if (!ControleFuncionario.VerificarExistencia(idFuncionario) ||
+               !ControleCliente.VerificarExistencia(idCliente))
+            {
+                notify.Show(this, "Funcionário ou cliente inexistente.", BunifuSnackbar.MessageTypes.Warning);
+                return;
+            }
+            if (!DadosJogo.VerificarJogo(jogo))
+            {
+                notify.Show(this, "Jogo inválido", BunifuSnackbar.MessageTypes.Warning);
+                return;
+            }
+            if (!LivroController.VerificarQuantidade(isbn, quantidade))
+            {
+                notify.Show(this, "Quantidade inválida.", BunifuSnackbar.MessageTypes.Warning);
+                return;
+            }
+        }
     }
 }

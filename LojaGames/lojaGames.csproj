@@ -264,6 +264,9 @@
     <None Include="Resources\Control Panel Active.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\luffyyyy-unscreen.gif" />
+    <None Include="Resources\Luffy-unscreen.gif" />
+    <None Include="Resources\Gear4Luffy_6417_thumb.gif" />
     <None Include="Resources\olho.png" />
     <None Include="Resources\icons8-homtem-turista-96 %281%29.png" />
     <None Include="Resources\icons8-homtem-turista-96.png" />
@@ -289,6 +292,8 @@
     <None Include="Resources\Add Image.png" />
     <None Include="Resources\Add User Male.png" />
     <None Include="Resources\fechar-o-olho %281%29.png" />
+    <None Include="Resources\ezgif-5-2b16adc25a.gif" />
+    <None Include="Resources\ezgif-5-7ca3350208.gif" />
     <Content Include="Resources\Game Controller Active.png" />
     <None Include="Resources\Home Page Active.png" />
     <None Include="Resources\Home Page.png" />

@@ -11,6 +11,32 @@ namespace LojaGames
 {
     internal class ControleCliente
     {
+        public static bool VerificarExistencia(int id) // verificar existencia
+        {
+            Conexao.Conectar();
+            string sql = "SELECT * FROM clientes.dados WHERE id = @id";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    Conexao.Fechar();
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e);
+            }
+            Conexao.Fechar();
+            return false;
+        }
+
         public static bool VerificarCredenciais(string usuario, string senha) // verificar Login
         {
             try

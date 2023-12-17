@@ -253,6 +253,26 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ezgif_5_2b16adc25a {
+            get {
+                object obj = ResourceManager.GetObject("ezgif-5-2b16adc25a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_5_7ca3350208 {
+            get {
+                object obj = ResourceManager.GetObject("ezgif-5-7ca3350208", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fechar_o_olho__1_ {
             get {
                 object obj = ResourceManager.GetObject("fechar-o-olho (1)", resourceCulture);
@@ -276,6 +296,16 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Game_Controller_Active {
             get {
                 object obj = ResourceManager.GetObject("Game Controller Active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gear4Luffy_6417_thumb {
+            get {
+                object obj = ResourceManager.GetObject("Gear4Luffy_6417_thumb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -419,6 +449,26 @@ namespace LojaGames.Properties {
         internal static System.Drawing.Bitmap Logo_sem_fundo1 {
             get {
                 object obj = ResourceManager.GetObject("Logo sem fundo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Luffy_unscreen {
+            get {
+                object obj = ResourceManager.GetObject("Luffy-unscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap luffyyyy_unscreen {
+            get {
+                object obj = ResourceManager.GetObject("luffyyyy-unscreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

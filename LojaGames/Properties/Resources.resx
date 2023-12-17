@@ -121,6 +121,9 @@
   <data name="olho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\olho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add User Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +157,12 @@
   <data name="XCinza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XCinza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gear4Luffy_6417_thumb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gear4Luffy_6417_thumb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luffy-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luffy-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,11 +187,11 @@
   <data name="Super Mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Super Mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Game Controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Game Controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Minimalistic Mountain Sunset 562023 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimalistic Mountain Sunset 562023 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fechar-o-olho (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechar-o-olho (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimalistic Mountain Sunset 562023 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimalistic Mountain Sunset 562023 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +211,8 @@
   <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add User Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add User Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game Controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="illustration-mountains-minimalism-artwork-silhouette-symmetry-242619-wallhere.com (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\illustration-mountains-minimalism-artwork-silhouette-symmetry-242619-wallhere.com (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,14 +232,14 @@
   <data name="icons8-homtem-turista-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-homtem-turista-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mountains-minimalism-1979973-wallhere.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mountains-minimalism-1979973-wallhere.com (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo sem fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo sem fundo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cash Active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash Active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +259,14 @@
   <data name="Line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ezgif-5-2b16adc25a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif-5-2b16adc25a.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ExitCinza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExitCinza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ezgif-5-7ca3350208" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif-5-7ca3350208.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blaidd_Elden_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blaidd_Elden_Ring.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,13 +280,13 @@
   <data name="Super Mario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Super Mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo sem fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo sem fundo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mountains-minimalism-1979973-wallhere.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountains-minimalism-1979973-wallhere.com (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add Imagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Imagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fechar-o-olho (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fechar-o-olho (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="luffyyyy-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\luffyyyy-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
