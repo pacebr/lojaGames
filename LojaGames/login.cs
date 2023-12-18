@@ -40,9 +40,11 @@ namespace LojaGames
             string senha = txtSenhaCliente.Text;
 
             bool loginSucesso = ControleCliente.VerificarCredenciais(usuario, senha);
+            UsuarioLogado.usuario = "";
 
             if (loginSucesso)
             {
+                UsuarioLogado.efuncionario = false;
                 new menu().Show();
                 this.Close();
                 Conexao.Fechar();
@@ -63,11 +65,14 @@ namespace LojaGames
         {
             string usuario = txtUsuarioFunc.Text;
             string senha = txtSenhaFunc.Text;
+            
 
             bool loginSucesso = ControleFuncionario.VerificarCredenciais(usuario, senha);
+            UsuarioLogado.usuario = usuario;
 
             if (loginSucesso)
             {
+                UsuarioLogado.efuncionario = true;
                 new menu().Show();
                 this.Close();
                 Conexao.Fechar();

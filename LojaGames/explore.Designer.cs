@@ -242,6 +242,7 @@
             this.btnExplorar.TextMarginLeft = 0;
             this.btnExplorar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnExplorar.UseDefaultRadiusAndThickness = true;
+            this.btnExplorar.Click += new System.EventHandler(this.btnExplorar_Click);
             // 
             // explore
             // 

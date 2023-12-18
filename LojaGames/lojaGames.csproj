@@ -178,6 +178,7 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioLogado.cs" />
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="explore.resx">
       <DependentUpon>explore.cs</DependentUpon>

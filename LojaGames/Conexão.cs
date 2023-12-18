@@ -16,8 +16,8 @@ namespace LojaGames
 
         private static SqlConnection conexaoBanco()
         {
-            var conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb");
-            //var conexao = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");          
+            //var conexao = new SqlConnection(@"Data Source=localhost\SQLEXPRESS; integrated security=SSPI;initial catalog=exodusDb");
+            var conexao = new SqlConnection(@"Data Source=SJC0562934W10-1; User ID=sa; Password=Senac123; Initial Catalog=exodusDb");          
             conn = conexao;
 
             return conn;

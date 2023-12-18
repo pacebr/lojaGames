@@ -24,5 +24,14 @@ namespace LojaGames
             new login().Show();
             Visible = false;
         }
+
+        private void btnExplorar_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            UsuarioLogado.explorar = true;
+            UsuarioLogado.usuario = "";
+            menu menu = new menu();
+            menu.Show();
+        }
     }
 }

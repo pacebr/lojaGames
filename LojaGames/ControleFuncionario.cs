@@ -143,7 +143,6 @@ namespace LojaGames
             Conexao.Conectar();
 
             string cargo = "";
-            bool isGerente = false;
 
             string sql = "SELECT cargo FROM funcionarios.dados WHERE usuario = @usuario";
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
@@ -157,11 +156,11 @@ namespace LojaGames
                 }
             }
             if (cargo == "Gerente")
-                isGerente = true;
+                return true;
 
             Conexao.Fechar();
 
-            return isGerente;
+            return false;
         }
         public static bool AdicionarFuncionario(string nome,string sobrenome,string CPF,string genero,string idade, string cargo,string usuario, string senha, byte[] foto)
         {

@@ -37,6 +37,9 @@ namespace LojaGames
         public menu()
         {
             InitializeComponent();
+            LimitarAcessoFuncionarios();
+            LimitarAcessoCliente();
+            LimitarAcessoExplorar();
             pcbJogoCarousel1.Controls.Add(panelJogo1);
             pcbJogoCarousel2.Controls.Add(panelJogo2);
             pcbJogoCarousel3.Controls.Add(panelJogo3);
@@ -70,7 +73,6 @@ namespace LojaGames
             btnJogos.Image = Resources.Game_Controller;
             btnAdicionar.Image = Resources.Add_New;
             btnDinheiro.Image = Resources.Cash;
-            btnConfiguracao.Image = Resources.Wrench;
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -81,7 +83,6 @@ namespace LojaGames
             btnJogos.Image = Resources.Game_Controller;
             btnAdicionar.Image = Resources.Add_New;
             btnDinheiro.Image = Resources.Cash;
-            btnConfiguracao.Image = Resources.Wrench;
         }
 
         private void btnJogos_Click(object sender, EventArgs e)
@@ -92,7 +93,6 @@ namespace LojaGames
             btnDashboard.Image = Resources.Control_Panel1;
             btnAdicionar.Image = Resources.Add_New;
             btnDinheiro.Image = Resources.Cash;
-            btnConfiguracao.Image = Resources.Wrench;
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -104,7 +104,6 @@ namespace LojaGames
             btnJogos.Image = Resources.Game_Controller;
             btnAdicionar.Image = Resources.Add_New_Active;
             btnDinheiro.Image = Resources.Cash;
-            btnConfiguracao.Image = Resources.Wrench;
         }
 
         private void btnDinheiro_Click(object sender, EventArgs e)
@@ -115,7 +114,6 @@ namespace LojaGames
             btnJogos.Image = Resources.Game_Controller;
             btnAdicionar.Image = Resources.Add_New;
             btnDinheiro.Image = Resources.Cash_Active;
-            btnConfiguracao.Image = Resources.Wrench;
         }
 
         private void btnConfiguracao_Click(object sender, EventArgs e)
@@ -126,7 +124,6 @@ namespace LojaGames
             btnJogos.Image = Resources.Game_Controller;
             btnAdicionar.Image = Resources.Add_New;
             btnDinheiro.Image = Resources.Cash;
-            btnConfiguracao.Image = Resources.Wrench_Active;
         }
 
         private void btnJogo_Click(object sender, EventArgs e)
@@ -433,6 +430,7 @@ namespace LojaGames
         {
             Close();
             new login().Show();
+            UsuarioLogado.explorar = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -1455,5 +1453,31 @@ namespace LojaGames
             popularAlterarClienteDGV();
             btnAlterarClienteLimpar_Click(sender, e);
         }
+        private void LimitarAcessoFuncionarios()
+        {
+            if (!ControleFuncionario.VerificarGerencia(UsuarioLogado.usuario))
+            {
+                btnAdicionarFuncionario.Enabled = false;
+                btnGerenciarFuncionario.Enabled = false;
+            }
+        }
+        private void LimitarAcessoCliente()
+        {
+            if(UsuarioLogado.efuncionario == false)
+            {
+                btnAdicionar.Visible = false;
+                btnDinheiro.Visible = false;
+            }
+        }
+        private void LimitarAcessoExplorar()
+        {
+            if (UsuarioLogado.explorar == true)
+            {
+                btnCasa.Visible = false;
+                btnAdicionar.Visible = false;
+                btnDinheiro.Visible = false;
+            }
+        }
+        
     }
 }

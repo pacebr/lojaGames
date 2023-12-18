@@ -275,7 +275,6 @@
             this.pgAdd = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnAdicionarJogo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnGerenciarCliente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnGerenciarFuncionario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdicionarFuncionario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -415,7 +414,6 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnCasa = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnDinheiro = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnConfiguracao = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnAdicionar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnJogos = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -442,7 +440,6 @@
             this.tabPage3.SuspendLayout();
             this.pgAdd.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.bunifuPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1838,10 +1835,10 @@
             this.pgAdd.Location = new System.Drawing.Point(0, 6);
             this.pgAdd.Multiline = true;
             this.pgAdd.Name = "pgAdd";
-            this.pgAdd.Page = this.tabPage11;
-            this.pgAdd.PageIndex = 5;
-            this.pgAdd.PageName = "tabPage11";
-            this.pgAdd.PageTitle = "tabPage11";
+            this.pgAdd.Page = this.tabPage6;
+            this.pgAdd.PageIndex = 0;
+            this.pgAdd.PageName = "tabPage6";
+            this.pgAdd.PageTitle = "tabPage6";
             this.pgAdd.SelectedIndex = 0;
             this.pgAdd.Size = new System.Drawing.Size(1216, 631);
             this.pgAdd.TabIndex = 13;
@@ -1867,7 +1864,6 @@
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.tabPage6.Controls.Add(this.btnAdicionarJogo);
-            this.tabPage6.Controls.Add(this.pictureBox3);
             this.tabPage6.Controls.Add(this.btnGerenciarCliente);
             this.tabPage6.Controls.Add(this.btnGerenciarFuncionario);
             this.tabPage6.Controls.Add(this.btnAdicionarFuncionario);
@@ -1968,17 +1964,6 @@
             this.btnAdicionarJogo.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAdicionarJogo.UseDefaultRadiusAndThickness = true;
             this.btnAdicionarJogo.Click += new System.EventHandler(this.btnAdicionarJogo_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::LojaGames.Properties.Resources.Xysh;
-            this.pictureBox3.Location = new System.Drawing.Point(124, 233);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(78, 61);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
             // 
             // btnGerenciarCliente
             // 
@@ -8893,7 +8878,6 @@
             this.bunifuPanel1.BorderThickness = 0;
             this.bunifuPanel1.Controls.Add(this.btnCasa);
             this.bunifuPanel1.Controls.Add(this.btnDinheiro);
-            this.bunifuPanel1.Controls.Add(this.btnConfiguracao);
             this.bunifuPanel1.Controls.Add(this.btnAdicionar);
             this.bunifuPanel1.Controls.Add(this.btnDashboard);
             this.bunifuPanel1.Controls.Add(this.btnJogos);
@@ -8975,42 +8959,6 @@
             this.btnDinheiro.Zoom = 0;
             this.btnDinheiro.ZoomSpeed = 10;
             this.btnDinheiro.Click += new System.EventHandler(this.btnDinheiro_Click);
-            // 
-            // btnConfiguracao
-            // 
-            this.btnConfiguracao.ActiveImage = null;
-            this.btnConfiguracao.AllowAnimations = true;
-            this.btnConfiguracao.AllowBuffering = false;
-            this.btnConfiguracao.AllowToggling = false;
-            this.btnConfiguracao.AllowZooming = false;
-            this.btnConfiguracao.AllowZoomingOnFocus = false;
-            this.btnConfiguracao.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnConfiguracao.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnConfiguracao.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.ErrorImage")));
-            this.btnConfiguracao.FadeWhenInactive = false;
-            this.btnConfiguracao.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnConfiguracao.ForeColor = System.Drawing.Color.Transparent;
-            this.btnConfiguracao.Image = global::LojaGames.Properties.Resources.Wrench;
-            this.btnConfiguracao.ImageActive = null;
-            this.btnConfiguracao.ImageLocation = null;
-            this.btnConfiguracao.ImageMargin = 0;
-            this.btnConfiguracao.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.ImageZoomSize = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracao.InitialImage")));
-            this.btnConfiguracao.Location = new System.Drawing.Point(31, 646);
-            this.btnConfiguracao.Name = "btnConfiguracao";
-            this.btnConfiguracao.Rotation = 0;
-            this.btnConfiguracao.ShowActiveImage = true;
-            this.btnConfiguracao.ShowCursorChanges = true;
-            this.btnConfiguracao.ShowImageBorders = true;
-            this.btnConfiguracao.ShowSizeMarkers = false;
-            this.btnConfiguracao.Size = new System.Drawing.Size(35, 35);
-            this.btnConfiguracao.TabIndex = 14;
-            this.btnConfiguracao.ToolTipText = "";
-            this.btnConfiguracao.WaitOnLoad = false;
-            this.btnConfiguracao.Zoom = 0;
-            this.btnConfiguracao.ZoomSpeed = 10;
-            this.btnConfiguracao.Click += new System.EventHandler(this.btnConfiguracao_Click);
             // 
             // btnAdicionar
             // 
@@ -9174,7 +9122,6 @@
             this.tabPage3.ResumeLayout(false);
             this.pgAdd.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.bunifuPanel5.ResumeLayout(false);
@@ -9240,7 +9187,6 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.UI.WinForms.BunifuImageButton btnDashboard;
-        private Bunifu.UI.WinForms.BunifuImageButton btnConfiguracao;
         private Bunifu.UI.WinForms.BunifuImageButton btnDinheiro;
         private Bunifu.UI.WinForms.BunifuImageButton btnAdicionar;
         private Bunifu.UI.WinForms.BunifuImageButton btnJogos;
@@ -9370,7 +9316,6 @@
         private Bunifu.UI.WinForms.BunifuPictureBox pcbFotoFuncionario;
         private Bunifu.UI.WinForms.BunifuTextBox txtVendaID;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnGerenciarCliente;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.TabPage tabPage11;
