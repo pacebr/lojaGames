@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace LojaGames
 {
@@ -15,7 +16,7 @@ namespace LojaGames
         {
             Conexao.Conectar();
 
-            string sql = "INSERT INTO vendas.dados (jogo, quantidade, preco, clienteID, funcionarioID) " +
+            string sql = "INSERT INTO vendas.dados (jogo, quantidade, valor, clienteID, funcionarioID) " +
                 "VALUES (@jogo, @quantidade, @valor, @clienteID, @funcionarioID)";
 
             try
@@ -45,8 +46,8 @@ namespace LojaGames
         {
             Conexao.Conectar();
 
-            string sql = "UPDATE vendas.dados SET jogo = @jogo, valor = @valor, " +
-                "cliente_id = @clienteID, funcionarioID = @funcionarioID WHERE id = @id";
+            string sql = "UPDATE vendas.dados SET jogo = @jogo, quantidade = @quantidade, valor = @valor, " +
+                "clienteID = @clienteID, funcionarioID = @funcionarioID WHERE id = @id";
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
@@ -72,8 +73,16 @@ namespace LojaGames
             Conexao.Fechar();
             return false;
         }
-        public static bool DeleteVendas(int id)
+        public static bool DeleteVendas(int id, Bunifu.UI.WinForms.BunifuTextBox txtDeletarID)
         {
+            menu menu = new menu();
+            BunifuSnackbar notificacao = new BunifuSnackbar();
+
+            if (id <= 0 || string.IsNullOrWhiteSpace(txtDeletarID.Text))
+            {
+                notificacao.Show(menu, "Selecione uma Venda primeiro.", BunifuSnackbar.MessageTypes.Warning);
+            }
+
             Conexao.Conectar();
 
             string sql = "DELETE FROM vendas.dados WHERE id = " + id + ";";
@@ -92,6 +101,32 @@ namespace LojaGames
             Conexao.Fechar();
             return false;
         }
+         public static DataTable PopularDGVvendas()
+        {
+            Conexao.Conectar();
+
+            string sql = "SELECT * FROM vendas.dados";
+            SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
+
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                sda.Fill(dataTable);
+
+                return dataTable;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
+        }
+
         public static object DataGridView(DataGridView vendasDGV)
         {
             Conexao.Conectar();

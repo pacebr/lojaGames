@@ -227,7 +227,7 @@ namespace LojaGames
             string endereco = txtEndereco.Text;
 
             ControleCliente.AddCliente(nome, sobrenome, usuario, senha, idade, genero, CPF, telefone, endereco, imagem);
-            Utilidades.limparCampos(this);
+            Utilidades.limparCampos(this, pcbImagemCadastro);
             voltarTextoDrop();
         }
 

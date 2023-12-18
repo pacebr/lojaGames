@@ -19,6 +19,143 @@ namespace LojaGames
 {
     public static class DadosJogo
     {
+        public static Image ObterImagemDoJogoPeloNome(string nomeJogo)
+        {
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT imagem FROM jogos.dados WHERE jogo = @jogo";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Conexao.conn))
+                {
+                    cmd.Parameters.AddWithValue("@jogo", nomeJogo);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        // Converter a imagem do banco de dados (byte[]) para Image
+                        byte[] bytes = (byte[])result;
+                        using (MemoryStream ms = new MemoryStream(bytes))
+                        {
+                            return Image.FromStream(ms);
+                        }
+                    }
+                    else
+                    {
+                        return null; // Ou outra imagem padrão se a imagem não for encontrada
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Ou outra imagem padrão se ocorrer um erro
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
+        }
+        public static float ObterPrecoDoJogoPeloNome(string nomeJogo)
+        {
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT preco FROM jogos.dados WHERE jogo = @jogo";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Conexao.conn))
+                {
+                    cmd.Parameters.AddWithValue("@jogo", nomeJogo);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return Convert.ToSingle(result);
+                    }
+                    else
+                    {
+                        return -1.0f; // Ou outro valor que indique que o preço não foi encontrado
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1.0f; // Ou outro valor que indique um erro
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
+        }
+
+        public static int ObterIdDoJogoPeloNome(string nomeJogo)
+        {
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT id FROM jogos.dados WHERE jogo = @jogo";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Conexao.conn))
+                {
+                    cmd.Parameters.AddWithValue("@jogo", nomeJogo);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1; // Ou outro valor que indique um erro
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
+        }
+        public static List<string> ObterNomeJogos()
+        {
+            List<string> nomesJogos = new List<string>();
+
+            try
+            {
+                Conexao.Conectar();
+                string sql = "SELECT jogo FROM jogos.dados";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Conexao.conn))
+                {
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            nomesJogos.Add(dr["jogo"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Considere usar um mecanismo de log aqui em vez de MessageBox
+                MessageBox.Show("Erro: " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Conexao.Fechar();
+            }
+
+            return nomesJogos;
+        }
 
         public static bool VerificarJogo(string jogo) // verificar Jogo
         {
@@ -406,7 +543,7 @@ namespace LojaGames
             Conexao.Fechar();
             return false;
         }
-        public static DataTable PopularDGV()
+        public static DataTable PopularDGVJogos()
         {
             Conexao.Conectar();
 
